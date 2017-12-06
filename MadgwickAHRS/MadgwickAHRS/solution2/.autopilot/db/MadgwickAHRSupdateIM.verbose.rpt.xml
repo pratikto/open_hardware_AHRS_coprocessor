@@ -1,0 +1,274 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'MadgwickAHRSupdateIM'" level="0">
+<item name = "Date">Tue Dec  5 11:58:57 2017
+</item>
+<item name = "Version">2017.3.1 (Build 2033595 on Fri Oct 20 14:40:16 MDT 2017)</item>
+<item name = "Project">MadgwickAHRS</item>
+<item name = "Solution">solution2</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 6.67, 0.62</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">178, 502, 178, 502, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_feedbackStep_fu_192">feedbackStep, 13, 13, 1, 1, function</column>
+<column name="grp_normalise_1_fu_205">normalise_1, 113, 113, 113, 113, none</column>
+<column name="grp_normalise_fu_213">normalise, 118, 118, 118, 118, none</column>
+<column name="grp_integrateQdot_fu_220">integrateQdot, 16, 16, 10, 10, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 175</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">0, 79, 8258, 13522</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 1833</column>
+<column name="Register">-, -, 1542, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">0, 35, 9, 29</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="MadgwickAHRSupdatbkb_U41">MadgwickAHRSupdatbkb, 0, 2, 324, 424</column>
+<column name="MadgwickAHRSupdatbkb_U42">MadgwickAHRSupdatbkb, 0, 2, 324, 424</column>
+<column name="MadgwickAHRSupdatbkb_U43">MadgwickAHRSupdatbkb, 0, 2, 324, 424</column>
+<column name="MadgwickAHRSupdatbkb_U44">MadgwickAHRSupdatbkb, 0, 2, 324, 424</column>
+<column name="MadgwickAHRSupdatcud_U45">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatcud_U46">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatcud_U47">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatcud_U48">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatcud_U49">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatcud_U50">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatcud_U51">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatcud_U52">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatcud_U53">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatcud_U54">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatcud_U55">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatcud_U56">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatdEe_U57">MadgwickAHRSupdatdEe, 0, 0, 75, 248</column>
+<column name="grp_feedbackStep_fu_192">feedbackStep, 0, 20, 2412, 3124</column>
+<column name="grp_integrateQdot_fu_220">integrateQdot, 0, 5, 711, 956</column>
+<column name="grp_normalise_fu_213">normalise, 0, 5, 932, 1738</column>
+<column name="grp_normalise_1_fu_205">normalise_1, 0, 5, 1020, 1860</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="tmp_65_fu_561_p2">and, 0, 0, 8, 1, 1</column>
+<column name="tmp_70_fu_601_p2">and, 0, 0, 8, 1, 1</column>
+<column name="tmp_75_fu_641_p2">and, 0, 0, 8, 1, 1</column>
+<column name="notlhs3_fu_585_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="notlhs5_fu_625_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="notlhs_fu_545_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="notrhs4_fu_591_p2">icmp, 0, 0, 18, 23, 1</column>
+<column name="notrhs6_fu_631_p2">icmp, 0, 0, 18, 23, 1</column>
+<column name="notrhs_fu_551_p2">icmp, 0, 0, 18, 23, 1</column>
+<column name="tmp_22_fu_557_p2">or, 0, 0, 8, 1, 1</column>
+<column name="tmp_68_fu_597_p2">or, 0, 0, 8, 1, 1</column>
+<column name="tmp_73_fu_637_p2">or, 0, 0, 8, 1, 1</column>
+<column name="tmp_neg_fu_517_p2">xor, 0, 0, 40, 32, 33</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="a_address0">41, 8, 2, 16</column>
+<column name="a_ce0">15, 3, 1, 3</column>
+<column name="a_we0">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">685, 155, 1, 155</column>
+<column name="ap_phi_mux_qDot_1_12_phi_fu_175_p4">9, 2, 32, 64</column>
+<column name="ap_phi_mux_qDot_2_11_phi_fu_165_p4">9, 2, 32, 64</column>
+<column name="ap_phi_mux_qDot_3_10_phi_fu_155_p4">9, 2, 32, 64</column>
+<column name="ap_phi_mux_qDot_phi_fu_185_p4">9, 2, 32, 64</column>
+<column name="g_address0">15, 3, 2, 6</column>
+<column name="grp_fu_234_opcode">15, 3, 2, 6</column>
+<column name="grp_fu_234_p0">27, 5, 32, 160</column>
+<column name="grp_fu_234_p1">47, 10, 32, 320</column>
+<column name="grp_fu_238_opcode">15, 3, 2, 6</column>
+<column name="grp_fu_238_p0">27, 5, 32, 160</column>
+<column name="grp_fu_238_p1">47, 10, 32, 320</column>
+<column name="grp_fu_242_opcode">15, 3, 2, 6</column>
+<column name="grp_fu_242_p0">21, 4, 32, 128</column>
+<column name="grp_fu_242_p1">33, 6, 32, 192</column>
+<column name="grp_fu_246_opcode">15, 3, 2, 6</column>
+<column name="grp_fu_246_p0">21, 4, 32, 128</column>
+<column name="grp_fu_246_p1">33, 6, 32, 192</column>
+<column name="grp_fu_254_p0">50, 11, 32, 352</column>
+<column name="grp_fu_254_p1">56, 13, 32, 416</column>
+<column name="grp_fu_258_p0">41, 8, 32, 256</column>
+<column name="grp_fu_258_p1">38, 7, 32, 224</column>
+<column name="grp_fu_262_p0">38, 7, 32, 224</column>
+<column name="grp_fu_262_p1">33, 6, 32, 192</column>
+<column name="grp_fu_266_p0">27, 5, 32, 160</column>
+<column name="grp_fu_266_p1">41, 8, 32, 256</column>
+<column name="grp_fu_270_p0">27, 5, 32, 160</column>
+<column name="grp_fu_270_p1">27, 5, 32, 160</column>
+<column name="grp_fu_274_p0">21, 4, 32, 128</column>
+<column name="grp_fu_274_p1">21, 4, 32, 128</column>
+<column name="grp_fu_278_p0">21, 4, 32, 128</column>
+<column name="grp_fu_278_p1">21, 4, 32, 128</column>
+<column name="grp_fu_282_p0">15, 3, 32, 96</column>
+<column name="grp_fu_282_p1">15, 3, 32, 96</column>
+<column name="grp_normalise_fu_213_in_r_q0">15, 3, 32, 96</column>
+<column name="qDot_1_12_reg_172">9, 2, 32, 64</column>
+<column name="qDot_2_11_reg_162">9, 2, 32, 64</column>
+<column name="qDot_3_10_reg_152">9, 2, 32, 64</column>
+<column name="qDot_reg_182">9, 2, 32, 64</column>
+<column name="q_address0">38, 7, 2, 14</column>
+<column name="q_address1">33, 6, 2, 12</column>
+<column name="q_ce0">21, 4, 1, 4</column>
+<column name="q_ce1">15, 3, 1, 3</column>
+<column name="q_d0">15, 3, 32, 96</column>
+<column name="q_we0">15, 3, 1, 3</column>
+<column name="q_we1">9, 2, 1, 2</column>
+<column name="reg_320">9, 2, 32, 64</column>
+<column name="reg_331">9, 2, 32, 64</column>
+<column name="reg_341">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="a_load_4_reg_819">32, 0, 32, 0</column>
+<column name="ap_CS_fsm">154, 0, 154, 0</column>
+<column name="ap_reg_grp_integrateQdot_fu_220_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_normalise_1_fu_205_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_normalise_fu_213_ap_start">1, 0, 1, 0</column>
+<column name="g_load_1_reg_710">32, 0, 32, 0</column>
+<column name="g_load_2_reg_717">32, 0, 32, 0</column>
+<column name="g_load_reg_688">32, 0, 32, 0</column>
+<column name="notlhs3_reg_754">1, 0, 1, 0</column>
+<column name="notlhs5_reg_773">1, 0, 1, 0</column>
+<column name="notlhs_reg_735">1, 0, 1, 0</column>
+<column name="notrhs4_reg_759">1, 0, 1, 0</column>
+<column name="notrhs6_reg_778">1, 0, 1, 0</column>
+<column name="notrhs_reg_740">1, 0, 1, 0</column>
+<column name="p_4q1_reg_797">32, 0, 32, 0</column>
+<column name="p_4q2_reg_808">32, 0, 32, 0</column>
+<column name="qDot_0_1_reg_852">32, 0, 32, 0</column>
+<column name="qDot_1_12_reg_172">32, 0, 32, 0</column>
+<column name="qDot_1_1_reg_857">32, 0, 32, 0</column>
+<column name="qDot_2_11_reg_162">32, 0, 32, 0</column>
+<column name="qDot_2_1_reg_862">32, 0, 32, 0</column>
+<column name="qDot_3_10_reg_152">32, 0, 32, 0</column>
+<column name="qDot_3_1_reg_867">32, 0, 32, 0</column>
+<column name="qDot_reg_182">32, 0, 32, 0</column>
+<column name="q_load_6_reg_787">32, 0, 32, 0</column>
+<column name="reg_320">32, 0, 32, 0</column>
+<column name="reg_331">32, 0, 32, 0</column>
+<column name="reg_341">32, 0, 32, 0</column>
+<column name="reg_354">32, 0, 32, 0</column>
+<column name="reg_362">32, 0, 32, 0</column>
+<column name="reg_370">32, 0, 32, 0</column>
+<column name="reg_378">32, 0, 32, 0</column>
+<column name="reg_386">32, 0, 32, 0</column>
+<column name="reg_396">32, 0, 32, 0</column>
+<column name="reg_406">32, 0, 32, 0</column>
+<column name="reg_413">32, 0, 32, 0</column>
+<column name="reg_419">32, 0, 32, 0</column>
+<column name="reg_427">32, 0, 32, 0</column>
+<column name="reg_435">32, 0, 32, 0</column>
+<column name="reg_442">32, 0, 32, 0</column>
+<column name="reg_450">32, 0, 32, 0</column>
+<column name="reg_459">32, 0, 32, 0</column>
+<column name="reg_470">32, 0, 32, 0</column>
+<column name="reg_479">32, 0, 32, 0</column>
+<column name="reg_488">32, 0, 32, 0</column>
+<column name="reg_499">32, 0, 32, 0</column>
+<column name="reg_505">32, 0, 32, 0</column>
+<column name="tmp_44_reg_803">32, 0, 32, 0</column>
+<column name="tmp_57_reg_827">32, 0, 32, 0</column>
+<column name="tmp_58_reg_832">32, 0, 32, 0</column>
+<column name="tmp_60_reg_837">32, 0, 32, 0</column>
+<column name="tmp_63_reg_842">32, 0, 32, 0</column>
+<column name="tmp_65_reg_745">1, 0, 1, 0</column>
+<column name="tmp_70_reg_764">1, 0, 1, 0</column>
+<column name="tmp_75_reg_783">1, 0, 1, 0</column>
+<column name="tmp_neg_reg_705">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, MadgwickAHRSupdateIM, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, MadgwickAHRSupdateIM, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, MadgwickAHRSupdateIM, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, MadgwickAHRSupdateIM, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, MadgwickAHRSupdateIM, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, MadgwickAHRSupdateIM, return value</column>
+<column name="g_address0">out, 2, ap_memory, g, array</column>
+<column name="g_ce0">out, 1, ap_memory, g, array</column>
+<column name="g_q0">in, 32, ap_memory, g, array</column>
+<column name="g_address1">out, 2, ap_memory, g, array</column>
+<column name="g_ce1">out, 1, ap_memory, g, array</column>
+<column name="g_q1">in, 32, ap_memory, g, array</column>
+<column name="a_address0">out, 2, ap_memory, a, array</column>
+<column name="a_ce0">out, 1, ap_memory, a, array</column>
+<column name="a_we0">out, 1, ap_memory, a, array</column>
+<column name="a_d0">out, 32, ap_memory, a, array</column>
+<column name="a_q0">in, 32, ap_memory, a, array</column>
+<column name="beta">in, 32, ap_none, beta, pointer</column>
+<column name="q_address0">out, 2, ap_memory, q, array</column>
+<column name="q_ce0">out, 1, ap_memory, q, array</column>
+<column name="q_we0">out, 1, ap_memory, q, array</column>
+<column name="q_d0">out, 32, ap_memory, q, array</column>
+<column name="q_q0">in, 32, ap_memory, q, array</column>
+<column name="q_address1">out, 2, ap_memory, q, array</column>
+<column name="q_ce1">out, 1, ap_memory, q, array</column>
+<column name="q_we1">out, 1, ap_memory, q, array</column>
+<column name="q_d1">out, 32, ap_memory, q, array</column>
+<column name="q_q1">in, 32, ap_memory, q, array</column>
+</table>
+</item>
+</section>
+</profile>

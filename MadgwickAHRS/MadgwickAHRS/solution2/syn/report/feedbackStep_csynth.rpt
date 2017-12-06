@@ -1,0 +1,143 @@
+
+
+================================================================
+== Vivado HLS Report for 'feedbackStep'
+================================================================
+* Date:           Tue Dec  5 11:58:56 2017
+
+* Version:        2017.3.1 (Build 2033595 on Fri Oct 20 14:40:16 MDT 2017)
+* Project:        MadgwickAHRS
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      4.35|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |   13|   13|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|     20|    1900|   2996|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        0|      -|     512|    128|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|     20|    2412|   3124|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      9|       2|      5|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+-------+-----+-----+
+    |         Instance         |        Module        | BRAM_18K| DSP48E|  FF | LUT |
+    +--------------------------+----------------------+---------+-------+-----+-----+
+    |MadgwickAHRSupdatcud_U19  |MadgwickAHRSupdatcud  |        0|      3|  151|  325|
+    |MadgwickAHRSupdatcud_U20  |MadgwickAHRSupdatcud  |        0|      3|  151|  325|
+    |MadgwickAHRSupdatcud_U21  |MadgwickAHRSupdatcud  |        0|      3|  151|  325|
+    |MadgwickAHRSupdatcud_U22  |MadgwickAHRSupdatcud  |        0|      3|  151|  325|
+    |MadgwickAHRSupdateOg_U15  |MadgwickAHRSupdateOg  |        0|      2|  324|  424|
+    |MadgwickAHRSupdateOg_U16  |MadgwickAHRSupdateOg  |        0|      2|  324|  424|
+    |MadgwickAHRSupdateOg_U17  |MadgwickAHRSupdateOg  |        0|      2|  324|  424|
+    |MadgwickAHRSupdateOg_U18  |MadgwickAHRSupdateOg  |        0|      2|  324|  424|
+    +--------------------------+----------------------+---------+-------+-----+-----+
+    |Total                     |                      |        0|     20| 1900| 2996|
+    +--------------------------+----------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +-----------------------+----+----+-----+-----------+
+    |          Name         | FF | LUT| Bits| Const Bits|
+    +-----------------------+----+----+-----+-----------+
+    |qDot_0_read_1_reg_193  |  32|   0|   32|          0|
+    |qDot_1_read_1_reg_188  |  32|   0|   32|          0|
+    |qDot_2_read_1_reg_183  |  32|   0|   32|          0|
+    |qDot_3_read_1_reg_178  |  32|   0|   32|          0|
+    |tmp_1_reg_203          |  32|   0|   32|          0|
+    |tmp_2_reg_208          |  32|   0|   32|          0|
+    |tmp_3_reg_213          |  32|   0|   32|          0|
+    |tmp_s_reg_198          |  32|   0|   32|          0|
+    |qDot_0_read_1_reg_193  |  64|  32|   32|          0|
+    |qDot_1_read_1_reg_188  |  64|  32|   32|          0|
+    |qDot_2_read_1_reg_183  |  64|  32|   32|          0|
+    |qDot_3_read_1_reg_178  |  64|  32|   32|          0|
+    +-----------------------+----+----+-----+-----------+
+    |Total                  | 512| 128|  384|          0|
+    +-----------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------+-----+-----+------------+--------------+--------------+
+|  RTL Ports  | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------+-----+-----+------------+--------------+--------------+
+|ap_clk       |  in |    1| ap_ctrl_hs | feedbackStep | return value |
+|ap_rst       |  in |    1| ap_ctrl_hs | feedbackStep | return value |
+|ap_return_0  | out |   32| ap_ctrl_hs | feedbackStep | return value |
+|ap_return_1  | out |   32| ap_ctrl_hs | feedbackStep | return value |
+|ap_return_2  | out |   32| ap_ctrl_hs | feedbackStep | return value |
+|ap_return_3  | out |   32| ap_ctrl_hs | feedbackStep | return value |
+|qDot_0_read  |  in |   32|   ap_none  |  qDot_0_read |    scalar    |
+|qDot_1_read  |  in |   32|   ap_none  |  qDot_1_read |    scalar    |
+|qDot_2_read  |  in |   32|   ap_none  |  qDot_2_read |    scalar    |
+|qDot_3_read  |  in |   32|   ap_none  |  qDot_3_read |    scalar    |
+|beta         |  in |   32|   ap_none  |     beta     |    scalar    |
+|s_0_read     |  in |   32|   ap_none  |   s_0_read   |    scalar    |
+|s_1_read     |  in |   32|   ap_none  |   s_1_read   |    scalar    |
+|s_2_read     |  in |   32|   ap_none  |   s_2_read   |    scalar    |
+|s_3_read     |  in |   32|   ap_none  |   s_3_read   |    scalar    |
++-------------+-----+-----+------------+--------------+--------------+
+

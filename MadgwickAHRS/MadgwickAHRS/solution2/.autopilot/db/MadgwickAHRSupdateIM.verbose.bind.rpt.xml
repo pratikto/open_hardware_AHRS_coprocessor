@@ -1,0 +1,49 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'MadgwickAHRSupdateIM'" level="0">
+<item name = "Date">Tue Dec  5 11:58:47 2017
+</item>
+<item name = "Version">2017.3.1 (Build 2033595 on Fri Oct 20 14:40:16 MDT 2017)</item>
+<item name = "Project">MadgwickAHRS</item>
+<item name = "Solution">solution2</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 6.67, 0.62</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">178, 502, 178, 502, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_feedbackStep_fu_192">feedbackStep, 13, 13, 1, 1, function</column>
+<column name="grp_normalise_1_fu_205">normalise_1, 113, 113, 113, 113, none</column>
+<column name="grp_normalise_fu_213">normalise, 118, 118, 118, 118, none</column>
+<column name="grp_integrateQdot_fu_220">integrateQdot, 16, 16, 10, 10, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

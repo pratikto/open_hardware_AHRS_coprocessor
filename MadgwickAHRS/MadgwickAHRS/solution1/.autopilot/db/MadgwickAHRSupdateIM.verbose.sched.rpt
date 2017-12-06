@@ -1,0 +1,2195 @@
+
+
+================================================================
+== Vivado HLS Report for 'MadgwickAHRSupdateIM'
+================================================================
+* Date:           Tue Dec  5 11:37:57 2017
+
+* Version:        2017.3.1 (Build 2033595 on Fri Oct 20 14:40:16 MDT 2017)
+* Project:        MadgwickAHRS
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      4.35|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  226|  601|  226|  601|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                      |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name      | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- loopfeedbackStep    |   64|   64|        16|          -|          -|     4|    no    |
+        |- loop_integrateQdot  |   64|   64|        16|          -|          -|     4|    no    |
+        +----------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 155
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / (tmp_65)
+	42  / (!tmp_65)
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / (tmp_70)
+	42  / (!tmp_70)
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / (!tmp_65) | (!tmp_70) | (!tmp_75)
+	123  / (tmp_65 & tmp_70 & tmp_75)
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	74  / true
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	78  / true
+78 --> 
+	79  / true
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	88  / true
+88 --> 
+	89  / true
+89 --> 
+	90  / true
+90 --> 
+	91  / true
+91 --> 
+	92  / true
+92 --> 
+	93  / true
+93 --> 
+	94  / true
+94 --> 
+	95  / true
+95 --> 
+	96  / true
+96 --> 
+	97  / true
+97 --> 
+	98  / true
+98 --> 
+	99  / true
+99 --> 
+	100  / true
+100 --> 
+	101  / true
+101 --> 
+	102  / true
+102 --> 
+	103  / true
+103 --> 
+	104  / true
+104 --> 
+	105  / true
+105 --> 
+	106  / true
+106 --> 
+	107  / true
+107 --> 
+	108  / true
+108 --> 
+	109  / true
+109 --> 
+	110  / true
+110 --> 
+	111  / true
+111 --> 
+	112  / true
+112 --> 
+	113  / true
+113 --> 
+	114  / true
+114 --> 
+	115  / true
+115 --> 
+	116  / true
+116 --> 
+	117  / true
+117 --> 
+	118  / true
+118 --> 
+	119  / true
+119 --> 
+	120  / true
+120 --> 
+	121  / true
+121 --> 
+	122  / true
+122 --> 
+	123  / true
+123 --> 
+	124  / (!tmp_65 & !exitcond_i) | (!tmp_70 & !exitcond_i) | (!tmp_75 & !exitcond_i)
+	139  / (exitcond_i) | (tmp_65 & tmp_70 & tmp_75)
+124 --> 
+	125  / true
+125 --> 
+	126  / true
+126 --> 
+	127  / true
+127 --> 
+	128  / true
+128 --> 
+	129  / true
+129 --> 
+	130  / true
+130 --> 
+	131  / true
+131 --> 
+	132  / true
+132 --> 
+	133  / true
+133 --> 
+	134  / true
+134 --> 
+	135  / true
+135 --> 
+	136  / true
+136 --> 
+	137  / true
+137 --> 
+	138  / true
+138 --> 
+	123  / true
+139 --> 
+	140  / (!exitcond_i1)
+	155  / (exitcond_i1)
+140 --> 
+	141  / true
+141 --> 
+	142  / true
+142 --> 
+	143  / true
+143 --> 
+	144  / true
+144 --> 
+	145  / true
+145 --> 
+	146  / true
+146 --> 
+	147  / true
+147 --> 
+	148  / true
+148 --> 
+	149  / true
+149 --> 
+	150  / true
+150 --> 
+	151  / true
+151 --> 
+	152  / true
+152 --> 
+	153  / true
+153 --> 
+	154  / true
+154 --> 
+	139  / true
+155 --> 
+
+* FSM state operations: 
+
+ <State 1> : 2.32ns
+ST_1 : Operation 156 [2/2] (2.32ns)   --->   "%q_load = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 1), align 4" [MadgwickAHRS.cpp:136]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%g_addr = getelementptr [4 x float]* %g, i64 0, i64 1" [MadgwickAHRS.cpp:136]
+ST_1 : Operation 158 [2/2] (2.32ns)   --->   "%g_load = load float* %g_addr, align 4" [MadgwickAHRS.cpp:136]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+ <State 2> : 2.32ns
+ST_2 : Operation 159 [1/2] (2.32ns)   --->   "%q_load = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 1), align 4" [MadgwickAHRS.cpp:136]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 160 [1/2] (2.32ns)   --->   "%g_load = load float* %g_addr, align 4" [MadgwickAHRS.cpp:136]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 161 [2/2] (2.32ns)   --->   "%q_load_1 = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 2), align 8" [MadgwickAHRS.cpp:136]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 162 [1/1] (0.00ns)   --->   "%g_addr_1 = getelementptr [4 x float]* %g, i64 0, i64 2" [MadgwickAHRS.cpp:136]
+ST_2 : Operation 163 [2/2] (2.32ns)   --->   "%g_load_1 = load float* %g_addr_1, align 4" [MadgwickAHRS.cpp:136]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 164 [1/1] (0.00ns)   --->   "%g_addr_2 = getelementptr [4 x float]* %g, i64 0, i64 3" [MadgwickAHRS.cpp:136]
+ST_2 : Operation 165 [2/2] (2.32ns)   --->   "%g_load_2 = load float* %g_addr_2, align 4" [MadgwickAHRS.cpp:136]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 166 [2/2] (2.32ns)   --->   "%q_load_3 = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 0), align 16" [MadgwickAHRS.cpp:138]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+ <State 3> : 2.32ns
+ST_3 : Operation 167 [1/1] (0.00ns)   --->   "%tmp_to_int = bitcast float %q_load to i32" [MadgwickAHRS.cpp:136]
+ST_3 : Operation 168 [1/1] (0.86ns)   --->   "%tmp_neg = xor i32 %tmp_to_int, -2147483648" [MadgwickAHRS.cpp:136]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 169 [1/2] (2.32ns)   --->   "%q_load_1 = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 2), align 8" [MadgwickAHRS.cpp:136]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 170 [1/2] (2.32ns)   --->   "%g_load_1 = load float* %g_addr_1, align 4" [MadgwickAHRS.cpp:136]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 171 [1/2] (2.32ns)   --->   "%g_load_2 = load float* %g_addr_2, align 4" [MadgwickAHRS.cpp:136]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 172 [1/2] (2.32ns)   --->   "%q_load_3 = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 0), align 16" [MadgwickAHRS.cpp:138]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+ <State 4> : 4.35ns
+ST_4 : Operation 173 [1/1] (0.00ns)   --->   "%tmp = bitcast i32 %tmp_neg to float" [MadgwickAHRS.cpp:136]
+ST_4 : Operation 174 [5/5] (4.35ns)   --->   "%tmp_s = fmul float %g_load, %tmp" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 175 [5/5] (4.35ns)   --->   "%tmp_1 = fmul float %q_load_1, %g_load_1" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 176 [5/5] (4.35ns)   --->   "%tmp_6 = fmul float %q_load_3, %g_load" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 177 [5/5] (4.35ns)   --->   "%tmp_7 = fmul float %q_load_1, %g_load_2" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 178 [5/5] (4.35ns)   --->   "%tmp_10 = fmul float %q_load_3, %g_load_1" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 179 [5/5] (4.35ns)   --->   "%tmp_11 = fmul float %q_load, %g_load_2" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 180 [5/5] (4.35ns)   --->   "%tmp_15 = fmul float %q_load_3, %g_load_2" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 181 [5/5] (4.35ns)   --->   "%tmp_16 = fmul float %q_load, %g_load_1" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 5> : 4.35ns
+ST_5 : Operation 182 [4/5] (4.35ns)   --->   "%tmp_s = fmul float %g_load, %tmp" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 183 [4/5] (4.35ns)   --->   "%tmp_1 = fmul float %q_load_1, %g_load_1" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 184 [4/5] (4.35ns)   --->   "%tmp_6 = fmul float %q_load_3, %g_load" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 185 [4/5] (4.35ns)   --->   "%tmp_7 = fmul float %q_load_1, %g_load_2" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 186 [4/5] (4.35ns)   --->   "%tmp_10 = fmul float %q_load_3, %g_load_1" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 187 [4/5] (4.35ns)   --->   "%tmp_11 = fmul float %q_load, %g_load_2" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 188 [4/5] (4.35ns)   --->   "%tmp_15 = fmul float %q_load_3, %g_load_2" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 189 [4/5] (4.35ns)   --->   "%tmp_16 = fmul float %q_load, %g_load_1" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 6> : 4.35ns
+ST_6 : Operation 190 [3/5] (4.35ns)   --->   "%tmp_s = fmul float %g_load, %tmp" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 191 [3/5] (4.35ns)   --->   "%tmp_1 = fmul float %q_load_1, %g_load_1" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 192 [3/5] (4.35ns)   --->   "%tmp_6 = fmul float %q_load_3, %g_load" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 193 [3/5] (4.35ns)   --->   "%tmp_7 = fmul float %q_load_1, %g_load_2" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 194 [3/5] (4.35ns)   --->   "%tmp_10 = fmul float %q_load_3, %g_load_1" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 195 [3/5] (4.35ns)   --->   "%tmp_11 = fmul float %q_load, %g_load_2" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 196 [3/5] (4.35ns)   --->   "%tmp_15 = fmul float %q_load_3, %g_load_2" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 197 [3/5] (4.35ns)   --->   "%tmp_16 = fmul float %q_load, %g_load_1" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 7> : 4.35ns
+ST_7 : Operation 198 [2/5] (4.35ns)   --->   "%tmp_s = fmul float %g_load, %tmp" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 199 [2/5] (4.35ns)   --->   "%tmp_1 = fmul float %q_load_1, %g_load_1" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 200 [2/5] (4.35ns)   --->   "%tmp_6 = fmul float %q_load_3, %g_load" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 201 [2/5] (4.35ns)   --->   "%tmp_7 = fmul float %q_load_1, %g_load_2" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 202 [2/5] (4.35ns)   --->   "%tmp_10 = fmul float %q_load_3, %g_load_1" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 203 [2/5] (4.35ns)   --->   "%tmp_11 = fmul float %q_load, %g_load_2" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 204 [2/5] (4.35ns)   --->   "%tmp_15 = fmul float %q_load_3, %g_load_2" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 205 [2/5] (4.35ns)   --->   "%tmp_16 = fmul float %q_load, %g_load_1" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 8> : 4.35ns
+ST_8 : Operation 206 [1/5] (4.35ns)   --->   "%tmp_s = fmul float %g_load, %tmp" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 207 [1/5] (4.35ns)   --->   "%tmp_1 = fmul float %q_load_1, %g_load_1" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 208 [1/5] (4.35ns)   --->   "%tmp_6 = fmul float %q_load_3, %g_load" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 209 [1/5] (4.35ns)   --->   "%tmp_7 = fmul float %q_load_1, %g_load_2" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 210 [1/5] (4.35ns)   --->   "%tmp_10 = fmul float %q_load_3, %g_load_1" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 211 [1/5] (4.35ns)   --->   "%tmp_11 = fmul float %q_load, %g_load_2" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 212 [1/5] (4.35ns)   --->   "%tmp_15 = fmul float %q_load_3, %g_load_2" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 213 [1/5] (4.35ns)   --->   "%tmp_16 = fmul float %q_load, %g_load_1" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 9> : 4.35ns
+ST_9 : Operation 214 [9/9] (4.34ns)   --->   "%tmp_2 = fsub float %tmp_s, %tmp_1" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 215 [9/9] (4.34ns)   --->   "%tmp_8 = fadd float %tmp_6, %tmp_7" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 216 [9/9] (4.34ns)   --->   "%tmp_12 = fsub float %tmp_10, %tmp_11" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 217 [9/9] (4.34ns)   --->   "%tmp_17 = fadd float %tmp_15, %tmp_16" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 10> : 4.35ns
+ST_10 : Operation 218 [8/9] (4.34ns)   --->   "%tmp_2 = fsub float %tmp_s, %tmp_1" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 219 [8/9] (4.34ns)   --->   "%tmp_8 = fadd float %tmp_6, %tmp_7" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 220 [8/9] (4.34ns)   --->   "%tmp_12 = fsub float %tmp_10, %tmp_11" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 221 [8/9] (4.34ns)   --->   "%tmp_17 = fadd float %tmp_15, %tmp_16" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 11> : 4.35ns
+ST_11 : Operation 222 [7/9] (4.34ns)   --->   "%tmp_2 = fsub float %tmp_s, %tmp_1" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 223 [2/2] (2.32ns)   --->   "%q_load_2 = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 3), align 4" [MadgwickAHRS.cpp:136]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_11 : Operation 224 [7/9] (4.34ns)   --->   "%tmp_8 = fadd float %tmp_6, %tmp_7" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 225 [7/9] (4.34ns)   --->   "%tmp_12 = fsub float %tmp_10, %tmp_11" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 226 [7/9] (4.34ns)   --->   "%tmp_17 = fadd float %tmp_15, %tmp_16" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 12> : 4.35ns
+ST_12 : Operation 227 [6/9] (4.34ns)   --->   "%tmp_2 = fsub float %tmp_s, %tmp_1" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 228 [1/2] (2.32ns)   --->   "%q_load_2 = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 3), align 4" [MadgwickAHRS.cpp:136]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_12 : Operation 229 [6/9] (4.34ns)   --->   "%tmp_8 = fadd float %tmp_6, %tmp_7" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 230 [6/9] (4.34ns)   --->   "%tmp_12 = fsub float %tmp_10, %tmp_11" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 231 [6/9] (4.34ns)   --->   "%tmp_17 = fadd float %tmp_15, %tmp_16" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 13> : 4.35ns
+ST_13 : Operation 232 [5/9] (4.34ns)   --->   "%tmp_2 = fsub float %tmp_s, %tmp_1" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 233 [5/5] (4.35ns)   --->   "%tmp_3 = fmul float %q_load_2, %g_load_2" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 234 [5/9] (4.34ns)   --->   "%tmp_8 = fadd float %tmp_6, %tmp_7" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 235 [5/5] (4.35ns)   --->   "%tmp_9 = fmul float %q_load_2, %g_load_1" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 236 [5/9] (4.34ns)   --->   "%tmp_12 = fsub float %tmp_10, %tmp_11" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 237 [5/5] (4.35ns)   --->   "%tmp_13 = fmul float %q_load_2, %g_load" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 238 [5/9] (4.34ns)   --->   "%tmp_17 = fadd float %tmp_15, %tmp_16" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 239 [5/5] (4.35ns)   --->   "%tmp_18 = fmul float %q_load_1, %g_load" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 14> : 4.35ns
+ST_14 : Operation 240 [4/9] (4.34ns)   --->   "%tmp_2 = fsub float %tmp_s, %tmp_1" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 241 [4/5] (4.35ns)   --->   "%tmp_3 = fmul float %q_load_2, %g_load_2" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 242 [4/9] (4.34ns)   --->   "%tmp_8 = fadd float %tmp_6, %tmp_7" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 243 [4/5] (4.35ns)   --->   "%tmp_9 = fmul float %q_load_2, %g_load_1" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 244 [4/9] (4.34ns)   --->   "%tmp_12 = fsub float %tmp_10, %tmp_11" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 245 [4/5] (4.35ns)   --->   "%tmp_13 = fmul float %q_load_2, %g_load" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 246 [4/9] (4.34ns)   --->   "%tmp_17 = fadd float %tmp_15, %tmp_16" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 247 [4/5] (4.35ns)   --->   "%tmp_18 = fmul float %q_load_1, %g_load" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 15> : 4.35ns
+ST_15 : Operation 248 [3/9] (4.34ns)   --->   "%tmp_2 = fsub float %tmp_s, %tmp_1" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 249 [3/5] (4.35ns)   --->   "%tmp_3 = fmul float %q_load_2, %g_load_2" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 250 [3/9] (4.34ns)   --->   "%tmp_8 = fadd float %tmp_6, %tmp_7" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 251 [3/5] (4.35ns)   --->   "%tmp_9 = fmul float %q_load_2, %g_load_1" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 252 [3/9] (4.34ns)   --->   "%tmp_12 = fsub float %tmp_10, %tmp_11" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 253 [3/5] (4.35ns)   --->   "%tmp_13 = fmul float %q_load_2, %g_load" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 254 [3/9] (4.34ns)   --->   "%tmp_17 = fadd float %tmp_15, %tmp_16" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 255 [3/5] (4.35ns)   --->   "%tmp_18 = fmul float %q_load_1, %g_load" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 16> : 4.35ns
+ST_16 : Operation 256 [2/9] (4.34ns)   --->   "%tmp_2 = fsub float %tmp_s, %tmp_1" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 257 [2/5] (4.35ns)   --->   "%tmp_3 = fmul float %q_load_2, %g_load_2" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 258 [2/9] (4.34ns)   --->   "%tmp_8 = fadd float %tmp_6, %tmp_7" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 259 [2/5] (4.35ns)   --->   "%tmp_9 = fmul float %q_load_2, %g_load_1" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 260 [2/9] (4.34ns)   --->   "%tmp_12 = fsub float %tmp_10, %tmp_11" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 261 [2/5] (4.35ns)   --->   "%tmp_13 = fmul float %q_load_2, %g_load" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 262 [2/9] (4.34ns)   --->   "%tmp_17 = fadd float %tmp_15, %tmp_16" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 263 [2/5] (4.35ns)   --->   "%tmp_18 = fmul float %q_load_1, %g_load" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 17> : 4.35ns
+ST_17 : Operation 264 [1/9] (4.34ns)   --->   "%tmp_2 = fsub float %tmp_s, %tmp_1" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 265 [1/5] (4.35ns)   --->   "%tmp_3 = fmul float %q_load_2, %g_load_2" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 266 [1/9] (4.34ns)   --->   "%tmp_8 = fadd float %tmp_6, %tmp_7" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 267 [1/5] (4.35ns)   --->   "%tmp_9 = fmul float %q_load_2, %g_load_1" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 268 [1/9] (4.34ns)   --->   "%tmp_12 = fsub float %tmp_10, %tmp_11" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 269 [1/5] (4.35ns)   --->   "%tmp_13 = fmul float %q_load_2, %g_load" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 270 [1/9] (4.34ns)   --->   "%tmp_17 = fadd float %tmp_15, %tmp_16" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 271 [1/5] (4.35ns)   --->   "%tmp_18 = fmul float %q_load_1, %g_load" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 18> : 4.35ns
+ST_18 : Operation 272 [9/9] (4.34ns)   --->   "%tmp_4 = fsub float %tmp_2, %tmp_3" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 273 [9/9] (4.34ns)   --->   "%tmp_5 = fsub float %tmp_8, %tmp_9" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 274 [9/9] (4.34ns)   --->   "%tmp_14 = fadd float %tmp_12, %tmp_13" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 275 [9/9] (4.34ns)   --->   "%tmp_19 = fsub float %tmp_17, %tmp_18" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 19> : 4.35ns
+ST_19 : Operation 276 [8/9] (4.34ns)   --->   "%tmp_4 = fsub float %tmp_2, %tmp_3" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 277 [8/9] (4.34ns)   --->   "%tmp_5 = fsub float %tmp_8, %tmp_9" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 278 [8/9] (4.34ns)   --->   "%tmp_14 = fadd float %tmp_12, %tmp_13" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 279 [8/9] (4.34ns)   --->   "%tmp_19 = fsub float %tmp_17, %tmp_18" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 20> : 4.35ns
+ST_20 : Operation 280 [7/9] (4.34ns)   --->   "%tmp_4 = fsub float %tmp_2, %tmp_3" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 281 [7/9] (4.34ns)   --->   "%tmp_5 = fsub float %tmp_8, %tmp_9" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 282 [7/9] (4.34ns)   --->   "%tmp_14 = fadd float %tmp_12, %tmp_13" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 283 [7/9] (4.34ns)   --->   "%tmp_19 = fsub float %tmp_17, %tmp_18" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 21> : 4.35ns
+ST_21 : Operation 284 [6/9] (4.34ns)   --->   "%tmp_4 = fsub float %tmp_2, %tmp_3" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 285 [6/9] (4.34ns)   --->   "%tmp_5 = fsub float %tmp_8, %tmp_9" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 286 [6/9] (4.34ns)   --->   "%tmp_14 = fadd float %tmp_12, %tmp_13" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 287 [6/9] (4.34ns)   --->   "%tmp_19 = fsub float %tmp_17, %tmp_18" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 22> : 4.35ns
+ST_22 : Operation 288 [5/9] (4.34ns)   --->   "%tmp_4 = fsub float %tmp_2, %tmp_3" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 289 [5/9] (4.34ns)   --->   "%tmp_5 = fsub float %tmp_8, %tmp_9" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 290 [5/9] (4.34ns)   --->   "%tmp_14 = fadd float %tmp_12, %tmp_13" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 291 [5/9] (4.34ns)   --->   "%tmp_19 = fsub float %tmp_17, %tmp_18" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 23> : 4.35ns
+ST_23 : Operation 292 [4/9] (4.34ns)   --->   "%tmp_4 = fsub float %tmp_2, %tmp_3" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 293 [4/9] (4.34ns)   --->   "%tmp_5 = fsub float %tmp_8, %tmp_9" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 294 [4/9] (4.34ns)   --->   "%tmp_14 = fadd float %tmp_12, %tmp_13" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 295 [4/9] (4.34ns)   --->   "%tmp_19 = fsub float %tmp_17, %tmp_18" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 24> : 4.35ns
+ST_24 : Operation 296 [3/9] (4.34ns)   --->   "%tmp_4 = fsub float %tmp_2, %tmp_3" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 297 [3/9] (4.34ns)   --->   "%tmp_5 = fsub float %tmp_8, %tmp_9" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 298 [3/9] (4.34ns)   --->   "%tmp_14 = fadd float %tmp_12, %tmp_13" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 299 [3/9] (4.34ns)   --->   "%tmp_19 = fsub float %tmp_17, %tmp_18" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 25> : 4.35ns
+ST_25 : Operation 300 [2/9] (4.34ns)   --->   "%tmp_4 = fsub float %tmp_2, %tmp_3" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 301 [2/9] (4.34ns)   --->   "%tmp_5 = fsub float %tmp_8, %tmp_9" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 302 [2/9] (4.34ns)   --->   "%tmp_14 = fadd float %tmp_12, %tmp_13" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 303 [2/9] (4.34ns)   --->   "%tmp_19 = fsub float %tmp_17, %tmp_18" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 26> : 4.35ns
+ST_26 : Operation 304 [1/9] (4.34ns)   --->   "%tmp_4 = fsub float %tmp_2, %tmp_3" [MadgwickAHRS.cpp:136]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 305 [1/9] (4.34ns)   --->   "%tmp_5 = fsub float %tmp_8, %tmp_9" [MadgwickAHRS.cpp:138]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 306 [1/9] (4.34ns)   --->   "%tmp_14 = fadd float %tmp_12, %tmp_13" [MadgwickAHRS.cpp:140]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 307 [1/9] (4.34ns)   --->   "%tmp_19 = fsub float %tmp_17, %tmp_18" [MadgwickAHRS.cpp:142]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 308 [1/1] (0.00ns)   --->   "%a_addr = getelementptr [4 x float]* %a, i64 0, i64 1" [MadgwickAHRS.cpp:145]
+ST_26 : Operation 309 [2/2] (2.32ns)   --->   "%a_load = load float* %a_addr, align 4" [MadgwickAHRS.cpp:145]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+ <State 27> : 4.35ns
+ST_27 : Operation 310 [5/5] (4.35ns)   --->   "%qDot_0 = fmul float %tmp_4, 5.000000e-01" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 311 [5/5] (4.35ns)   --->   "%qDot_1 = fmul float %tmp_5, 5.000000e-01" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 312 [5/5] (4.35ns)   --->   "%qDot_2 = fmul float %tmp_14, 5.000000e-01" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 313 [5/5] (4.35ns)   --->   "%qDot_3 = fmul float %tmp_19, 5.000000e-01" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 314 [1/2] (2.32ns)   --->   "%a_load = load float* %a_addr, align 4" [MadgwickAHRS.cpp:145]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+ <State 28> : 4.35ns
+ST_28 : Operation 315 [4/5] (4.35ns)   --->   "%qDot_0 = fmul float %tmp_4, 5.000000e-01" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 316 [4/5] (4.35ns)   --->   "%qDot_1 = fmul float %tmp_5, 5.000000e-01" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 317 [4/5] (4.35ns)   --->   "%qDot_2 = fmul float %tmp_14, 5.000000e-01" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 318 [4/5] (4.35ns)   --->   "%qDot_3 = fmul float %tmp_19, 5.000000e-01" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 319 [1/1] (0.00ns)   --->   "%a_load_to_int = bitcast float %a_load to i32" [MadgwickAHRS.cpp:145]
+ST_28 : Operation 320 [1/1] (0.00ns)   --->   "%tmp_20 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %a_load_to_int, i32 23, i32 30)" [MadgwickAHRS.cpp:145]
+ST_28 : Operation 321 [1/1] (0.00ns)   --->   "%tmp_21 = trunc i32 %a_load_to_int to i23" [MadgwickAHRS.cpp:145]
+ST_28 : Operation 322 [1/1] (1.55ns)   --->   "%notlhs = icmp ne i8 %tmp_20, -1" [MadgwickAHRS.cpp:145]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 323 [1/1] (2.44ns)   --->   "%notrhs = icmp eq i23 %tmp_21, 0" [MadgwickAHRS.cpp:145]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 324 [4/4] (2.73ns)   --->   "%tmp_64 = fcmp oeq float %a_load, 0.000000e+00" [MadgwickAHRS.cpp:145]   --->   Core 103 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 29> : 4.35ns
+ST_29 : Operation 325 [3/5] (4.35ns)   --->   "%qDot_0 = fmul float %tmp_4, 5.000000e-01" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 326 [3/5] (4.35ns)   --->   "%qDot_1 = fmul float %tmp_5, 5.000000e-01" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 327 [3/5] (4.35ns)   --->   "%qDot_2 = fmul float %tmp_14, 5.000000e-01" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 328 [3/5] (4.35ns)   --->   "%qDot_3 = fmul float %tmp_19, 5.000000e-01" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 329 [3/4] (2.73ns)   --->   "%tmp_64 = fcmp oeq float %a_load, 0.000000e+00" [MadgwickAHRS.cpp:145]   --->   Core 103 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 30> : 4.35ns
+ST_30 : Operation 330 [2/5] (4.35ns)   --->   "%qDot_0 = fmul float %tmp_4, 5.000000e-01" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 331 [2/5] (4.35ns)   --->   "%qDot_1 = fmul float %tmp_5, 5.000000e-01" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 332 [2/5] (4.35ns)   --->   "%qDot_2 = fmul float %tmp_14, 5.000000e-01" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 333 [2/5] (4.35ns)   --->   "%qDot_3 = fmul float %tmp_19, 5.000000e-01" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 334 [2/4] (2.73ns)   --->   "%tmp_64 = fcmp oeq float %a_load, 0.000000e+00" [MadgwickAHRS.cpp:145]   --->   Core 103 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 31> : 4.35ns
+ST_31 : Operation 335 [1/5] (4.35ns)   --->   "%qDot_0 = fmul float %tmp_4, 5.000000e-01" [MadgwickAHRS.cpp:136]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 336 [1/5] (4.35ns)   --->   "%qDot_1 = fmul float %tmp_5, 5.000000e-01" [MadgwickAHRS.cpp:138]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 337 [1/5] (4.35ns)   --->   "%qDot_2 = fmul float %tmp_14, 5.000000e-01" [MadgwickAHRS.cpp:140]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 338 [1/5] (4.35ns)   --->   "%qDot_3 = fmul float %tmp_19, 5.000000e-01" [MadgwickAHRS.cpp:142]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 339 [1/1] (0.00ns) (grouped into LUT with out node tmp_65)   --->   "%tmp_22 = or i1 %notrhs, %notlhs" [MadgwickAHRS.cpp:145]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 340 [1/4] (2.73ns)   --->   "%tmp_64 = fcmp oeq float %a_load, 0.000000e+00" [MadgwickAHRS.cpp:145]   --->   Core 103 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 341 [1/1] (0.93ns) (out node of the LUT)   --->   "%tmp_65 = and i1 %tmp_22, %tmp_64" [MadgwickAHRS.cpp:145]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 342 [1/1] (0.00ns)   --->   "br i1 %tmp_65, label %1, label %._crit_edge" [MadgwickAHRS.cpp:145]
+ST_31 : Operation 343 [1/1] (0.00ns)   --->   "%a_addr_1 = getelementptr [4 x float]* %a, i64 0, i64 2" [MadgwickAHRS.cpp:145]
+ST_31 : Operation 344 [2/2] (2.32ns)   --->   "%a_load_1 = load float* %a_addr_1, align 4" [MadgwickAHRS.cpp:145]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+ <State 32> : 2.32ns
+ST_32 : Operation 345 [1/2] (2.32ns)   --->   "%a_load_1 = load float* %a_addr_1, align 4" [MadgwickAHRS.cpp:145]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+ <State 33> : 2.73ns
+ST_33 : Operation 346 [1/1] (0.00ns)   --->   "%a_load_1_to_int = bitcast float %a_load_1 to i32" [MadgwickAHRS.cpp:145]
+ST_33 : Operation 347 [1/1] (0.00ns)   --->   "%tmp_66 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %a_load_1_to_int, i32 23, i32 30)" [MadgwickAHRS.cpp:145]
+ST_33 : Operation 348 [1/1] (0.00ns)   --->   "%tmp_67 = trunc i32 %a_load_1_to_int to i23" [MadgwickAHRS.cpp:145]
+ST_33 : Operation 349 [1/1] (1.55ns)   --->   "%notlhs1 = icmp ne i8 %tmp_66, -1" [MadgwickAHRS.cpp:145]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 350 [1/1] (2.44ns)   --->   "%notrhs1 = icmp eq i23 %tmp_67, 0" [MadgwickAHRS.cpp:145]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 351 [4/4] (2.73ns)   --->   "%tmp_69 = fcmp oeq float %a_load_1, 0.000000e+00" [MadgwickAHRS.cpp:145]   --->   Core 103 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 34> : 2.73ns
+ST_34 : Operation 352 [3/4] (2.73ns)   --->   "%tmp_69 = fcmp oeq float %a_load_1, 0.000000e+00" [MadgwickAHRS.cpp:145]   --->   Core 103 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 35> : 2.73ns
+ST_35 : Operation 353 [2/4] (2.73ns)   --->   "%tmp_69 = fcmp oeq float %a_load_1, 0.000000e+00" [MadgwickAHRS.cpp:145]   --->   Core 103 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 36> : 3.66ns
+ST_36 : Operation 354 [1/1] (0.00ns) (grouped into LUT with out node tmp_70)   --->   "%tmp_68 = or i1 %notrhs1, %notlhs1" [MadgwickAHRS.cpp:145]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 355 [1/4] (2.73ns)   --->   "%tmp_69 = fcmp oeq float %a_load_1, 0.000000e+00" [MadgwickAHRS.cpp:145]   --->   Core 103 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 356 [1/1] (0.93ns) (out node of the LUT)   --->   "%tmp_70 = and i1 %tmp_68, %tmp_69" [MadgwickAHRS.cpp:145]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 357 [1/1] (0.00ns)   --->   "br i1 %tmp_70, label %2, label %._crit_edge" [MadgwickAHRS.cpp:145]
+ST_36 : Operation 358 [1/1] (0.00ns)   --->   "%a_addr_2 = getelementptr [4 x float]* %a, i64 0, i64 3" [MadgwickAHRS.cpp:145]
+ST_36 : Operation 359 [2/2] (2.32ns)   --->   "%a_load_2 = load float* %a_addr_2, align 4" [MadgwickAHRS.cpp:145]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+ <State 37> : 2.32ns
+ST_37 : Operation 360 [1/2] (2.32ns)   --->   "%a_load_2 = load float* %a_addr_2, align 4" [MadgwickAHRS.cpp:145]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+ <State 38> : 2.73ns
+ST_38 : Operation 361 [1/1] (0.00ns)   --->   "%a_load_2_to_int = bitcast float %a_load_2 to i32" [MadgwickAHRS.cpp:145]
+ST_38 : Operation 362 [1/1] (0.00ns)   --->   "%tmp_71 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %a_load_2_to_int, i32 23, i32 30)" [MadgwickAHRS.cpp:145]
+ST_38 : Operation 363 [1/1] (0.00ns)   --->   "%tmp_72 = trunc i32 %a_load_2_to_int to i23" [MadgwickAHRS.cpp:145]
+ST_38 : Operation 364 [1/1] (1.55ns)   --->   "%notlhs2 = icmp ne i8 %tmp_71, -1" [MadgwickAHRS.cpp:145]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 365 [1/1] (2.44ns)   --->   "%notrhs2 = icmp eq i23 %tmp_72, 0" [MadgwickAHRS.cpp:145]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 366 [4/4] (2.73ns)   --->   "%tmp_74 = fcmp oeq float %a_load_2, 0.000000e+00" [MadgwickAHRS.cpp:145]   --->   Core 103 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 39> : 2.73ns
+ST_39 : Operation 367 [3/4] (2.73ns)   --->   "%tmp_74 = fcmp oeq float %a_load_2, 0.000000e+00" [MadgwickAHRS.cpp:145]   --->   Core 103 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 40> : 2.73ns
+ST_40 : Operation 368 [2/4] (2.73ns)   --->   "%tmp_74 = fcmp oeq float %a_load_2, 0.000000e+00" [MadgwickAHRS.cpp:145]   --->   Core 103 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 41> : 3.66ns
+ST_41 : Operation 369 [1/1] (0.00ns) (grouped into LUT with out node tmp_75)   --->   "%tmp_73 = or i1 %notrhs2, %notlhs2" [MadgwickAHRS.cpp:145]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 370 [1/4] (2.73ns)   --->   "%tmp_74 = fcmp oeq float %a_load_2, 0.000000e+00" [MadgwickAHRS.cpp:145]   --->   Core 103 'FCmp' <Latency = 3> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 371 [1/1] (0.93ns) (out node of the LUT)   --->   "%tmp_75 = and i1 %tmp_73, %tmp_74" [MadgwickAHRS.cpp:145]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+ <State 42> : 2.32ns
+ST_42 : Operation 372 [1/1] (1.76ns)   --->   "br i1 %tmp_75, label %._crit_edge2, label %._crit_edge" [MadgwickAHRS.cpp:145]
+ST_42 : Operation 373 [2/2] (2.32ns)   --->   "%q_load_4 = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 0), align 16" [MadgwickAHRS.cpp:151]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+ <State 43> : 2.32ns
+ST_43 : Operation 374 [1/2] (2.32ns)   --->   "%q_load_4 = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 0), align 16" [MadgwickAHRS.cpp:151]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+ <State 44> : 4.35ns
+ST_44 : Operation 375 [5/5] (4.35ns)   --->   "%q0q0 = fmul float %q_load_4, %q_load_4" [MadgwickAHRS.cpp:160]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 45> : 4.35ns
+ST_45 : Operation 376 [4/5] (4.35ns)   --->   "%q0q0 = fmul float %q_load_4, %q_load_4" [MadgwickAHRS.cpp:160]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 46> : 4.35ns
+ST_46 : Operation 377 [3/5] (4.35ns)   --->   "%q0q0 = fmul float %q_load_4, %q_load_4" [MadgwickAHRS.cpp:160]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 47> : 4.35ns
+ST_47 : Operation 378 [2/2] (2.32ns)   --->   "%q_load_5 = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 1), align 4" [MadgwickAHRS.cpp:152]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_47 : Operation 379 [2/2] (2.32ns)   --->   "%q_load_7 = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 3), align 4" [MadgwickAHRS.cpp:154]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_47 : Operation 380 [2/5] (4.35ns)   --->   "%q0q0 = fmul float %q_load_4, %q_load_4" [MadgwickAHRS.cpp:160]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 48> : 4.35ns
+ST_48 : Operation 381 [1/2] (2.32ns)   --->   "%q_load_5 = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 1), align 4" [MadgwickAHRS.cpp:152]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_48 : Operation 382 [1/2] (2.32ns)   --->   "%q_load_7 = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 3), align 4" [MadgwickAHRS.cpp:154]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_48 : Operation 383 [1/5] (4.35ns)   --->   "%q0q0 = fmul float %q_load_4, %q_load_4" [MadgwickAHRS.cpp:160]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 49> : 4.35ns
+ST_49 : Operation 384 [5/5] (4.35ns)   --->   "%p_2q0 = fmul float %q_load_4, 2.000000e+00" [MadgwickAHRS.cpp:151]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 385 [5/5] (4.35ns)   --->   "%p_2q3 = fmul float %q_load_7, 2.000000e+00" [MadgwickAHRS.cpp:154]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 386 [5/5] (4.35ns)   --->   "%p_4q1 = fmul float %q_load_5, 4.000000e+00" [MadgwickAHRS.cpp:156]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 387 [5/5] (4.35ns)   --->   "%q3q3 = fmul float %q_load_7, %q_load_7" [MadgwickAHRS.cpp:163]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 388 [5/5] (4.35ns)   --->   "%tmp_32 = fmul float %q0q0, 4.000000e+00" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 50> : 4.35ns
+ST_50 : Operation 389 [2/2] (1.76ns)   --->   "call fastcc void @normalise([4 x float]* %a)" [MadgwickAHRS.cpp:148]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_50 : Operation 390 [4/5] (4.35ns)   --->   "%p_2q0 = fmul float %q_load_4, 2.000000e+00" [MadgwickAHRS.cpp:151]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 391 [4/5] (4.35ns)   --->   "%p_2q3 = fmul float %q_load_7, 2.000000e+00" [MadgwickAHRS.cpp:154]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 392 [4/5] (4.35ns)   --->   "%p_4q1 = fmul float %q_load_5, 4.000000e+00" [MadgwickAHRS.cpp:156]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 393 [4/5] (4.35ns)   --->   "%q3q3 = fmul float %q_load_7, %q_load_7" [MadgwickAHRS.cpp:163]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 394 [4/5] (4.35ns)   --->   "%tmp_32 = fmul float %q0q0, 4.000000e+00" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 51> : 4.35ns
+ST_51 : Operation 395 [1/2] (0.00ns)   --->   "call fastcc void @normalise([4 x float]* %a)" [MadgwickAHRS.cpp:148]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_51 : Operation 396 [3/5] (4.35ns)   --->   "%p_2q0 = fmul float %q_load_4, 2.000000e+00" [MadgwickAHRS.cpp:151]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 397 [3/5] (4.35ns)   --->   "%p_2q3 = fmul float %q_load_7, 2.000000e+00" [MadgwickAHRS.cpp:154]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 398 [3/5] (4.35ns)   --->   "%p_4q1 = fmul float %q_load_5, 4.000000e+00" [MadgwickAHRS.cpp:156]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 399 [3/5] (4.35ns)   --->   "%q3q3 = fmul float %q_load_7, %q_load_7" [MadgwickAHRS.cpp:163]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 400 [3/5] (4.35ns)   --->   "%tmp_32 = fmul float %q0q0, 4.000000e+00" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 52> : 4.35ns
+ST_52 : Operation 401 [2/5] (4.35ns)   --->   "%p_2q0 = fmul float %q_load_4, 2.000000e+00" [MadgwickAHRS.cpp:151]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_52 : Operation 402 [2/2] (2.32ns)   --->   "%q_load_6 = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 2), align 8" [MadgwickAHRS.cpp:153]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_52 : Operation 403 [2/5] (4.35ns)   --->   "%p_2q3 = fmul float %q_load_7, 2.000000e+00" [MadgwickAHRS.cpp:154]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_52 : Operation 404 [2/5] (4.35ns)   --->   "%p_4q1 = fmul float %q_load_5, 4.000000e+00" [MadgwickAHRS.cpp:156]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_52 : Operation 405 [2/5] (4.35ns)   --->   "%q3q3 = fmul float %q_load_7, %q_load_7" [MadgwickAHRS.cpp:163]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_52 : Operation 406 [2/2] (2.32ns)   --->   "%a_load_3 = load float* %a_addr, align 4" [MadgwickAHRS.cpp:167]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_52 : Operation 407 [2/5] (4.35ns)   --->   "%tmp_32 = fmul float %q0q0, 4.000000e+00" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 53> : 4.35ns
+ST_53 : Operation 408 [1/5] (4.35ns)   --->   "%p_2q0 = fmul float %q_load_4, 2.000000e+00" [MadgwickAHRS.cpp:151]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 409 [1/2] (2.32ns)   --->   "%q_load_6 = load float* getelementptr inbounds ([4 x float]* @q, i64 0, i64 2), align 8" [MadgwickAHRS.cpp:153]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_53 : Operation 410 [1/5] (4.35ns)   --->   "%p_2q3 = fmul float %q_load_7, 2.000000e+00" [MadgwickAHRS.cpp:154]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 411 [1/5] (4.35ns)   --->   "%p_4q1 = fmul float %q_load_5, 4.000000e+00" [MadgwickAHRS.cpp:156]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 412 [1/5] (4.35ns)   --->   "%q3q3 = fmul float %q_load_7, %q_load_7" [MadgwickAHRS.cpp:163]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 413 [1/2] (2.32ns)   --->   "%a_load_3 = load float* %a_addr, align 4" [MadgwickAHRS.cpp:167]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_53 : Operation 414 [1/5] (4.35ns)   --->   "%tmp_32 = fmul float %q0q0, 4.000000e+00" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 54> : 4.35ns
+ST_54 : Operation 415 [5/5] (4.35ns)   --->   "%tmp_29 = fmul float %p_4q1, %q3q3" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_54 : Operation 416 [5/5] (4.35ns)   --->   "%tmp_30 = fmul float %p_2q3, %a_load_3" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_54 : Operation 417 [5/5] (4.35ns)   --->   "%tmp_43 = fmul float %tmp_32, %q_load_6" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_54 : Operation 418 [5/5] (4.35ns)   --->   "%tmp_44 = fmul float %p_2q0, %a_load_3" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 55> : 4.35ns
+ST_55 : Operation 419 [4/5] (4.35ns)   --->   "%tmp_29 = fmul float %p_4q1, %q3q3" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 420 [4/5] (4.35ns)   --->   "%tmp_30 = fmul float %p_2q3, %a_load_3" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 421 [4/5] (4.35ns)   --->   "%tmp_43 = fmul float %tmp_32, %q_load_6" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 422 [4/5] (4.35ns)   --->   "%tmp_44 = fmul float %p_2q0, %a_load_3" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 56> : 4.35ns
+ST_56 : Operation 423 [3/5] (4.35ns)   --->   "%tmp_29 = fmul float %p_4q1, %q3q3" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 424 [3/5] (4.35ns)   --->   "%tmp_30 = fmul float %p_2q3, %a_load_3" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 425 [3/5] (4.35ns)   --->   "%tmp_43 = fmul float %tmp_32, %q_load_6" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 426 [3/5] (4.35ns)   --->   "%tmp_44 = fmul float %p_2q0, %a_load_3" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 57> : 4.35ns
+ST_57 : Operation 427 [2/5] (4.35ns)   --->   "%tmp_29 = fmul float %p_4q1, %q3q3" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 428 [2/5] (4.35ns)   --->   "%tmp_30 = fmul float %p_2q3, %a_load_3" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 429 [2/5] (4.35ns)   --->   "%tmp_43 = fmul float %tmp_32, %q_load_6" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 430 [2/5] (4.35ns)   --->   "%tmp_44 = fmul float %p_2q0, %a_load_3" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 58> : 4.35ns
+ST_58 : Operation 431 [5/5] (4.35ns)   --->   "%p_4q2 = fmul float %q_load_6, 4.000000e+00" [MadgwickAHRS.cpp:157]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 432 [1/5] (4.35ns)   --->   "%tmp_29 = fmul float %p_4q1, %q3q3" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 433 [1/5] (4.35ns)   --->   "%tmp_30 = fmul float %p_2q3, %a_load_3" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 434 [1/5] (4.35ns)   --->   "%tmp_43 = fmul float %tmp_32, %q_load_6" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 435 [1/5] (4.35ns)   --->   "%tmp_44 = fmul float %p_2q0, %a_load_3" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 59> : 4.35ns
+ST_59 : Operation 436 [4/5] (4.35ns)   --->   "%p_4q2 = fmul float %q_load_6, 4.000000e+00" [MadgwickAHRS.cpp:157]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_59 : Operation 437 [9/9] (4.34ns)   --->   "%tmp_31 = fsub float %tmp_29, %tmp_30" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_59 : Operation 438 [9/9] (4.34ns)   --->   "%tmp_45 = fadd float %tmp_43, %tmp_44" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 60> : 4.35ns
+ST_60 : Operation 439 [3/5] (4.35ns)   --->   "%p_4q2 = fmul float %q_load_6, 4.000000e+00" [MadgwickAHRS.cpp:157]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_60 : Operation 440 [8/9] (4.34ns)   --->   "%tmp_31 = fsub float %tmp_29, %tmp_30" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_60 : Operation 441 [8/9] (4.34ns)   --->   "%tmp_45 = fadd float %tmp_43, %tmp_44" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 61> : 4.35ns
+ST_61 : Operation 442 [2/5] (4.35ns)   --->   "%p_4q2 = fmul float %q_load_6, 4.000000e+00" [MadgwickAHRS.cpp:157]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_61 : Operation 443 [7/9] (4.34ns)   --->   "%tmp_31 = fsub float %tmp_29, %tmp_30" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_61 : Operation 444 [7/9] (4.34ns)   --->   "%tmp_45 = fadd float %tmp_43, %tmp_44" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 62> : 4.35ns
+ST_62 : Operation 445 [1/5] (4.35ns)   --->   "%p_4q2 = fmul float %q_load_6, 4.000000e+00" [MadgwickAHRS.cpp:157]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_62 : Operation 446 [6/9] (4.34ns)   --->   "%tmp_31 = fsub float %tmp_29, %tmp_30" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_62 : Operation 447 [6/9] (4.34ns)   --->   "%tmp_45 = fadd float %tmp_43, %tmp_44" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 63> : 4.35ns
+ST_63 : Operation 448 [5/9] (4.34ns)   --->   "%tmp_31 = fsub float %tmp_29, %tmp_30" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_63 : Operation 449 [5/5] (4.35ns)   --->   "%tmp_33 = fmul float %tmp_32, %q_load_5" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_63 : Operation 450 [5/9] (4.34ns)   --->   "%tmp_45 = fadd float %tmp_43, %tmp_44" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_63 : Operation 451 [5/5] (4.35ns)   --->   "%tmp_46 = fmul float %p_4q2, %q3q3" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 64> : 4.35ns
+ST_64 : Operation 452 [4/9] (4.34ns)   --->   "%tmp_31 = fsub float %tmp_29, %tmp_30" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 453 [4/5] (4.35ns)   --->   "%tmp_33 = fmul float %tmp_32, %q_load_5" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 454 [4/9] (4.34ns)   --->   "%tmp_45 = fadd float %tmp_43, %tmp_44" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 455 [4/5] (4.35ns)   --->   "%tmp_46 = fmul float %p_4q2, %q3q3" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 65> : 4.35ns
+ST_65 : Operation 456 [3/9] (4.34ns)   --->   "%tmp_31 = fsub float %tmp_29, %tmp_30" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_65 : Operation 457 [3/5] (4.35ns)   --->   "%tmp_33 = fmul float %tmp_32, %q_load_5" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_65 : Operation 458 [3/9] (4.34ns)   --->   "%tmp_45 = fadd float %tmp_43, %tmp_44" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_65 : Operation 459 [3/5] (4.35ns)   --->   "%tmp_46 = fmul float %p_4q2, %q3q3" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 66> : 4.35ns
+ST_66 : Operation 460 [2/9] (4.34ns)   --->   "%tmp_31 = fsub float %tmp_29, %tmp_30" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 461 [2/5] (4.35ns)   --->   "%tmp_33 = fmul float %tmp_32, %q_load_5" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 462 [2/9] (4.34ns)   --->   "%tmp_45 = fadd float %tmp_43, %tmp_44" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 463 [2/5] (4.35ns)   --->   "%tmp_46 = fmul float %p_4q2, %q3q3" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 67> : 4.35ns
+ST_67 : Operation 464 [1/9] (4.34ns)   --->   "%tmp_31 = fsub float %tmp_29, %tmp_30" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_67 : Operation 465 [1/5] (4.35ns)   --->   "%tmp_33 = fmul float %tmp_32, %q_load_5" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_67 : Operation 466 [1/9] (4.34ns)   --->   "%tmp_45 = fadd float %tmp_43, %tmp_44" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_67 : Operation 467 [1/5] (4.35ns)   --->   "%tmp_46 = fmul float %p_4q2, %q3q3" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 68> : 4.35ns
+ST_68 : Operation 468 [9/9] (4.34ns)   --->   "%tmp_34 = fadd float %tmp_31, %tmp_33" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_68 : Operation 469 [9/9] (4.34ns)   --->   "%tmp_47 = fadd float %tmp_45, %tmp_46" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 69> : 4.35ns
+ST_69 : Operation 470 [8/9] (4.34ns)   --->   "%tmp_34 = fadd float %tmp_31, %tmp_33" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_69 : Operation 471 [8/9] (4.34ns)   --->   "%tmp_47 = fadd float %tmp_45, %tmp_46" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 70> : 4.35ns
+ST_70 : Operation 472 [1/1] (0.00ns)   --->   "%a_addr_3 = getelementptr [4 x float]* %a, i64 0, i64 2" [MadgwickAHRS.cpp:167]
+ST_70 : Operation 473 [2/2] (2.32ns)   --->   "%a_load_4 = load float* %a_addr_3, align 4" [MadgwickAHRS.cpp:167]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_70 : Operation 474 [7/9] (4.34ns)   --->   "%tmp_34 = fadd float %tmp_31, %tmp_33" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_70 : Operation 475 [7/9] (4.34ns)   --->   "%tmp_47 = fadd float %tmp_45, %tmp_46" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 71> : 4.35ns
+ST_71 : Operation 476 [1/2] (2.32ns)   --->   "%a_load_4 = load float* %a_addr_3, align 4" [MadgwickAHRS.cpp:167]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_71 : Operation 477 [6/9] (4.34ns)   --->   "%tmp_34 = fadd float %tmp_31, %tmp_33" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_71 : Operation 478 [6/9] (4.34ns)   --->   "%tmp_47 = fadd float %tmp_45, %tmp_46" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 72> : 4.35ns
+ST_72 : Operation 479 [5/9] (4.34ns)   --->   "%tmp_34 = fadd float %tmp_31, %tmp_33" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_72 : Operation 480 [5/5] (4.35ns)   --->   "%tmp_35 = fmul float %p_2q0, %a_load_4" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_72 : Operation 481 [5/9] (4.34ns)   --->   "%tmp_47 = fadd float %tmp_45, %tmp_46" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_72 : Operation 482 [5/5] (4.35ns)   --->   "%tmp_48 = fmul float %p_2q3, %a_load_4" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 73> : 4.35ns
+ST_73 : Operation 483 [4/9] (4.34ns)   --->   "%tmp_34 = fadd float %tmp_31, %tmp_33" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_73 : Operation 484 [4/5] (4.35ns)   --->   "%tmp_35 = fmul float %p_2q0, %a_load_4" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_73 : Operation 485 [4/9] (4.34ns)   --->   "%tmp_47 = fadd float %tmp_45, %tmp_46" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_73 : Operation 486 [4/5] (4.35ns)   --->   "%tmp_48 = fmul float %p_2q3, %a_load_4" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 74> : 4.35ns
+ST_74 : Operation 487 [3/9] (4.34ns)   --->   "%tmp_34 = fadd float %tmp_31, %tmp_33" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_74 : Operation 488 [3/5] (4.35ns)   --->   "%tmp_35 = fmul float %p_2q0, %a_load_4" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_74 : Operation 489 [3/9] (4.34ns)   --->   "%tmp_47 = fadd float %tmp_45, %tmp_46" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_74 : Operation 490 [3/5] (4.35ns)   --->   "%tmp_48 = fmul float %p_2q3, %a_load_4" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 75> : 4.35ns
+ST_75 : Operation 491 [2/9] (4.34ns)   --->   "%tmp_34 = fadd float %tmp_31, %tmp_33" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_75 : Operation 492 [2/5] (4.35ns)   --->   "%tmp_35 = fmul float %p_2q0, %a_load_4" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_75 : Operation 493 [2/9] (4.34ns)   --->   "%tmp_47 = fadd float %tmp_45, %tmp_46" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_75 : Operation 494 [2/5] (4.35ns)   --->   "%tmp_48 = fmul float %p_2q3, %a_load_4" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 76> : 4.35ns
+ST_76 : Operation 495 [1/9] (4.34ns)   --->   "%tmp_34 = fadd float %tmp_31, %tmp_33" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 496 [1/5] (4.35ns)   --->   "%tmp_35 = fmul float %p_2q0, %a_load_4" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 497 [1/9] (4.34ns)   --->   "%tmp_47 = fadd float %tmp_45, %tmp_46" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 498 [1/5] (4.35ns)   --->   "%tmp_48 = fmul float %p_2q3, %a_load_4" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 77> : 4.35ns
+ST_77 : Operation 499 [9/9] (4.34ns)   --->   "%tmp_36 = fsub float %tmp_34, %tmp_35" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_77 : Operation 500 [9/9] (4.34ns)   --->   "%tmp_49 = fsub float %tmp_47, %tmp_48" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 78> : 4.35ns
+ST_78 : Operation 501 [8/9] (4.34ns)   --->   "%tmp_36 = fsub float %tmp_34, %tmp_35" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_78 : Operation 502 [8/9] (4.34ns)   --->   "%tmp_49 = fsub float %tmp_47, %tmp_48" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 79> : 4.35ns
+ST_79 : Operation 503 [7/9] (4.34ns)   --->   "%tmp_36 = fsub float %tmp_34, %tmp_35" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_79 : Operation 504 [7/9] (4.34ns)   --->   "%tmp_49 = fsub float %tmp_47, %tmp_48" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 80> : 4.35ns
+ST_80 : Operation 505 [5/5] (4.35ns)   --->   "%q1q1 = fmul float %q_load_5, %q_load_5" [MadgwickAHRS.cpp:161]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_80 : Operation 506 [6/9] (4.34ns)   --->   "%tmp_36 = fsub float %tmp_34, %tmp_35" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_80 : Operation 507 [6/9] (4.34ns)   --->   "%tmp_49 = fsub float %tmp_47, %tmp_48" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 81> : 4.35ns
+ST_81 : Operation 508 [4/5] (4.35ns)   --->   "%q1q1 = fmul float %q_load_5, %q_load_5" [MadgwickAHRS.cpp:161]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_81 : Operation 509 [5/9] (4.34ns)   --->   "%tmp_36 = fsub float %tmp_34, %tmp_35" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_81 : Operation 510 [5/9] (4.34ns)   --->   "%tmp_49 = fsub float %tmp_47, %tmp_48" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 82> : 4.35ns
+ST_82 : Operation 511 [3/5] (4.35ns)   --->   "%q1q1 = fmul float %q_load_5, %q_load_5" [MadgwickAHRS.cpp:161]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_82 : Operation 512 [4/9] (4.34ns)   --->   "%tmp_36 = fsub float %tmp_34, %tmp_35" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_82 : Operation 513 [4/9] (4.34ns)   --->   "%tmp_49 = fsub float %tmp_47, %tmp_48" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 83> : 4.35ns
+ST_83 : Operation 514 [2/5] (4.35ns)   --->   "%q1q1 = fmul float %q_load_5, %q_load_5" [MadgwickAHRS.cpp:161]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_83 : Operation 515 [3/9] (4.34ns)   --->   "%tmp_36 = fsub float %tmp_34, %tmp_35" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_83 : Operation 516 [3/9] (4.34ns)   --->   "%tmp_49 = fsub float %tmp_47, %tmp_48" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 84> : 4.35ns
+ST_84 : Operation 517 [1/5] (4.35ns)   --->   "%q1q1 = fmul float %q_load_5, %q_load_5" [MadgwickAHRS.cpp:161]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_84 : Operation 518 [2/9] (4.34ns)   --->   "%tmp_36 = fsub float %tmp_34, %tmp_35" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_84 : Operation 519 [2/9] (4.34ns)   --->   "%tmp_49 = fsub float %tmp_47, %tmp_48" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 85> : 4.35ns
+ST_85 : Operation 520 [5/5] (4.35ns)   --->   "%p_2q1 = fmul float %q_load_5, 2.000000e+00" [MadgwickAHRS.cpp:152]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_85 : Operation 521 [5/5] (4.35ns)   --->   "%p_2q2 = fmul float %q_load_6, 2.000000e+00" [MadgwickAHRS.cpp:153]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_85 : Operation 522 [5/5] (4.35ns)   --->   "%p_4q0 = fmul float %q_load_4, 4.000000e+00" [MadgwickAHRS.cpp:155]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_85 : Operation 523 [5/5] (4.35ns)   --->   "%p_8q1 = fmul float %q_load_5, 8.000000e+00" [MadgwickAHRS.cpp:158]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_85 : Operation 524 [5/5] (4.35ns)   --->   "%p_8q2 = fmul float %q_load_6, 8.000000e+00" [MadgwickAHRS.cpp:159]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_85 : Operation 525 [5/5] (4.35ns)   --->   "%q2q2 = fmul float %q_load_6, %q_load_6" [MadgwickAHRS.cpp:162]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_85 : Operation 526 [1/9] (4.34ns)   --->   "%tmp_36 = fsub float %tmp_34, %tmp_35" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_85 : Operation 527 [1/9] (4.34ns)   --->   "%tmp_49 = fsub float %tmp_47, %tmp_48" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_85 : Operation 528 [5/5] (4.35ns)   --->   "%tmp_56 = fmul float %q1q1, 4.000000e+00" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 86> : 4.35ns
+ST_86 : Operation 529 [4/5] (4.35ns)   --->   "%p_2q1 = fmul float %q_load_5, 2.000000e+00" [MadgwickAHRS.cpp:152]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_86 : Operation 530 [4/5] (4.35ns)   --->   "%p_2q2 = fmul float %q_load_6, 2.000000e+00" [MadgwickAHRS.cpp:153]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_86 : Operation 531 [4/5] (4.35ns)   --->   "%p_4q0 = fmul float %q_load_4, 4.000000e+00" [MadgwickAHRS.cpp:155]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_86 : Operation 532 [4/5] (4.35ns)   --->   "%p_8q1 = fmul float %q_load_5, 8.000000e+00" [MadgwickAHRS.cpp:158]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_86 : Operation 533 [4/5] (4.35ns)   --->   "%p_8q2 = fmul float %q_load_6, 8.000000e+00" [MadgwickAHRS.cpp:159]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_86 : Operation 534 [4/5] (4.35ns)   --->   "%q2q2 = fmul float %q_load_6, %q_load_6" [MadgwickAHRS.cpp:162]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_86 : Operation 535 [9/9] (4.34ns)   --->   "%tmp_37 = fsub float %tmp_36, %p_4q1" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_86 : Operation 536 [9/9] (4.34ns)   --->   "%tmp_50 = fsub float %tmp_49, %p_4q2" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_86 : Operation 537 [4/5] (4.35ns)   --->   "%tmp_56 = fmul float %q1q1, 4.000000e+00" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 87> : 4.35ns
+ST_87 : Operation 538 [3/5] (4.35ns)   --->   "%p_2q1 = fmul float %q_load_5, 2.000000e+00" [MadgwickAHRS.cpp:152]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_87 : Operation 539 [3/5] (4.35ns)   --->   "%p_2q2 = fmul float %q_load_6, 2.000000e+00" [MadgwickAHRS.cpp:153]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_87 : Operation 540 [3/5] (4.35ns)   --->   "%p_4q0 = fmul float %q_load_4, 4.000000e+00" [MadgwickAHRS.cpp:155]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_87 : Operation 541 [3/5] (4.35ns)   --->   "%p_8q1 = fmul float %q_load_5, 8.000000e+00" [MadgwickAHRS.cpp:158]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_87 : Operation 542 [3/5] (4.35ns)   --->   "%p_8q2 = fmul float %q_load_6, 8.000000e+00" [MadgwickAHRS.cpp:159]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_87 : Operation 543 [3/5] (4.35ns)   --->   "%q2q2 = fmul float %q_load_6, %q_load_6" [MadgwickAHRS.cpp:162]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_87 : Operation 544 [8/9] (4.34ns)   --->   "%tmp_37 = fsub float %tmp_36, %p_4q1" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_87 : Operation 545 [8/9] (4.34ns)   --->   "%tmp_50 = fsub float %tmp_49, %p_4q2" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_87 : Operation 546 [3/5] (4.35ns)   --->   "%tmp_56 = fmul float %q1q1, 4.000000e+00" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 88> : 4.35ns
+ST_88 : Operation 547 [2/5] (4.35ns)   --->   "%p_2q1 = fmul float %q_load_5, 2.000000e+00" [MadgwickAHRS.cpp:152]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 548 [2/5] (4.35ns)   --->   "%p_2q2 = fmul float %q_load_6, 2.000000e+00" [MadgwickAHRS.cpp:153]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 549 [2/5] (4.35ns)   --->   "%p_4q0 = fmul float %q_load_4, 4.000000e+00" [MadgwickAHRS.cpp:155]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 550 [2/5] (4.35ns)   --->   "%p_8q1 = fmul float %q_load_5, 8.000000e+00" [MadgwickAHRS.cpp:158]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 551 [2/5] (4.35ns)   --->   "%p_8q2 = fmul float %q_load_6, 8.000000e+00" [MadgwickAHRS.cpp:159]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 552 [2/5] (4.35ns)   --->   "%q2q2 = fmul float %q_load_6, %q_load_6" [MadgwickAHRS.cpp:162]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 553 [7/9] (4.34ns)   --->   "%tmp_37 = fsub float %tmp_36, %p_4q1" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 554 [7/9] (4.34ns)   --->   "%tmp_50 = fsub float %tmp_49, %p_4q2" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 555 [2/5] (4.35ns)   --->   "%tmp_56 = fmul float %q1q1, 4.000000e+00" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 89> : 4.35ns
+ST_89 : Operation 556 [1/5] (4.35ns)   --->   "%p_2q1 = fmul float %q_load_5, 2.000000e+00" [MadgwickAHRS.cpp:152]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_89 : Operation 557 [1/5] (4.35ns)   --->   "%p_2q2 = fmul float %q_load_6, 2.000000e+00" [MadgwickAHRS.cpp:153]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_89 : Operation 558 [1/5] (4.35ns)   --->   "%p_4q0 = fmul float %q_load_4, 4.000000e+00" [MadgwickAHRS.cpp:155]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_89 : Operation 559 [1/5] (4.35ns)   --->   "%p_8q1 = fmul float %q_load_5, 8.000000e+00" [MadgwickAHRS.cpp:158]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_89 : Operation 560 [1/5] (4.35ns)   --->   "%p_8q2 = fmul float %q_load_6, 8.000000e+00" [MadgwickAHRS.cpp:159]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_89 : Operation 561 [1/5] (4.35ns)   --->   "%q2q2 = fmul float %q_load_6, %q_load_6" [MadgwickAHRS.cpp:162]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_89 : Operation 562 [6/9] (4.34ns)   --->   "%tmp_37 = fsub float %tmp_36, %p_4q1" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_89 : Operation 563 [6/9] (4.34ns)   --->   "%tmp_50 = fsub float %tmp_49, %p_4q2" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_89 : Operation 564 [1/5] (4.35ns)   --->   "%tmp_56 = fmul float %q1q1, 4.000000e+00" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 90> : 4.35ns
+ST_90 : Operation 565 [5/5] (4.35ns)   --->   "%tmp_23 = fmul float %p_4q0, %q2q2" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_90 : Operation 566 [5/5] (4.35ns)   --->   "%tmp_24 = fmul float %p_2q2, %a_load_3" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_90 : Operation 567 [5/5] (4.35ns)   --->   "%tmp_26 = fmul float %p_4q0, %q1q1" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_90 : Operation 568 [5/5] (4.35ns)   --->   "%tmp_28 = fmul float %p_2q1, %a_load_4" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_90 : Operation 569 [5/9] (4.34ns)   --->   "%tmp_37 = fsub float %tmp_36, %p_4q1" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_90 : Operation 570 [5/5] (4.35ns)   --->   "%tmp_38 = fmul float %p_8q1, %q1q1" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_90 : Operation 571 [5/5] (4.35ns)   --->   "%tmp_40 = fmul float %p_8q1, %q2q2" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_90 : Operation 572 [5/9] (4.34ns)   --->   "%tmp_50 = fsub float %tmp_49, %p_4q2" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_90 : Operation 573 [5/5] (4.35ns)   --->   "%tmp_51 = fmul float %p_8q2, %q1q1" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_90 : Operation 574 [5/5] (4.35ns)   --->   "%tmp_53 = fmul float %p_8q2, %q2q2" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_90 : Operation 575 [5/5] (4.35ns)   --->   "%tmp_57 = fmul float %tmp_56, %q_load_7" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_90 : Operation 576 [5/5] (4.35ns)   --->   "%tmp_58 = fmul float %p_2q1, %a_load_3" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_90 : Operation 577 [5/5] (4.35ns)   --->   "%tmp_60 = fmul float %q2q2, 4.000000e+00" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_90 : Operation 578 [5/5] (4.35ns)   --->   "%tmp_63 = fmul float %p_2q2, %a_load_4" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 91> : 4.35ns
+ST_91 : Operation 579 [4/5] (4.35ns)   --->   "%tmp_23 = fmul float %p_4q0, %q2q2" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_91 : Operation 580 [4/5] (4.35ns)   --->   "%tmp_24 = fmul float %p_2q2, %a_load_3" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_91 : Operation 581 [4/5] (4.35ns)   --->   "%tmp_26 = fmul float %p_4q0, %q1q1" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_91 : Operation 582 [4/5] (4.35ns)   --->   "%tmp_28 = fmul float %p_2q1, %a_load_4" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_91 : Operation 583 [4/9] (4.34ns)   --->   "%tmp_37 = fsub float %tmp_36, %p_4q1" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_91 : Operation 584 [4/5] (4.35ns)   --->   "%tmp_38 = fmul float %p_8q1, %q1q1" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_91 : Operation 585 [4/5] (4.35ns)   --->   "%tmp_40 = fmul float %p_8q1, %q2q2" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_91 : Operation 586 [4/9] (4.34ns)   --->   "%tmp_50 = fsub float %tmp_49, %p_4q2" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_91 : Operation 587 [4/5] (4.35ns)   --->   "%tmp_51 = fmul float %p_8q2, %q1q1" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_91 : Operation 588 [4/5] (4.35ns)   --->   "%tmp_53 = fmul float %p_8q2, %q2q2" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_91 : Operation 589 [4/5] (4.35ns)   --->   "%tmp_57 = fmul float %tmp_56, %q_load_7" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_91 : Operation 590 [4/5] (4.35ns)   --->   "%tmp_58 = fmul float %p_2q1, %a_load_3" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_91 : Operation 591 [4/5] (4.35ns)   --->   "%tmp_60 = fmul float %q2q2, 4.000000e+00" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_91 : Operation 592 [4/5] (4.35ns)   --->   "%tmp_63 = fmul float %p_2q2, %a_load_4" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 92> : 4.35ns
+ST_92 : Operation 593 [3/5] (4.35ns)   --->   "%tmp_23 = fmul float %p_4q0, %q2q2" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_92 : Operation 594 [3/5] (4.35ns)   --->   "%tmp_24 = fmul float %p_2q2, %a_load_3" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_92 : Operation 595 [3/5] (4.35ns)   --->   "%tmp_26 = fmul float %p_4q0, %q1q1" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_92 : Operation 596 [3/5] (4.35ns)   --->   "%tmp_28 = fmul float %p_2q1, %a_load_4" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_92 : Operation 597 [3/9] (4.34ns)   --->   "%tmp_37 = fsub float %tmp_36, %p_4q1" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_92 : Operation 598 [3/5] (4.35ns)   --->   "%tmp_38 = fmul float %p_8q1, %q1q1" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_92 : Operation 599 [3/5] (4.35ns)   --->   "%tmp_40 = fmul float %p_8q1, %q2q2" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_92 : Operation 600 [3/9] (4.34ns)   --->   "%tmp_50 = fsub float %tmp_49, %p_4q2" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_92 : Operation 601 [3/5] (4.35ns)   --->   "%tmp_51 = fmul float %p_8q2, %q1q1" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_92 : Operation 602 [3/5] (4.35ns)   --->   "%tmp_53 = fmul float %p_8q2, %q2q2" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_92 : Operation 603 [3/5] (4.35ns)   --->   "%tmp_57 = fmul float %tmp_56, %q_load_7" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_92 : Operation 604 [3/5] (4.35ns)   --->   "%tmp_58 = fmul float %p_2q1, %a_load_3" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_92 : Operation 605 [3/5] (4.35ns)   --->   "%tmp_60 = fmul float %q2q2, 4.000000e+00" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_92 : Operation 606 [3/5] (4.35ns)   --->   "%tmp_63 = fmul float %p_2q2, %a_load_4" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 93> : 4.35ns
+ST_93 : Operation 607 [2/5] (4.35ns)   --->   "%tmp_23 = fmul float %p_4q0, %q2q2" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_93 : Operation 608 [2/5] (4.35ns)   --->   "%tmp_24 = fmul float %p_2q2, %a_load_3" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_93 : Operation 609 [2/5] (4.35ns)   --->   "%tmp_26 = fmul float %p_4q0, %q1q1" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_93 : Operation 610 [2/5] (4.35ns)   --->   "%tmp_28 = fmul float %p_2q1, %a_load_4" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_93 : Operation 611 [2/9] (4.34ns)   --->   "%tmp_37 = fsub float %tmp_36, %p_4q1" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_93 : Operation 612 [2/5] (4.35ns)   --->   "%tmp_38 = fmul float %p_8q1, %q1q1" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_93 : Operation 613 [2/5] (4.35ns)   --->   "%tmp_40 = fmul float %p_8q1, %q2q2" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_93 : Operation 614 [2/9] (4.34ns)   --->   "%tmp_50 = fsub float %tmp_49, %p_4q2" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_93 : Operation 615 [2/5] (4.35ns)   --->   "%tmp_51 = fmul float %p_8q2, %q1q1" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_93 : Operation 616 [2/5] (4.35ns)   --->   "%tmp_53 = fmul float %p_8q2, %q2q2" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_93 : Operation 617 [2/5] (4.35ns)   --->   "%tmp_57 = fmul float %tmp_56, %q_load_7" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_93 : Operation 618 [2/5] (4.35ns)   --->   "%tmp_58 = fmul float %p_2q1, %a_load_3" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_93 : Operation 619 [2/5] (4.35ns)   --->   "%tmp_60 = fmul float %q2q2, 4.000000e+00" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_93 : Operation 620 [2/5] (4.35ns)   --->   "%tmp_63 = fmul float %p_2q2, %a_load_4" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 94> : 4.35ns
+ST_94 : Operation 621 [1/5] (4.35ns)   --->   "%tmp_23 = fmul float %p_4q0, %q2q2" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 622 [1/5] (4.35ns)   --->   "%tmp_24 = fmul float %p_2q2, %a_load_3" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 623 [1/5] (4.35ns)   --->   "%tmp_26 = fmul float %p_4q0, %q1q1" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 624 [1/5] (4.35ns)   --->   "%tmp_28 = fmul float %p_2q1, %a_load_4" [MadgwickAHRS.cpp:167]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 625 [1/9] (4.34ns)   --->   "%tmp_37 = fsub float %tmp_36, %p_4q1" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 626 [1/5] (4.35ns)   --->   "%tmp_38 = fmul float %p_8q1, %q1q1" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 627 [1/5] (4.35ns)   --->   "%tmp_40 = fmul float %p_8q1, %q2q2" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 628 [1/9] (4.34ns)   --->   "%tmp_50 = fsub float %tmp_49, %p_4q2" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 629 [1/5] (4.35ns)   --->   "%tmp_51 = fmul float %p_8q2, %q1q1" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 630 [1/5] (4.35ns)   --->   "%tmp_53 = fmul float %p_8q2, %q2q2" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 631 [1/5] (4.35ns)   --->   "%tmp_57 = fmul float %tmp_56, %q_load_7" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 632 [1/5] (4.35ns)   --->   "%tmp_58 = fmul float %p_2q1, %a_load_3" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 633 [1/5] (4.35ns)   --->   "%tmp_60 = fmul float %q2q2, 4.000000e+00" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 634 [1/5] (4.35ns)   --->   "%tmp_63 = fmul float %p_2q2, %a_load_4" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 95> : 4.35ns
+ST_95 : Operation 635 [9/9] (4.34ns)   --->   "%tmp_25 = fadd float %tmp_23, %tmp_24" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_95 : Operation 636 [9/9] (4.34ns)   --->   "%tmp_39 = fadd float %tmp_37, %tmp_38" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_95 : Operation 637 [9/9] (4.34ns)   --->   "%tmp_52 = fadd float %tmp_50, %tmp_51" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_95 : Operation 638 [9/9] (4.34ns)   --->   "%tmp_59 = fsub float %tmp_57, %tmp_58" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_95 : Operation 639 [5/5] (4.35ns)   --->   "%tmp_61 = fmul float %tmp_60, %q_load_7" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 96> : 4.35ns
+ST_96 : Operation 640 [8/9] (4.34ns)   --->   "%tmp_25 = fadd float %tmp_23, %tmp_24" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_96 : Operation 641 [8/9] (4.34ns)   --->   "%tmp_39 = fadd float %tmp_37, %tmp_38" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_96 : Operation 642 [8/9] (4.34ns)   --->   "%tmp_52 = fadd float %tmp_50, %tmp_51" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_96 : Operation 643 [8/9] (4.34ns)   --->   "%tmp_59 = fsub float %tmp_57, %tmp_58" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_96 : Operation 644 [4/5] (4.35ns)   --->   "%tmp_61 = fmul float %tmp_60, %q_load_7" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 97> : 4.35ns
+ST_97 : Operation 645 [7/9] (4.34ns)   --->   "%tmp_25 = fadd float %tmp_23, %tmp_24" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_97 : Operation 646 [7/9] (4.34ns)   --->   "%tmp_39 = fadd float %tmp_37, %tmp_38" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_97 : Operation 647 [7/9] (4.34ns)   --->   "%tmp_52 = fadd float %tmp_50, %tmp_51" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_97 : Operation 648 [7/9] (4.34ns)   --->   "%tmp_59 = fsub float %tmp_57, %tmp_58" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_97 : Operation 649 [3/5] (4.35ns)   --->   "%tmp_61 = fmul float %tmp_60, %q_load_7" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 98> : 4.35ns
+ST_98 : Operation 650 [6/9] (4.34ns)   --->   "%tmp_25 = fadd float %tmp_23, %tmp_24" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_98 : Operation 651 [6/9] (4.34ns)   --->   "%tmp_39 = fadd float %tmp_37, %tmp_38" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_98 : Operation 652 [6/9] (4.34ns)   --->   "%tmp_52 = fadd float %tmp_50, %tmp_51" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_98 : Operation 653 [6/9] (4.34ns)   --->   "%tmp_59 = fsub float %tmp_57, %tmp_58" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_98 : Operation 654 [2/5] (4.35ns)   --->   "%tmp_61 = fmul float %tmp_60, %q_load_7" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 99> : 4.35ns
+ST_99 : Operation 655 [5/9] (4.34ns)   --->   "%tmp_25 = fadd float %tmp_23, %tmp_24" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_99 : Operation 656 [5/9] (4.34ns)   --->   "%tmp_39 = fadd float %tmp_37, %tmp_38" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_99 : Operation 657 [5/9] (4.34ns)   --->   "%tmp_52 = fadd float %tmp_50, %tmp_51" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_99 : Operation 658 [5/9] (4.34ns)   --->   "%tmp_59 = fsub float %tmp_57, %tmp_58" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_99 : Operation 659 [1/5] (4.35ns)   --->   "%tmp_61 = fmul float %tmp_60, %q_load_7" [MadgwickAHRS.cpp:173]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 100> : 4.35ns
+ST_100 : Operation 660 [4/9] (4.34ns)   --->   "%tmp_25 = fadd float %tmp_23, %tmp_24" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_100 : Operation 661 [4/9] (4.34ns)   --->   "%tmp_39 = fadd float %tmp_37, %tmp_38" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_100 : Operation 662 [4/9] (4.34ns)   --->   "%tmp_52 = fadd float %tmp_50, %tmp_51" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_100 : Operation 663 [4/9] (4.34ns)   --->   "%tmp_59 = fsub float %tmp_57, %tmp_58" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 101> : 4.35ns
+ST_101 : Operation 664 [3/9] (4.34ns)   --->   "%tmp_25 = fadd float %tmp_23, %tmp_24" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_101 : Operation 665 [3/9] (4.34ns)   --->   "%tmp_39 = fadd float %tmp_37, %tmp_38" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_101 : Operation 666 [3/9] (4.34ns)   --->   "%tmp_52 = fadd float %tmp_50, %tmp_51" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_101 : Operation 667 [3/9] (4.34ns)   --->   "%tmp_59 = fsub float %tmp_57, %tmp_58" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 102> : 4.35ns
+ST_102 : Operation 668 [2/9] (4.34ns)   --->   "%tmp_25 = fadd float %tmp_23, %tmp_24" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_102 : Operation 669 [2/9] (4.34ns)   --->   "%tmp_39 = fadd float %tmp_37, %tmp_38" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_102 : Operation 670 [2/9] (4.34ns)   --->   "%tmp_52 = fadd float %tmp_50, %tmp_51" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_102 : Operation 671 [2/9] (4.34ns)   --->   "%tmp_59 = fsub float %tmp_57, %tmp_58" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 103> : 4.35ns
+ST_103 : Operation 672 [1/9] (4.34ns)   --->   "%tmp_25 = fadd float %tmp_23, %tmp_24" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_103 : Operation 673 [1/9] (4.34ns)   --->   "%tmp_39 = fadd float %tmp_37, %tmp_38" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_103 : Operation 674 [1/9] (4.34ns)   --->   "%tmp_52 = fadd float %tmp_50, %tmp_51" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_103 : Operation 675 [1/9] (4.34ns)   --->   "%tmp_59 = fsub float %tmp_57, %tmp_58" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 104> : 4.35ns
+ST_104 : Operation 676 [9/9] (4.34ns)   --->   "%tmp_27 = fadd float %tmp_25, %tmp_26" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_104 : Operation 677 [9/9] (4.34ns)   --->   "%tmp_41 = fadd float %tmp_39, %tmp_40" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_104 : Operation 678 [9/9] (4.34ns)   --->   "%tmp_54 = fadd float %tmp_52, %tmp_53" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_104 : Operation 679 [9/9] (4.34ns)   --->   "%tmp_62 = fadd float %tmp_59, %tmp_61" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 105> : 4.35ns
+ST_105 : Operation 680 [8/9] (4.34ns)   --->   "%tmp_27 = fadd float %tmp_25, %tmp_26" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_105 : Operation 681 [8/9] (4.34ns)   --->   "%tmp_41 = fadd float %tmp_39, %tmp_40" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_105 : Operation 682 [8/9] (4.34ns)   --->   "%tmp_54 = fadd float %tmp_52, %tmp_53" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_105 : Operation 683 [8/9] (4.34ns)   --->   "%tmp_62 = fadd float %tmp_59, %tmp_61" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 106> : 4.35ns
+ST_106 : Operation 684 [7/9] (4.34ns)   --->   "%tmp_27 = fadd float %tmp_25, %tmp_26" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_106 : Operation 685 [7/9] (4.34ns)   --->   "%tmp_41 = fadd float %tmp_39, %tmp_40" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_106 : Operation 686 [1/1] (0.00ns)   --->   "%a_addr_4 = getelementptr [4 x float]* %a, i64 0, i64 3" [MadgwickAHRS.cpp:169]
+ST_106 : Operation 687 [2/2] (2.32ns)   --->   "%a_load_5 = load float* %a_addr_4, align 4" [MadgwickAHRS.cpp:169]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_106 : Operation 688 [7/9] (4.34ns)   --->   "%tmp_54 = fadd float %tmp_52, %tmp_53" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_106 : Operation 689 [7/9] (4.34ns)   --->   "%tmp_62 = fadd float %tmp_59, %tmp_61" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 107> : 4.35ns
+ST_107 : Operation 690 [6/9] (4.34ns)   --->   "%tmp_27 = fadd float %tmp_25, %tmp_26" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_107 : Operation 691 [6/9] (4.34ns)   --->   "%tmp_41 = fadd float %tmp_39, %tmp_40" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_107 : Operation 692 [1/2] (2.32ns)   --->   "%a_load_5 = load float* %a_addr_4, align 4" [MadgwickAHRS.cpp:169]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_107 : Operation 693 [6/9] (4.34ns)   --->   "%tmp_54 = fadd float %tmp_52, %tmp_53" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_107 : Operation 694 [6/9] (4.34ns)   --->   "%tmp_62 = fadd float %tmp_59, %tmp_61" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 108> : 4.35ns
+ST_108 : Operation 695 [5/9] (4.34ns)   --->   "%tmp_27 = fadd float %tmp_25, %tmp_26" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_108 : Operation 696 [5/9] (4.34ns)   --->   "%tmp_41 = fadd float %tmp_39, %tmp_40" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_108 : Operation 697 [5/5] (4.35ns)   --->   "%tmp_42 = fmul float %p_4q1, %a_load_5" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_108 : Operation 698 [5/9] (4.34ns)   --->   "%tmp_54 = fadd float %tmp_52, %tmp_53" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_108 : Operation 699 [5/5] (4.35ns)   --->   "%tmp_55 = fmul float %p_4q2, %a_load_5" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_108 : Operation 700 [5/9] (4.34ns)   --->   "%tmp_62 = fadd float %tmp_59, %tmp_61" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 109> : 4.35ns
+ST_109 : Operation 701 [4/9] (4.34ns)   --->   "%tmp_27 = fadd float %tmp_25, %tmp_26" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_109 : Operation 702 [4/9] (4.34ns)   --->   "%tmp_41 = fadd float %tmp_39, %tmp_40" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_109 : Operation 703 [4/5] (4.35ns)   --->   "%tmp_42 = fmul float %p_4q1, %a_load_5" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_109 : Operation 704 [4/9] (4.34ns)   --->   "%tmp_54 = fadd float %tmp_52, %tmp_53" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_109 : Operation 705 [4/5] (4.35ns)   --->   "%tmp_55 = fmul float %p_4q2, %a_load_5" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_109 : Operation 706 [4/9] (4.34ns)   --->   "%tmp_62 = fadd float %tmp_59, %tmp_61" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 110> : 4.35ns
+ST_110 : Operation 707 [3/9] (4.34ns)   --->   "%tmp_27 = fadd float %tmp_25, %tmp_26" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_110 : Operation 708 [3/9] (4.34ns)   --->   "%tmp_41 = fadd float %tmp_39, %tmp_40" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_110 : Operation 709 [3/5] (4.35ns)   --->   "%tmp_42 = fmul float %p_4q1, %a_load_5" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_110 : Operation 710 [3/9] (4.34ns)   --->   "%tmp_54 = fadd float %tmp_52, %tmp_53" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_110 : Operation 711 [3/5] (4.35ns)   --->   "%tmp_55 = fmul float %p_4q2, %a_load_5" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_110 : Operation 712 [3/9] (4.34ns)   --->   "%tmp_62 = fadd float %tmp_59, %tmp_61" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 111> : 4.35ns
+ST_111 : Operation 713 [2/9] (4.34ns)   --->   "%tmp_27 = fadd float %tmp_25, %tmp_26" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_111 : Operation 714 [2/9] (4.34ns)   --->   "%tmp_41 = fadd float %tmp_39, %tmp_40" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_111 : Operation 715 [2/5] (4.35ns)   --->   "%tmp_42 = fmul float %p_4q1, %a_load_5" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_111 : Operation 716 [2/9] (4.34ns)   --->   "%tmp_54 = fadd float %tmp_52, %tmp_53" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_111 : Operation 717 [2/5] (4.35ns)   --->   "%tmp_55 = fmul float %p_4q2, %a_load_5" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_111 : Operation 718 [2/9] (4.34ns)   --->   "%tmp_62 = fadd float %tmp_59, %tmp_61" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 112> : 4.35ns
+ST_112 : Operation 719 [1/9] (4.34ns)   --->   "%tmp_27 = fadd float %tmp_25, %tmp_26" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_112 : Operation 720 [1/9] (4.34ns)   --->   "%tmp_41 = fadd float %tmp_39, %tmp_40" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_112 : Operation 721 [1/5] (4.35ns)   --->   "%tmp_42 = fmul float %p_4q1, %a_load_5" [MadgwickAHRS.cpp:169]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_112 : Operation 722 [1/9] (4.34ns)   --->   "%tmp_54 = fadd float %tmp_52, %tmp_53" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_112 : Operation 723 [1/5] (4.35ns)   --->   "%tmp_55 = fmul float %p_4q2, %a_load_5" [MadgwickAHRS.cpp:171]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_112 : Operation 724 [1/9] (4.34ns)   --->   "%tmp_62 = fadd float %tmp_59, %tmp_61" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 113> : 4.35ns
+ST_113 : Operation 725 [9/9] (4.34ns)   --->   "%s_0 = fsub float %tmp_27, %tmp_28" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_113 : Operation 726 [9/9] (4.34ns)   --->   "%s_1 = fadd float %tmp_41, %tmp_42" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_113 : Operation 727 [9/9] (4.34ns)   --->   "%s_2 = fadd float %tmp_54, %tmp_55" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_113 : Operation 728 [9/9] (4.34ns)   --->   "%s_3 = fsub float %tmp_62, %tmp_63" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 114> : 4.35ns
+ST_114 : Operation 729 [8/9] (4.34ns)   --->   "%s_0 = fsub float %tmp_27, %tmp_28" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_114 : Operation 730 [8/9] (4.34ns)   --->   "%s_1 = fadd float %tmp_41, %tmp_42" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_114 : Operation 731 [8/9] (4.34ns)   --->   "%s_2 = fadd float %tmp_54, %tmp_55" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_114 : Operation 732 [8/9] (4.34ns)   --->   "%s_3 = fsub float %tmp_62, %tmp_63" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 115> : 4.35ns
+ST_115 : Operation 733 [7/9] (4.34ns)   --->   "%s_0 = fsub float %tmp_27, %tmp_28" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_115 : Operation 734 [7/9] (4.34ns)   --->   "%s_1 = fadd float %tmp_41, %tmp_42" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_115 : Operation 735 [7/9] (4.34ns)   --->   "%s_2 = fadd float %tmp_54, %tmp_55" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_115 : Operation 736 [7/9] (4.34ns)   --->   "%s_3 = fsub float %tmp_62, %tmp_63" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 116> : 4.35ns
+ST_116 : Operation 737 [6/9] (4.34ns)   --->   "%s_0 = fsub float %tmp_27, %tmp_28" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_116 : Operation 738 [6/9] (4.34ns)   --->   "%s_1 = fadd float %tmp_41, %tmp_42" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_116 : Operation 739 [6/9] (4.34ns)   --->   "%s_2 = fadd float %tmp_54, %tmp_55" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_116 : Operation 740 [6/9] (4.34ns)   --->   "%s_3 = fsub float %tmp_62, %tmp_63" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 117> : 4.35ns
+ST_117 : Operation 741 [5/9] (4.34ns)   --->   "%s_0 = fsub float %tmp_27, %tmp_28" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_117 : Operation 742 [5/9] (4.34ns)   --->   "%s_1 = fadd float %tmp_41, %tmp_42" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_117 : Operation 743 [5/9] (4.34ns)   --->   "%s_2 = fadd float %tmp_54, %tmp_55" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_117 : Operation 744 [5/9] (4.34ns)   --->   "%s_3 = fsub float %tmp_62, %tmp_63" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 118> : 4.35ns
+ST_118 : Operation 745 [4/9] (4.34ns)   --->   "%s_0 = fsub float %tmp_27, %tmp_28" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_118 : Operation 746 [4/9] (4.34ns)   --->   "%s_1 = fadd float %tmp_41, %tmp_42" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_118 : Operation 747 [4/9] (4.34ns)   --->   "%s_2 = fadd float %tmp_54, %tmp_55" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_118 : Operation 748 [4/9] (4.34ns)   --->   "%s_3 = fsub float %tmp_62, %tmp_63" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 119> : 4.35ns
+ST_119 : Operation 749 [3/9] (4.34ns)   --->   "%s_0 = fsub float %tmp_27, %tmp_28" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_119 : Operation 750 [3/9] (4.34ns)   --->   "%s_1 = fadd float %tmp_41, %tmp_42" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_119 : Operation 751 [3/9] (4.34ns)   --->   "%s_2 = fadd float %tmp_54, %tmp_55" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_119 : Operation 752 [3/9] (4.34ns)   --->   "%s_3 = fsub float %tmp_62, %tmp_63" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 120> : 4.35ns
+ST_120 : Operation 753 [2/9] (4.34ns)   --->   "%s_0 = fsub float %tmp_27, %tmp_28" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_120 : Operation 754 [2/9] (4.34ns)   --->   "%s_1 = fadd float %tmp_41, %tmp_42" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_120 : Operation 755 [2/9] (4.34ns)   --->   "%s_2 = fadd float %tmp_54, %tmp_55" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_120 : Operation 756 [2/9] (4.34ns)   --->   "%s_3 = fsub float %tmp_62, %tmp_63" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 121> : 4.35ns
+ST_121 : Operation 757 [1/9] (4.34ns)   --->   "%s_0 = fsub float %tmp_27, %tmp_28" [MadgwickAHRS.cpp:167]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_121 : Operation 758 [1/9] (4.34ns)   --->   "%s_1 = fadd float %tmp_41, %tmp_42" [MadgwickAHRS.cpp:169]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_121 : Operation 759 [1/9] (4.34ns)   --->   "%s_2 = fadd float %tmp_54, %tmp_55" [MadgwickAHRS.cpp:171]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_121 : Operation 760 [1/9] (4.34ns)   --->   "%s_3 = fsub float %tmp_62, %tmp_63" [MadgwickAHRS.cpp:173]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_121 : Operation 761 [2/2] (0.00ns)   --->   "%call_ret = call fastcc { float, float, float } @normalise.1(float %s_0, float %s_1, float %s_2, float %s_3)" [MadgwickAHRS.cpp:176]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 122> : 1.77ns
+ST_122 : Operation 762 [1/2] (1.37ns)   --->   "%call_ret = call fastcc { float, float, float } @normalise.1(float %s_0, float %s_1, float %s_2, float %s_3)" [MadgwickAHRS.cpp:176]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_122 : Operation 763 [1/1] (0.00ns)   --->   "%s_2_1 = extractvalue { float, float, float } %call_ret, 1" [MadgwickAHRS.cpp:176]
+ST_122 : Operation 764 [1/1] (0.00ns)   --->   "%s_1_1 = extractvalue { float, float, float } %call_ret, 0" [MadgwickAHRS.cpp:176]
+ST_122 : Operation 765 [1/1] (0.00ns)   --->   "%s_0_1 = extractvalue { float, float, float } %call_ret, 2" [MadgwickAHRS.cpp:176]
+ST_122 : Operation 766 [1/1] (0.00ns)   --->   "%beta_load = load float* @beta, align 4" [MadgwickAHRS.cpp:179]
+ST_122 : Operation 767 [1/1] (1.76ns)   --->   "br label %3" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]
+
+ <State 123> : 1.96ns
+ST_123 : Operation 768 [1/1] (0.00ns)   --->   "%qDot_3_3 = phi float [ %qDot_0, %._crit_edge ], [ %qDot_3_4, %_ifconv ]"
+ST_123 : Operation 769 [1/1] (0.00ns)   --->   "%qDot_3_5 = phi float [ %qDot_1, %._crit_edge ], [ %qDot_3_7, %_ifconv ]"
+ST_123 : Operation 770 [1/1] (0.00ns)   --->   "%qDot_2_2 = phi float [ %qDot_2, %._crit_edge ], [ %qDot_3_10, %_ifconv ]"
+ST_123 : Operation 771 [1/1] (0.00ns)   --->   "%qDot_31 = phi float [ %qDot_3, %._crit_edge ], [ %qDot_3_13, %_ifconv ]"
+ST_123 : Operation 772 [1/1] (0.00ns)   --->   "%i_i = phi i3 [ 0, %._crit_edge ], [ %i, %_ifconv ]"
+ST_123 : Operation 773 [1/1] (1.13ns)   --->   "%exitcond_i = icmp eq i3 %i_i, -4" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_123 : Operation 774 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"
+ST_123 : Operation 775 [1/1] (1.65ns)   --->   "%i = add i3 %i_i, 1" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_123 : Operation 776 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %._crit_edge2.loopexit, label %_ifconv" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]
+ST_123 : Operation 777 [1/1] (0.00ns)   --->   "%tmp_79 = trunc i3 %i_i to i2" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]
+ST_123 : Operation 778 [1/1] (1.95ns)   --->   "%tmp_76 = call float @_ssdm_op_Mux.ap_auto.4float.i2(float %s_0_1, float %s_1_1, float %s_2_1, float %s_3, i2 %tmp_79)" [MadgwickAHRS.cpp:176]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_123 : Operation 779 [1/1] (1.76ns)   --->   "br label %._crit_edge2"
+ST_123 : Operation 780 [1/1] (0.00ns)   --->   "%qDot_0_s = phi float [ %qDot_0, %2 ], [ %qDot_3_3, %._crit_edge2.loopexit ]"
+ST_123 : Operation 781 [1/1] (0.00ns)   --->   "%qDot_1_2 = phi float [ %qDot_1, %2 ], [ %qDot_3_5, %._crit_edge2.loopexit ]"
+ST_123 : Operation 782 [1/1] (0.00ns)   --->   "%qDot_2_2_2 = phi float [ %qDot_2, %2 ], [ %qDot_2_2, %._crit_edge2.loopexit ]"
+ST_123 : Operation 783 [1/1] (0.00ns)   --->   "%qDot_3_2 = phi float [ %qDot_3, %2 ], [ %qDot_31, %._crit_edge2.loopexit ]"
+ST_123 : Operation 784 [1/1] (1.76ns)   --->   "br label %4" [MadgwickAHRS.cpp:239->MadgwickAHRS.cpp:183]
+
+ <State 124> : 4.35ns
+ST_124 : Operation 785 [5/5] (4.35ns)   --->   "%tmp_i = fmul float %tmp_76, %beta_load" [MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 125> : 4.35ns
+ST_125 : Operation 786 [4/5] (4.35ns)   --->   "%tmp_i = fmul float %tmp_76, %beta_load" [MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 126> : 4.35ns
+ST_126 : Operation 787 [3/5] (4.35ns)   --->   "%tmp_i = fmul float %tmp_76, %beta_load" [MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 127> : 4.35ns
+ST_127 : Operation 788 [2/5] (4.35ns)   --->   "%tmp_i = fmul float %tmp_76, %beta_load" [MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 128> : 4.35ns
+ST_128 : Operation 789 [1/5] (4.35ns)   --->   "%tmp_i = fmul float %tmp_76, %beta_load" [MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_128 : Operation 790 [1/1] (1.95ns)   --->   "%tmp_77 = call float @_ssdm_op_Mux.ap_auto.4float.i2(float %qDot_3_3, float %qDot_3_5, float %qDot_2_2, float %qDot_31, i2 %tmp_79)" [MadgwickAHRS.cpp:136]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+
+ <State 129> : 4.35ns
+ST_129 : Operation 791 [9/9] (4.34ns)   --->   "%qDot_3_14 = fsub float %tmp_77, %tmp_i" [MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 130> : 4.35ns
+ST_130 : Operation 792 [8/9] (4.34ns)   --->   "%qDot_3_14 = fsub float %tmp_77, %tmp_i" [MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 131> : 4.35ns
+ST_131 : Operation 793 [7/9] (4.34ns)   --->   "%qDot_3_14 = fsub float %tmp_77, %tmp_i" [MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 132> : 4.35ns
+ST_132 : Operation 794 [6/9] (4.34ns)   --->   "%qDot_3_14 = fsub float %tmp_77, %tmp_i" [MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 133> : 4.35ns
+ST_133 : Operation 795 [5/9] (4.34ns)   --->   "%qDot_3_14 = fsub float %tmp_77, %tmp_i" [MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 134> : 4.35ns
+ST_134 : Operation 796 [4/9] (4.34ns)   --->   "%qDot_3_14 = fsub float %tmp_77, %tmp_i" [MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 135> : 4.35ns
+ST_135 : Operation 797 [3/9] (4.34ns)   --->   "%qDot_3_14 = fsub float %tmp_77, %tmp_i" [MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 136> : 4.35ns
+ST_136 : Operation 798 [2/9] (4.34ns)   --->   "%qDot_3_14 = fsub float %tmp_77, %tmp_i" [MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 137> : 4.35ns
+ST_137 : Operation 799 [1/9] (4.34ns)   --->   "%qDot_3_14 = fsub float %tmp_77, %tmp_i" [MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 138> : 3.70ns
+ST_138 : Operation 800 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str2) nounwind" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]
+ST_138 : Operation 801 [1/1] (0.95ns)   --->   "%sel_tmp8 = icmp eq i2 %tmp_79, 0" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_138 : Operation 802 [1/1] (1.37ns)   --->   "%qDot_3_4 = select i1 %sel_tmp8, float %qDot_3_14, float %qDot_3_3" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_138 : Operation 803 [1/1] (0.95ns)   --->   "%sel_tmp = icmp eq i2 %tmp_79, 1" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_138 : Operation 804 [1/1] (0.00ns) (grouped into LUT with out node qDot_3_7)   --->   "%qDot_3_6 = select i1 %sel_tmp, float %qDot_3_14, float %qDot_3_5" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_138 : Operation 805 [1/1] (1.37ns) (out node of the LUT)   --->   "%qDot_3_7 = select i1 %sel_tmp8, float %qDot_3_5, float %qDot_3_6" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_138 : Operation 806 [1/1] (0.95ns)   --->   "%sel_tmp2 = icmp eq i2 %tmp_79, -2" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_138 : Operation 807 [1/1] (0.00ns) (grouped into LUT with out node qDot_3_9)   --->   "%qDot_3_8 = select i1 %sel_tmp2, float %qDot_3_14, float %qDot_2_2" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_138 : Operation 808 [1/1] (1.37ns) (out node of the LUT)   --->   "%qDot_3_9 = select i1 %sel_tmp, float %qDot_2_2, float %qDot_3_8" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_138 : Operation 809 [1/1] (1.37ns) (out node of the LUT)   --->   "%qDot_3_10 = select i1 %sel_tmp8, float %qDot_2_2, float %qDot_3_9" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_138 : Operation 810 [1/1] (0.00ns) (grouped into LUT with out node qDot_3_12)   --->   "%qDot_3_11 = select i1 %sel_tmp2, float %qDot_31, float %qDot_3_14" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_138 : Operation 811 [1/1] (1.37ns) (out node of the LUT)   --->   "%qDot_3_12 = select i1 %sel_tmp, float %qDot_31, float %qDot_3_11" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_138 : Operation 812 [1/1] (1.37ns) (out node of the LUT)   --->   "%qDot_3_13 = select i1 %sel_tmp8, float %qDot_31, float %qDot_3_12" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_138 : Operation 813 [1/1] (0.00ns)   --->   "br label %3" [MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179]
+
+ <State 139> : 1.96ns
+ST_139 : Operation 814 [1/1] (0.00ns)   --->   "%i_i1 = phi i3 [ 0, %._crit_edge2 ], [ %i_3, %5 ]"
+ST_139 : Operation 815 [1/1] (1.13ns)   --->   "%exitcond_i1 = icmp eq i3 %i_i1, -4" [MadgwickAHRS.cpp:239->MadgwickAHRS.cpp:183]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_139 : Operation 816 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"
+ST_139 : Operation 817 [1/1] (1.65ns)   --->   "%i_3 = add i3 %i_i1, 1" [MadgwickAHRS.cpp:239->MadgwickAHRS.cpp:183]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_139 : Operation 818 [1/1] (0.00ns)   --->   "br i1 %exitcond_i1, label %integrateQdot.exit, label %5" [MadgwickAHRS.cpp:239->MadgwickAHRS.cpp:183]
+ST_139 : Operation 819 [1/1] (0.00ns)   --->   "%tmp_i1 = zext i3 %i_i1 to i64" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]
+ST_139 : Operation 820 [1/1] (0.00ns)   --->   "%tmp_80 = trunc i3 %i_i1 to i2" [MadgwickAHRS.cpp:239->MadgwickAHRS.cpp:183]
+ST_139 : Operation 821 [1/1] (1.95ns)   --->   "%tmp_78 = call float @_ssdm_op_Mux.ap_auto.4float.i2(float %qDot_0_s, float %qDot_1_2, float %qDot_2_2_2, float %qDot_3_2, i2 %tmp_80)" [MadgwickAHRS.cpp:136]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_139 : Operation 822 [1/1] (0.00ns)   --->   "%q_addr = getelementptr [4 x float]* @q, i64 0, i64 %tmp_i1" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]
+ST_139 : Operation 823 [2/2] (1.76ns)   --->   "call fastcc void @normalise([4 x float]* @q)" [MadgwickAHRS.cpp:186]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 140> : 4.35ns
+ST_140 : Operation 824 [5/5] (4.35ns)   --->   "%tmp_i1_11 = fmul float %tmp_78, 1.953125e-03" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 141> : 4.35ns
+ST_141 : Operation 825 [4/5] (4.35ns)   --->   "%tmp_i1_11 = fmul float %tmp_78, 1.953125e-03" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 142> : 4.35ns
+ST_142 : Operation 826 [3/5] (4.35ns)   --->   "%tmp_i1_11 = fmul float %tmp_78, 1.953125e-03" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 143> : 4.35ns
+ST_143 : Operation 827 [2/5] (4.35ns)   --->   "%tmp_i1_11 = fmul float %tmp_78, 1.953125e-03" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_143 : Operation 828 [2/2] (2.32ns)   --->   "%q_load_8 = load float* %q_addr, align 4" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+ <State 144> : 4.35ns
+ST_144 : Operation 829 [1/5] (4.35ns)   --->   "%tmp_i1_11 = fmul float %tmp_78, 1.953125e-03" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_144 : Operation 830 [1/2] (2.32ns)   --->   "%q_load_8 = load float* %q_addr, align 4" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+ <State 145> : 4.35ns
+ST_145 : Operation 831 [9/9] (4.34ns)   --->   "%tmp_8_i = fadd float %q_load_8, %tmp_i1_11" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 146> : 4.35ns
+ST_146 : Operation 832 [8/9] (4.34ns)   --->   "%tmp_8_i = fadd float %q_load_8, %tmp_i1_11" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 147> : 4.35ns
+ST_147 : Operation 833 [7/9] (4.34ns)   --->   "%tmp_8_i = fadd float %q_load_8, %tmp_i1_11" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 148> : 4.35ns
+ST_148 : Operation 834 [6/9] (4.34ns)   --->   "%tmp_8_i = fadd float %q_load_8, %tmp_i1_11" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 149> : 4.35ns
+ST_149 : Operation 835 [5/9] (4.34ns)   --->   "%tmp_8_i = fadd float %q_load_8, %tmp_i1_11" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 150> : 4.35ns
+ST_150 : Operation 836 [4/9] (4.34ns)   --->   "%tmp_8_i = fadd float %q_load_8, %tmp_i1_11" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 151> : 4.35ns
+ST_151 : Operation 837 [3/9] (4.34ns)   --->   "%tmp_8_i = fadd float %q_load_8, %tmp_i1_11" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 152> : 4.35ns
+ST_152 : Operation 838 [2/9] (4.34ns)   --->   "%tmp_8_i = fadd float %q_load_8, %tmp_i1_11" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 153> : 4.35ns
+ST_153 : Operation 839 [1/9] (4.34ns)   --->   "%tmp_8_i = fadd float %q_load_8, %tmp_i1_11" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 154> : 2.32ns
+ST_154 : Operation 840 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str3) nounwind" [MadgwickAHRS.cpp:239->MadgwickAHRS.cpp:183]
+ST_154 : Operation 841 [1/1] (2.32ns)   --->   "store float %tmp_8_i, float* %q_addr, align 4" [MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_154 : Operation 842 [1/1] (0.00ns)   --->   "br label %4" [MadgwickAHRS.cpp:239->MadgwickAHRS.cpp:183]
+
+ <State 155> : 0.00ns
+ST_155 : Operation 843 [1/2] (0.00ns)   --->   "call fastcc void @normalise([4 x float]* @q)" [MadgwickAHRS.cpp:186]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_155 : Operation 844 [1/1] (0.00ns)   --->   "ret void" [MadgwickAHRS.cpp:187]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('q_load', MadgwickAHRS.cpp:136) on array 'q' [5]  (2.32 ns)
+
+ <State 2>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('q_load', MadgwickAHRS.cpp:136) on array 'q' [5]  (2.32 ns)
+
+ <State 3>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('q_load_1', MadgwickAHRS.cpp:136) on array 'q' [12]  (2.32 ns)
+
+ <State 4>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', MadgwickAHRS.cpp:136) [11]  (4.35 ns)
+
+ <State 5>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', MadgwickAHRS.cpp:136) [11]  (4.35 ns)
+
+ <State 6>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', MadgwickAHRS.cpp:136) [11]  (4.35 ns)
+
+ <State 7>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', MadgwickAHRS.cpp:136) [11]  (4.35 ns)
+
+ <State 8>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_s', MadgwickAHRS.cpp:136) [11]  (4.35 ns)
+
+ <State 9>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_2', MadgwickAHRS.cpp:136) [16]  (4.35 ns)
+
+ <State 10>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_2', MadgwickAHRS.cpp:136) [16]  (4.35 ns)
+
+ <State 11>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_2', MadgwickAHRS.cpp:136) [16]  (4.35 ns)
+
+ <State 12>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_2', MadgwickAHRS.cpp:136) [16]  (4.35 ns)
+
+ <State 13>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_3', MadgwickAHRS.cpp:136) [20]  (4.35 ns)
+
+ <State 14>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_3', MadgwickAHRS.cpp:136) [20]  (4.35 ns)
+
+ <State 15>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_3', MadgwickAHRS.cpp:136) [20]  (4.35 ns)
+
+ <State 16>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_3', MadgwickAHRS.cpp:136) [20]  (4.35 ns)
+
+ <State 17>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_3', MadgwickAHRS.cpp:136) [20]  (4.35 ns)
+
+ <State 18>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_4', MadgwickAHRS.cpp:136) [21]  (4.35 ns)
+
+ <State 19>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_4', MadgwickAHRS.cpp:136) [21]  (4.35 ns)
+
+ <State 20>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_4', MadgwickAHRS.cpp:136) [21]  (4.35 ns)
+
+ <State 21>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_4', MadgwickAHRS.cpp:136) [21]  (4.35 ns)
+
+ <State 22>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_4', MadgwickAHRS.cpp:136) [21]  (4.35 ns)
+
+ <State 23>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_4', MadgwickAHRS.cpp:136) [21]  (4.35 ns)
+
+ <State 24>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_4', MadgwickAHRS.cpp:136) [21]  (4.35 ns)
+
+ <State 25>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_4', MadgwickAHRS.cpp:136) [21]  (4.35 ns)
+
+ <State 26>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_4', MadgwickAHRS.cpp:136) [21]  (4.35 ns)
+
+ <State 27>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('qDot[0]', MadgwickAHRS.cpp:136) [22]  (4.35 ns)
+
+ <State 28>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('qDot[0]', MadgwickAHRS.cpp:136) [22]  (4.35 ns)
+
+ <State 29>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('qDot[0]', MadgwickAHRS.cpp:136) [22]  (4.35 ns)
+
+ <State 30>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('qDot[0]', MadgwickAHRS.cpp:136) [22]  (4.35 ns)
+
+ <State 31>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('qDot[0]', MadgwickAHRS.cpp:136) [22]  (4.35 ns)
+
+ <State 32>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('a_load_1', MadgwickAHRS.cpp:145) on array 'a' [55]  (2.32 ns)
+
+ <State 33>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_69', MadgwickAHRS.cpp:145) [62]  (2.73 ns)
+
+ <State 34>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_69', MadgwickAHRS.cpp:145) [62]  (2.73 ns)
+
+ <State 35>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_69', MadgwickAHRS.cpp:145) [62]  (2.73 ns)
+
+ <State 36>: 3.66ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_69', MadgwickAHRS.cpp:145) [62]  (2.73 ns)
+	'and' operation ('tmp_70', MadgwickAHRS.cpp:145) [63]  (0.931 ns)
+
+ <State 37>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('a_load_2', MadgwickAHRS.cpp:145) on array 'a' [67]  (2.32 ns)
+
+ <State 38>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_74', MadgwickAHRS.cpp:145) [74]  (2.73 ns)
+
+ <State 39>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_74', MadgwickAHRS.cpp:145) [74]  (2.73 ns)
+
+ <State 40>: 2.73ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_74', MadgwickAHRS.cpp:145) [74]  (2.73 ns)
+
+ <State 41>: 3.66ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_74', MadgwickAHRS.cpp:145) [74]  (2.73 ns)
+	'and' operation ('tmp_75', MadgwickAHRS.cpp:145) [75]  (0.931 ns)
+
+ <State 42>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('q_load_4', MadgwickAHRS.cpp:151) on array 'q' [79]  (2.32 ns)
+
+ <State 43>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('q_load_4', MadgwickAHRS.cpp:151) on array 'q' [79]  (2.32 ns)
+
+ <State 44>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('q0q0', MadgwickAHRS.cpp:160) [92]  (4.35 ns)
+
+ <State 45>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('q0q0', MadgwickAHRS.cpp:160) [92]  (4.35 ns)
+
+ <State 46>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('q0q0', MadgwickAHRS.cpp:160) [92]  (4.35 ns)
+
+ <State 47>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('q0q0', MadgwickAHRS.cpp:160) [92]  (4.35 ns)
+
+ <State 48>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('q0q0', MadgwickAHRS.cpp:160) [92]  (4.35 ns)
+
+ <State 49>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_2q0', MadgwickAHRS.cpp:151) [80]  (4.35 ns)
+
+ <State 50>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_2q0', MadgwickAHRS.cpp:151) [80]  (4.35 ns)
+
+ <State 51>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_2q0', MadgwickAHRS.cpp:151) [80]  (4.35 ns)
+
+ <State 52>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_2q0', MadgwickAHRS.cpp:151) [80]  (4.35 ns)
+
+ <State 53>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_2q0', MadgwickAHRS.cpp:151) [80]  (4.35 ns)
+
+ <State 54>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_29', MadgwickAHRS.cpp:169) [106]  (4.35 ns)
+
+ <State 55>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_29', MadgwickAHRS.cpp:169) [106]  (4.35 ns)
+
+ <State 56>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_29', MadgwickAHRS.cpp:169) [106]  (4.35 ns)
+
+ <State 57>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_29', MadgwickAHRS.cpp:169) [106]  (4.35 ns)
+
+ <State 58>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_4q2', MadgwickAHRS.cpp:157) [89]  (4.35 ns)
+
+ <State 59>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_4q2', MadgwickAHRS.cpp:157) [89]  (4.35 ns)
+
+ <State 60>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_4q2', MadgwickAHRS.cpp:157) [89]  (4.35 ns)
+
+ <State 61>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_4q2', MadgwickAHRS.cpp:157) [89]  (4.35 ns)
+
+ <State 62>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_4q2', MadgwickAHRS.cpp:157) [89]  (4.35 ns)
+
+ <State 63>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_33', MadgwickAHRS.cpp:169) [110]  (4.35 ns)
+
+ <State 64>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_33', MadgwickAHRS.cpp:169) [110]  (4.35 ns)
+
+ <State 65>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_33', MadgwickAHRS.cpp:169) [110]  (4.35 ns)
+
+ <State 66>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_33', MadgwickAHRS.cpp:169) [110]  (4.35 ns)
+
+ <State 67>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_33', MadgwickAHRS.cpp:169) [110]  (4.35 ns)
+
+ <State 68>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_34', MadgwickAHRS.cpp:169) [111]  (4.35 ns)
+
+ <State 69>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_34', MadgwickAHRS.cpp:169) [111]  (4.35 ns)
+
+ <State 70>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_34', MadgwickAHRS.cpp:169) [111]  (4.35 ns)
+
+ <State 71>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_34', MadgwickAHRS.cpp:169) [111]  (4.35 ns)
+
+ <State 72>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_35', MadgwickAHRS.cpp:169) [112]  (4.35 ns)
+
+ <State 73>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_35', MadgwickAHRS.cpp:169) [112]  (4.35 ns)
+
+ <State 74>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_35', MadgwickAHRS.cpp:169) [112]  (4.35 ns)
+
+ <State 75>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_35', MadgwickAHRS.cpp:169) [112]  (4.35 ns)
+
+ <State 76>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_35', MadgwickAHRS.cpp:169) [112]  (4.35 ns)
+
+ <State 77>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_36', MadgwickAHRS.cpp:169) [113]  (4.35 ns)
+
+ <State 78>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_36', MadgwickAHRS.cpp:169) [113]  (4.35 ns)
+
+ <State 79>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_36', MadgwickAHRS.cpp:169) [113]  (4.35 ns)
+
+ <State 80>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('q1q1', MadgwickAHRS.cpp:161) [93]  (4.35 ns)
+
+ <State 81>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('q1q1', MadgwickAHRS.cpp:161) [93]  (4.35 ns)
+
+ <State 82>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('q1q1', MadgwickAHRS.cpp:161) [93]  (4.35 ns)
+
+ <State 83>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('q1q1', MadgwickAHRS.cpp:161) [93]  (4.35 ns)
+
+ <State 84>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('q1q1', MadgwickAHRS.cpp:161) [93]  (4.35 ns)
+
+ <State 85>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_2q1', MadgwickAHRS.cpp:152) [82]  (4.35 ns)
+
+ <State 86>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_2q1', MadgwickAHRS.cpp:152) [82]  (4.35 ns)
+
+ <State 87>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_2q1', MadgwickAHRS.cpp:152) [82]  (4.35 ns)
+
+ <State 88>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_2q1', MadgwickAHRS.cpp:152) [82]  (4.35 ns)
+
+ <State 89>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('_2q1', MadgwickAHRS.cpp:152) [82]  (4.35 ns)
+
+ <State 90>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_23', MadgwickAHRS.cpp:167) [96]  (4.35 ns)
+
+ <State 91>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_23', MadgwickAHRS.cpp:167) [96]  (4.35 ns)
+
+ <State 92>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_23', MadgwickAHRS.cpp:167) [96]  (4.35 ns)
+
+ <State 93>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_23', MadgwickAHRS.cpp:167) [96]  (4.35 ns)
+
+ <State 94>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_23', MadgwickAHRS.cpp:167) [96]  (4.35 ns)
+
+ <State 95>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_61', MadgwickAHRS.cpp:173) [142]  (4.35 ns)
+
+ <State 96>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_61', MadgwickAHRS.cpp:173) [142]  (4.35 ns)
+
+ <State 97>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_61', MadgwickAHRS.cpp:173) [142]  (4.35 ns)
+
+ <State 98>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_61', MadgwickAHRS.cpp:173) [142]  (4.35 ns)
+
+ <State 99>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_61', MadgwickAHRS.cpp:173) [142]  (4.35 ns)
+
+ <State 100>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_25', MadgwickAHRS.cpp:167) [99]  (4.35 ns)
+
+ <State 101>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_25', MadgwickAHRS.cpp:167) [99]  (4.35 ns)
+
+ <State 102>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_25', MadgwickAHRS.cpp:167) [99]  (4.35 ns)
+
+ <State 103>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_25', MadgwickAHRS.cpp:167) [99]  (4.35 ns)
+
+ <State 104>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_27', MadgwickAHRS.cpp:167) [101]  (4.35 ns)
+
+ <State 105>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_27', MadgwickAHRS.cpp:167) [101]  (4.35 ns)
+
+ <State 106>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_27', MadgwickAHRS.cpp:167) [101]  (4.35 ns)
+
+ <State 107>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_27', MadgwickAHRS.cpp:167) [101]  (4.35 ns)
+
+ <State 108>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_42', MadgwickAHRS.cpp:169) [121]  (4.35 ns)
+
+ <State 109>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_42', MadgwickAHRS.cpp:169) [121]  (4.35 ns)
+
+ <State 110>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_42', MadgwickAHRS.cpp:169) [121]  (4.35 ns)
+
+ <State 111>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_42', MadgwickAHRS.cpp:169) [121]  (4.35 ns)
+
+ <State 112>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_42', MadgwickAHRS.cpp:169) [121]  (4.35 ns)
+
+ <State 113>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('s[0]', MadgwickAHRS.cpp:167) [105]  (4.35 ns)
+
+ <State 114>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('s[0]', MadgwickAHRS.cpp:167) [105]  (4.35 ns)
+
+ <State 115>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('s[0]', MadgwickAHRS.cpp:167) [105]  (4.35 ns)
+
+ <State 116>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('s[0]', MadgwickAHRS.cpp:167) [105]  (4.35 ns)
+
+ <State 117>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('s[0]', MadgwickAHRS.cpp:167) [105]  (4.35 ns)
+
+ <State 118>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('s[0]', MadgwickAHRS.cpp:167) [105]  (4.35 ns)
+
+ <State 119>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('s[0]', MadgwickAHRS.cpp:167) [105]  (4.35 ns)
+
+ <State 120>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('s[0]', MadgwickAHRS.cpp:167) [105]  (4.35 ns)
+
+ <State 121>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('s[0]', MadgwickAHRS.cpp:167) [105]  (4.35 ns)
+
+ <State 122>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('qDot[3]') with incoming values : ('qDot[0]', MadgwickAHRS.cpp:136) ('qDot[3]', MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179) [153]  (1.77 ns)
+
+ <State 123>: 1.96ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179) [157]  (0 ns)
+	'mux' operation ('tmp_76', MadgwickAHRS.cpp:176) [165]  (1.96 ns)
+
+ <State 124>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_i', MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179) [166]  (4.35 ns)
+
+ <State 125>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_i', MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179) [166]  (4.35 ns)
+
+ <State 126>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_i', MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179) [166]  (4.35 ns)
+
+ <State 127>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_i', MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179) [166]  (4.35 ns)
+
+ <State 128>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_i', MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179) [166]  (4.35 ns)
+
+ <State 129>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('qDot[3]', MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179) [168]  (4.35 ns)
+
+ <State 130>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('qDot[3]', MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179) [168]  (4.35 ns)
+
+ <State 131>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('qDot[3]', MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179) [168]  (4.35 ns)
+
+ <State 132>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('qDot[3]', MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179) [168]  (4.35 ns)
+
+ <State 133>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('qDot[3]', MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179) [168]  (4.35 ns)
+
+ <State 134>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('qDot[3]', MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179) [168]  (4.35 ns)
+
+ <State 135>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('qDot[3]', MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179) [168]  (4.35 ns)
+
+ <State 136>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('qDot[3]', MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179) [168]  (4.35 ns)
+
+ <State 137>: 4.35ns
+The critical path consists of the following:
+	'fsub' operation ('qDot[3]', MadgwickAHRS.cpp:231->MadgwickAHRS.cpp:179) [168]  (4.35 ns)
+
+ <State 138>: 3.7ns
+The critical path consists of the following:
+	'icmp' operation ('sel_tmp', MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179) [171]  (0.959 ns)
+	'select' operation ('qDot[3]', MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179) [176]  (1.37 ns)
+	'select' operation ('qDot[3]', MadgwickAHRS.cpp:230->MadgwickAHRS.cpp:179) [177]  (1.37 ns)
+
+ <State 139>: 1.96ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', MadgwickAHRS.cpp:239->MadgwickAHRS.cpp:183) [191]  (0 ns)
+	'mux' operation ('tmp_78', MadgwickAHRS.cpp:136) [200]  (1.96 ns)
+
+ <State 140>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_i1_11', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) [201]  (4.35 ns)
+
+ <State 141>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_i1_11', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) [201]  (4.35 ns)
+
+ <State 142>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_i1_11', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) [201]  (4.35 ns)
+
+ <State 143>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_i1_11', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) [201]  (4.35 ns)
+
+ <State 144>: 4.35ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_i1_11', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) [201]  (4.35 ns)
+
+ <State 145>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_8_i', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) [204]  (4.35 ns)
+
+ <State 146>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_8_i', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) [204]  (4.35 ns)
+
+ <State 147>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_8_i', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) [204]  (4.35 ns)
+
+ <State 148>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_8_i', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) [204]  (4.35 ns)
+
+ <State 149>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_8_i', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) [204]  (4.35 ns)
+
+ <State 150>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_8_i', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) [204]  (4.35 ns)
+
+ <State 151>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_8_i', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) [204]  (4.35 ns)
+
+ <State 152>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_8_i', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) [204]  (4.35 ns)
+
+ <State 153>: 4.35ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_8_i', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) [204]  (4.35 ns)
+
+ <State 154>: 2.32ns
+The critical path consists of the following:
+	'store' operation (MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183) of variable 'tmp_8_i', MadgwickAHRS.cpp:240->MadgwickAHRS.cpp:183 on array 'q' [205]  (2.32 ns)
+
+ <State 155>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+	State 134
+	State 135
+	State 136
+	State 137
+	State 138
+	State 139
+	State 140
+	State 141
+	State 142
+	State 143
+	State 144
+	State 145
+	State 146
+	State 147
+	State 148
+	State 149
+	State 150
+	State 151
+	State 152
+	State 153
+	State 154
+	State 155
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

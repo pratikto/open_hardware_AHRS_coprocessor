@@ -1,0 +1,135 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'feedbackStep'" level="0">
+<item name = "Date">Tue Dec  5 11:58:56 2017
+</item>
+<item name = "Version">2017.3.1 (Build 2033595 on Fri Oct 20 14:40:16 MDT 2017)</item>
+<item name = "Project">MadgwickAHRS</item>
+<item name = "Solution">solution2</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 4.35, 0.62</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">13, 13, 1, 1, function</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, -, -</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, 20, 1900, 2996</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, -</column>
+<column name="Register">0, -, 512, 128</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">0, 9, 2, 5</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="MadgwickAHRSupdatcud_U19">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatcud_U20">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatcud_U21">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdatcud_U22">MadgwickAHRSupdatcud, 0, 3, 151, 325</column>
+<column name="MadgwickAHRSupdateOg_U15">MadgwickAHRSupdateOg, 0, 2, 324, 424</column>
+<column name="MadgwickAHRSupdateOg_U16">MadgwickAHRSupdateOg, 0, 2, 324, 424</column>
+<column name="MadgwickAHRSupdateOg_U17">MadgwickAHRSupdateOg, 0, 2, 324, 424</column>
+<column name="MadgwickAHRSupdateOg_U18">MadgwickAHRSupdateOg, 0, 2, 324, 424</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="qDot_0_read_1_reg_193">32, 0, 32, 0</column>
+<column name="qDot_1_read_1_reg_188">32, 0, 32, 0</column>
+<column name="qDot_2_read_1_reg_183">32, 0, 32, 0</column>
+<column name="qDot_3_read_1_reg_178">32, 0, 32, 0</column>
+<column name="tmp_1_reg_203">32, 0, 32, 0</column>
+<column name="tmp_2_reg_208">32, 0, 32, 0</column>
+<column name="tmp_3_reg_213">32, 0, 32, 0</column>
+<column name="tmp_s_reg_198">32, 0, 32, 0</column>
+<column name="qDot_0_read_1_reg_193">64, 32, 32, 0</column>
+<column name="qDot_1_read_1_reg_188">64, 32, 32, 0</column>
+<column name="qDot_2_read_1_reg_183">64, 32, 32, 0</column>
+<column name="qDot_3_read_1_reg_178">64, 32, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, feedbackStep, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, feedbackStep, return value</column>
+<column name="ap_return_0">out, 32, ap_ctrl_hs, feedbackStep, return value</column>
+<column name="ap_return_1">out, 32, ap_ctrl_hs, feedbackStep, return value</column>
+<column name="ap_return_2">out, 32, ap_ctrl_hs, feedbackStep, return value</column>
+<column name="ap_return_3">out, 32, ap_ctrl_hs, feedbackStep, return value</column>
+<column name="qDot_0_read">in, 32, ap_none, qDot_0_read, scalar</column>
+<column name="qDot_1_read">in, 32, ap_none, qDot_1_read, scalar</column>
+<column name="qDot_2_read">in, 32, ap_none, qDot_2_read, scalar</column>
+<column name="qDot_3_read">in, 32, ap_none, qDot_3_read, scalar</column>
+<column name="beta">in, 32, ap_none, beta, scalar</column>
+<column name="s_0_read">in, 32, ap_none, s_0_read, scalar</column>
+<column name="s_1_read">in, 32, ap_none, s_1_read, scalar</column>
+<column name="s_2_read">in, 32, ap_none, s_2_read, scalar</column>
+<column name="s_3_read">in, 32, ap_none, s_3_read, scalar</column>
+</table>
+</item>
+</section>
+</profile>

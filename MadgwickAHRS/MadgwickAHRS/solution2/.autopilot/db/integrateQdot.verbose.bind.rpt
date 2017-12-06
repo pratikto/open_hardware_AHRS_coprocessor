@@ -1,0 +1,978 @@
+
+
+================================================================
+== Vivado HLS Report for 'integrateQdot'
+================================================================
+* Date:           Tue Dec  5 11:58:46 2017
+
+* Version:        2017.3.1 (Build 2033595 on Fri Oct 20 14:40:16 MDT 2017)
+* Project:        MadgwickAHRS
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      6.67|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |   16|   16|   10|   10| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 10, depth = 17
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 17
+* Pipeline : 1
+  Pipeline-0 : II = 10, D = 17, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+
+* FSM state operations: 
+
+ <State 1> : 4.35ns
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%p_read_4 = call float @_ssdm_op_Read.ap_auto.float(float %p_read)"
+ST_1 : Operation 19 [5/5] (4.35ns)   --->   "%tmp_s = fmul float %p_read_4, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 2> : 4.35ns
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%p_read_3 = call float @_ssdm_op_Read.ap_auto.float(float %p_read1)"
+ST_2 : Operation 21 [4/5] (4.35ns)   --->   "%tmp_s = fmul float %p_read_4, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [5/5] (4.35ns)   --->   "%tmp_1 = fmul float %p_read_3, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 3> : 4.35ns
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%p_read_2 = call float @_ssdm_op_Read.ap_auto.float(float %p_read2)"
+ST_3 : Operation 24 [3/5] (4.35ns)   --->   "%tmp_s = fmul float %p_read_4, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 25 [4/5] (4.35ns)   --->   "%tmp_1 = fmul float %p_read_3, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 26 [5/5] (4.35ns)   --->   "%tmp_2 = fmul float %p_read_2, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 4> : 4.35ns
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%p_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %p_read3)"
+ST_4 : Operation 28 [2/5] (4.35ns)   --->   "%tmp_s = fmul float %p_read_4, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 29 [3/5] (4.35ns)   --->   "%tmp_1 = fmul float %p_read_3, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 30 [4/5] (4.35ns)   --->   "%tmp_2 = fmul float %p_read_2, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 31 [5/5] (4.35ns)   --->   "%tmp_3 = fmul float %p_read_1, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 5> : 4.35ns
+ST_5 : Operation 32 [1/5] (4.35ns)   --->   "%tmp_s = fmul float %p_read_4, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 33 [1/1] (0.00ns)   --->   "%q_addr = getelementptr [4 x float]* %q, i64 0, i64 0" [MadgwickAHRS.cpp:239]
+ST_5 : Operation 34 [2/2] (2.32ns)   --->   "%q_load = load float* %q_addr, align 4" [MadgwickAHRS.cpp:239]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_5 : Operation 35 [2/5] (4.35ns)   --->   "%tmp_1 = fmul float %p_read_3, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 36 [3/5] (4.35ns)   --->   "%tmp_2 = fmul float %p_read_2, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 37 [4/5] (4.35ns)   --->   "%tmp_3 = fmul float %p_read_1, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 6> : 6.67ns
+ST_6 : Operation 38 [1/2] (2.32ns)   --->   "%q_load = load float* %q_addr, align 4" [MadgwickAHRS.cpp:239]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_6 : Operation 39 [9/9] (4.34ns)   --->   "%tmp_8 = fadd float %q_load, %tmp_s" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 40 [1/5] (4.35ns)   --->   "%tmp_1 = fmul float %p_read_3, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%q_addr_1 = getelementptr [4 x float]* %q, i64 0, i64 1" [MadgwickAHRS.cpp:239]
+ST_6 : Operation 42 [2/2] (2.32ns)   --->   "%q_load_1 = load float* %q_addr_1, align 4" [MadgwickAHRS.cpp:239]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_6 : Operation 43 [2/5] (4.35ns)   --->   "%tmp_2 = fmul float %p_read_2, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 44 [3/5] (4.35ns)   --->   "%tmp_3 = fmul float %p_read_1, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 7> : 6.67ns
+ST_7 : Operation 45 [8/9] (4.34ns)   --->   "%tmp_8 = fadd float %q_load, %tmp_s" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 46 [1/2] (2.32ns)   --->   "%q_load_1 = load float* %q_addr_1, align 4" [MadgwickAHRS.cpp:239]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_7 : Operation 47 [9/9] (4.34ns)   --->   "%tmp_8_1 = fadd float %q_load_1, %tmp_1" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 48 [1/5] (4.35ns)   --->   "%tmp_2 = fmul float %p_read_2, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 49 [1/1] (0.00ns)   --->   "%q_addr_2 = getelementptr [4 x float]* %q, i64 0, i64 2" [MadgwickAHRS.cpp:239]
+ST_7 : Operation 50 [2/2] (2.32ns)   --->   "%q_load_2 = load float* %q_addr_2, align 4" [MadgwickAHRS.cpp:239]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_7 : Operation 51 [2/5] (4.35ns)   --->   "%tmp_3 = fmul float %p_read_1, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 8> : 6.67ns
+ST_8 : Operation 52 [7/9] (4.34ns)   --->   "%tmp_8 = fadd float %q_load, %tmp_s" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 53 [8/9] (4.34ns)   --->   "%tmp_8_1 = fadd float %q_load_1, %tmp_1" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 54 [1/2] (2.32ns)   --->   "%q_load_2 = load float* %q_addr_2, align 4" [MadgwickAHRS.cpp:239]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_8 : Operation 55 [9/9] (4.34ns)   --->   "%tmp_8_2 = fadd float %q_load_2, %tmp_2" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 56 [1/5] (4.35ns)   --->   "%tmp_3 = fmul float %p_read_1, 1.953125e-03" [MadgwickAHRS.cpp:239]   --->   Core 98 'FMul' <Latency = 4> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 57 [1/1] (0.00ns)   --->   "%q_addr_3 = getelementptr [4 x float]* %q, i64 0, i64 3" [MadgwickAHRS.cpp:239]
+ST_8 : Operation 58 [2/2] (2.32ns)   --->   "%q_load_3 = load float* %q_addr_3, align 4" [MadgwickAHRS.cpp:239]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+
+ <State 9> : 6.67ns
+ST_9 : Operation 59 [6/9] (4.34ns)   --->   "%tmp_8 = fadd float %q_load, %tmp_s" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 60 [7/9] (4.34ns)   --->   "%tmp_8_1 = fadd float %q_load_1, %tmp_1" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 61 [8/9] (4.34ns)   --->   "%tmp_8_2 = fadd float %q_load_2, %tmp_2" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 62 [1/2] (2.32ns)   --->   "%q_load_3 = load float* %q_addr_3, align 4" [MadgwickAHRS.cpp:239]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_9 : Operation 63 [9/9] (4.34ns)   --->   "%tmp_8_3 = fadd float %q_load_3, %tmp_3" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 10> : 4.35ns
+ST_10 : Operation 64 [5/9] (4.34ns)   --->   "%tmp_8 = fadd float %q_load, %tmp_s" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 65 [6/9] (4.34ns)   --->   "%tmp_8_1 = fadd float %q_load_1, %tmp_1" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 66 [7/9] (4.34ns)   --->   "%tmp_8_2 = fadd float %q_load_2, %tmp_2" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 67 [8/9] (4.34ns)   --->   "%tmp_8_3 = fadd float %q_load_3, %tmp_3" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 11> : 4.35ns
+ST_11 : Operation 68 [4/9] (4.34ns)   --->   "%tmp_8 = fadd float %q_load, %tmp_s" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 69 [5/9] (4.34ns)   --->   "%tmp_8_1 = fadd float %q_load_1, %tmp_1" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 70 [6/9] (4.34ns)   --->   "%tmp_8_2 = fadd float %q_load_2, %tmp_2" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 71 [7/9] (4.34ns)   --->   "%tmp_8_3 = fadd float %q_load_3, %tmp_3" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 12> : 4.35ns
+ST_12 : Operation 72 [3/9] (4.34ns)   --->   "%tmp_8 = fadd float %q_load, %tmp_s" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 73 [4/9] (4.34ns)   --->   "%tmp_8_1 = fadd float %q_load_1, %tmp_1" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 74 [5/9] (4.34ns)   --->   "%tmp_8_2 = fadd float %q_load_2, %tmp_2" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 75 [6/9] (4.34ns)   --->   "%tmp_8_3 = fadd float %q_load_3, %tmp_3" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 13> : 4.35ns
+ST_13 : Operation 76 [2/9] (4.34ns)   --->   "%tmp_8 = fadd float %q_load, %tmp_s" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 77 [3/9] (4.34ns)   --->   "%tmp_8_1 = fadd float %q_load_1, %tmp_1" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 78 [4/9] (4.34ns)   --->   "%tmp_8_2 = fadd float %q_load_2, %tmp_2" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 79 [5/9] (4.34ns)   --->   "%tmp_8_3 = fadd float %q_load_3, %tmp_3" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 14> : 6.67ns
+ST_14 : Operation 80 [1/9] (4.34ns)   --->   "%tmp_8 = fadd float %q_load, %tmp_s" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 81 [1/1] (2.32ns)   --->   "store float %tmp_8, float* %q_addr, align 4" [MadgwickAHRS.cpp:239]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_14 : Operation 82 [2/9] (4.34ns)   --->   "%tmp_8_1 = fadd float %q_load_1, %tmp_1" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 83 [3/9] (4.34ns)   --->   "%tmp_8_2 = fadd float %q_load_2, %tmp_2" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 84 [4/9] (4.34ns)   --->   "%tmp_8_3 = fadd float %q_load_3, %tmp_3" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 15> : 6.67ns
+ST_15 : Operation 85 [1/9] (4.34ns)   --->   "%tmp_8_1 = fadd float %q_load_1, %tmp_1" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 86 [1/1] (2.32ns)   --->   "store float %tmp_8_1, float* %q_addr_1, align 4" [MadgwickAHRS.cpp:239]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_15 : Operation 87 [2/9] (4.34ns)   --->   "%tmp_8_2 = fadd float %q_load_2, %tmp_2" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 88 [3/9] (4.34ns)   --->   "%tmp_8_3 = fadd float %q_load_3, %tmp_3" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 16> : 6.67ns
+ST_16 : Operation 89 [1/9] (4.34ns)   --->   "%tmp_8_2 = fadd float %q_load_2, %tmp_2" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 90 [1/1] (2.32ns)   --->   "store float %tmp_8_2, float* %q_addr_2, align 4" [MadgwickAHRS.cpp:239]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_16 : Operation 91 [2/9] (4.34ns)   --->   "%tmp_8_3 = fadd float %q_load_3, %tmp_3" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 17> : 6.67ns
+ST_17 : Operation 92 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [MadgwickAHRS.cpp:238]
+ST_17 : Operation 93 [1/9] (4.34ns)   --->   "%tmp_8_3 = fadd float %q_load_3, %tmp_3" [MadgwickAHRS.cpp:239]   --->   Core 97 'FAddSub' <Latency = 8> <II = 1> <Delay = 4.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 94 [1/1] (2.32ns)   --->   "store float %tmp_8_3, float* %q_addr_3, align 4" [MadgwickAHRS.cpp:239]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4> <RAM>
+ST_17 : Operation 95 [1/1] (0.00ns)   --->   "ret void" [MadgwickAHRS.cpp:241]
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 1
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ q]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[22]; IO mode=ap_memory:ce=0
+Port [ p_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read2]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_read3]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+p_read_4    (read         ) [ 001111000000000000]
+p_read_3    (read         ) [ 000111100000000000]
+p_read_2    (read         ) [ 000011110000000000]
+p_read_1    (read         ) [ 000001111000000000]
+tmp_s       (fmul         ) [ 011110111111111000]
+q_addr      (getelementptr) [ 011110111111111000]
+q_load      (load         ) [ 011110011111111000]
+tmp_1       (fmul         ) [ 011111011111111100]
+q_addr_1    (getelementptr) [ 011111011111111100]
+q_load_1    (load         ) [ 011111001111111100]
+tmp_2       (fmul         ) [ 011111101111111110]
+q_addr_2    (getelementptr) [ 011111101111111110]
+q_load_2    (load         ) [ 011111100111111110]
+tmp_3       (fmul         ) [ 011111110111111111]
+q_addr_3    (getelementptr) [ 011111110111111111]
+q_load_3    (load         ) [ 011111110011111111]
+tmp_8       (fadd         ) [ 000000000000000000]
+StgValue_81 (store        ) [ 000000000000000000]
+tmp_8_1     (fadd         ) [ 000000000000000000]
+StgValue_86 (store        ) [ 000000000000000000]
+tmp_8_2     (fadd         ) [ 000000000000000000]
+StgValue_90 (store        ) [ 000000000000000000]
+StgValue_92 (specpipeline ) [ 000000000000000000]
+tmp_8_3     (fadd         ) [ 000000000000000000]
+StgValue_94 (store        ) [ 000000000000000000]
+StgValue_95 (ret          ) [ 000000000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="q">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="q"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="p_read">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_read"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="p_read1">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_read1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="p_read2">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_read2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="p_read3">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_read3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.float"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1004" name="p_read_4_read_fu_32">
+<pin_list>
+<pin id="33" dir="0" index="0" bw="32" slack="0"/>
+<pin id="34" dir="0" index="1" bw="32" slack="0"/>
+<pin id="35" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_read_4/1 "/>
+</bind>
+</comp>
+
+<comp id="38" class="1004" name="p_read_3_read_fu_38">
+<pin_list>
+<pin id="39" dir="0" index="0" bw="32" slack="0"/>
+<pin id="40" dir="0" index="1" bw="32" slack="0"/>
+<pin id="41" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_read_3/2 "/>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="p_read_2_read_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="32" slack="0"/>
+<pin id="46" dir="0" index="1" bw="32" slack="0"/>
+<pin id="47" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_read_2/3 "/>
+</bind>
+</comp>
+
+<comp id="50" class="1004" name="p_read_1_read_fu_50">
+<pin_list>
+<pin id="51" dir="0" index="0" bw="32" slack="0"/>
+<pin id="52" dir="0" index="1" bw="32" slack="0"/>
+<pin id="53" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_read_1/4 "/>
+</bind>
+</comp>
+
+<comp id="56" class="1004" name="q_addr_gep_fu_56">
+<pin_list>
+<pin id="57" dir="0" index="0" bw="32" slack="0"/>
+<pin id="58" dir="0" index="1" bw="1" slack="0"/>
+<pin id="59" dir="0" index="2" bw="1" slack="0"/>
+<pin id="60" dir="1" index="3" bw="2" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="q_addr/5 "/>
+</bind>
+</comp>
+
+<comp id="64" class="1004" name="grp_access_fu_64">
+<pin_list>
+<pin id="65" dir="0" index="0" bw="2" slack="0"/>
+<pin id="66" dir="0" index="1" bw="32" slack="0"/>
+<pin id="77" dir="0" index="3" bw="2" slack="0"/>
+<pin id="78" dir="0" index="4" bw="32" slack="0"/>
+<pin id="67" dir="1" index="2" bw="32" slack="0"/>
+<pin id="79" dir="1" index="5" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) store(28) " fcode="store"/>
+<opset="q_load/5 q_load_1/6 q_load_2/7 q_load_3/8 StgValue_81/14 StgValue_86/15 StgValue_90/16 StgValue_94/17 "/>
+</bind>
+</comp>
+
+<comp id="69" class="1004" name="q_addr_1_gep_fu_69">
+<pin_list>
+<pin id="70" dir="0" index="0" bw="32" slack="0"/>
+<pin id="71" dir="0" index="1" bw="1" slack="0"/>
+<pin id="72" dir="0" index="2" bw="2" slack="0"/>
+<pin id="73" dir="1" index="3" bw="2" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="q_addr_1/6 "/>
+</bind>
+</comp>
+
+<comp id="81" class="1004" name="q_addr_2_gep_fu_81">
+<pin_list>
+<pin id="82" dir="0" index="0" bw="32" slack="0"/>
+<pin id="83" dir="0" index="1" bw="1" slack="0"/>
+<pin id="84" dir="0" index="2" bw="3" slack="0"/>
+<pin id="85" dir="1" index="3" bw="2" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="q_addr_2/7 "/>
+</bind>
+</comp>
+
+<comp id="90" class="1004" name="q_addr_3_gep_fu_90">
+<pin_list>
+<pin id="91" dir="0" index="0" bw="32" slack="0"/>
+<pin id="92" dir="0" index="1" bw="1" slack="0"/>
+<pin id="93" dir="0" index="2" bw="3" slack="0"/>
+<pin id="94" dir="1" index="3" bw="2" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="q_addr_3/8 "/>
+</bind>
+</comp>
+
+<comp id="99" class="1004" name="grp_fu_99">
+<pin_list>
+<pin id="100" dir="0" index="0" bw="32" slack="0"/>
+<pin id="101" dir="0" index="1" bw="32" slack="1"/>
+<pin id="102" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="fadd(9) " fcode="fadd"/>
+<opset="tmp_8/6 tmp_8_1/7 tmp_8_2/8 tmp_8_3/9 "/>
+</bind>
+</comp>
+
+<comp id="107" class="1004" name="grp_fu_107">
+<pin_list>
+<pin id="108" dir="0" index="0" bw="32" slack="0"/>
+<pin id="109" dir="0" index="1" bw="32" slack="0"/>
+<pin id="110" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="fmul(13) " fcode="fmul"/>
+<opset="tmp_s/1 tmp_1/2 tmp_2/3 tmp_3/4 "/>
+</bind>
+</comp>
+
+<comp id="116" class="1005" name="p_read_4_reg_116">
+<pin_list>
+<pin id="117" dir="0" index="0" bw="32" slack="1"/>
+<pin id="118" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_read_4 "/>
+</bind>
+</comp>
+
+<comp id="121" class="1005" name="p_read_3_reg_121">
+<pin_list>
+<pin id="122" dir="0" index="0" bw="32" slack="1"/>
+<pin id="123" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_read_3 "/>
+</bind>
+</comp>
+
+<comp id="126" class="1005" name="p_read_2_reg_126">
+<pin_list>
+<pin id="127" dir="0" index="0" bw="32" slack="1"/>
+<pin id="128" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_read_2 "/>
+</bind>
+</comp>
+
+<comp id="131" class="1005" name="p_read_1_reg_131">
+<pin_list>
+<pin id="132" dir="0" index="0" bw="32" slack="1"/>
+<pin id="133" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_read_1 "/>
+</bind>
+</comp>
+
+<comp id="136" class="1005" name="tmp_s_reg_136">
+<pin_list>
+<pin id="137" dir="0" index="0" bw="32" slack="1"/>
+<pin id="138" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp_s "/>
+</bind>
+</comp>
+
+<comp id="141" class="1005" name="q_addr_reg_141">
+<pin_list>
+<pin id="142" dir="0" index="0" bw="2" slack="1"/>
+<pin id="143" dir="1" index="1" bw="2" slack="1"/>
+</pin_list>
+<bind>
+<opset="q_addr "/>
+</bind>
+</comp>
+
+<comp id="146" class="1005" name="q_load_reg_146">
+<pin_list>
+<pin id="147" dir="0" index="0" bw="32" slack="1"/>
+<pin id="148" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="q_load "/>
+</bind>
+</comp>
+
+<comp id="151" class="1005" name="tmp_1_reg_151">
+<pin_list>
+<pin id="152" dir="0" index="0" bw="32" slack="1"/>
+<pin id="153" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp_1 "/>
+</bind>
+</comp>
+
+<comp id="156" class="1005" name="q_addr_1_reg_156">
+<pin_list>
+<pin id="157" dir="0" index="0" bw="2" slack="1"/>
+<pin id="158" dir="1" index="1" bw="2" slack="1"/>
+</pin_list>
+<bind>
+<opset="q_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="161" class="1005" name="q_load_1_reg_161">
+<pin_list>
+<pin id="162" dir="0" index="0" bw="32" slack="1"/>
+<pin id="163" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="q_load_1 "/>
+</bind>
+</comp>
+
+<comp id="166" class="1005" name="tmp_2_reg_166">
+<pin_list>
+<pin id="167" dir="0" index="0" bw="32" slack="1"/>
+<pin id="168" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp_2 "/>
+</bind>
+</comp>
+
+<comp id="171" class="1005" name="q_addr_2_reg_171">
+<pin_list>
+<pin id="172" dir="0" index="0" bw="2" slack="1"/>
+<pin id="173" dir="1" index="1" bw="2" slack="1"/>
+</pin_list>
+<bind>
+<opset="q_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="177" class="1005" name="q_load_2_reg_177">
+<pin_list>
+<pin id="178" dir="0" index="0" bw="32" slack="1"/>
+<pin id="179" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="q_load_2 "/>
+</bind>
+</comp>
+
+<comp id="182" class="1005" name="tmp_3_reg_182">
+<pin_list>
+<pin id="183" dir="0" index="0" bw="32" slack="1"/>
+<pin id="184" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp_3 "/>
+</bind>
+</comp>
+
+<comp id="187" class="1005" name="q_addr_3_reg_187">
+<pin_list>
+<pin id="188" dir="0" index="0" bw="2" slack="1"/>
+<pin id="189" dir="1" index="1" bw="2" slack="1"/>
+</pin_list>
+<bind>
+<opset="q_addr_3 "/>
+</bind>
+</comp>
+
+<comp id="193" class="1005" name="q_load_3_reg_193">
+<pin_list>
+<pin id="194" dir="0" index="0" bw="32" slack="1"/>
+<pin id="195" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="q_load_3 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="36"><net_src comp="10" pin="0"/><net_sink comp="32" pin=0"/></net>
+
+<net id="37"><net_src comp="2" pin="0"/><net_sink comp="32" pin=1"/></net>
+
+<net id="42"><net_src comp="10" pin="0"/><net_sink comp="38" pin=0"/></net>
+
+<net id="43"><net_src comp="4" pin="0"/><net_sink comp="38" pin=1"/></net>
+
+<net id="48"><net_src comp="10" pin="0"/><net_sink comp="44" pin=0"/></net>
+
+<net id="49"><net_src comp="6" pin="0"/><net_sink comp="44" pin=1"/></net>
+
+<net id="54"><net_src comp="10" pin="0"/><net_sink comp="50" pin=0"/></net>
+
+<net id="55"><net_src comp="8" pin="0"/><net_sink comp="50" pin=1"/></net>
+
+<net id="61"><net_src comp="0" pin="0"/><net_sink comp="56" pin=0"/></net>
+
+<net id="62"><net_src comp="14" pin="0"/><net_sink comp="56" pin=1"/></net>
+
+<net id="63"><net_src comp="14" pin="0"/><net_sink comp="56" pin=2"/></net>
+
+<net id="68"><net_src comp="56" pin="3"/><net_sink comp="64" pin=0"/></net>
+
+<net id="74"><net_src comp="0" pin="0"/><net_sink comp="69" pin=0"/></net>
+
+<net id="75"><net_src comp="14" pin="0"/><net_sink comp="69" pin=1"/></net>
+
+<net id="76"><net_src comp="16" pin="0"/><net_sink comp="69" pin=2"/></net>
+
+<net id="80"><net_src comp="69" pin="3"/><net_sink comp="64" pin=3"/></net>
+
+<net id="86"><net_src comp="0" pin="0"/><net_sink comp="81" pin=0"/></net>
+
+<net id="87"><net_src comp="14" pin="0"/><net_sink comp="81" pin=1"/></net>
+
+<net id="88"><net_src comp="18" pin="0"/><net_sink comp="81" pin=2"/></net>
+
+<net id="89"><net_src comp="81" pin="3"/><net_sink comp="64" pin=3"/></net>
+
+<net id="95"><net_src comp="0" pin="0"/><net_sink comp="90" pin=0"/></net>
+
+<net id="96"><net_src comp="14" pin="0"/><net_sink comp="90" pin=1"/></net>
+
+<net id="97"><net_src comp="20" pin="0"/><net_sink comp="90" pin=2"/></net>
+
+<net id="98"><net_src comp="90" pin="3"/><net_sink comp="64" pin=3"/></net>
+
+<net id="103"><net_src comp="99" pin="2"/><net_sink comp="64" pin=1"/></net>
+
+<net id="104"><net_src comp="64" pin="2"/><net_sink comp="99" pin=0"/></net>
+
+<net id="105"><net_src comp="99" pin="2"/><net_sink comp="64" pin=4"/></net>
+
+<net id="106"><net_src comp="64" pin="5"/><net_sink comp="99" pin=0"/></net>
+
+<net id="111"><net_src comp="32" pin="2"/><net_sink comp="107" pin=0"/></net>
+
+<net id="112"><net_src comp="12" pin="0"/><net_sink comp="107" pin=1"/></net>
+
+<net id="113"><net_src comp="38" pin="2"/><net_sink comp="107" pin=0"/></net>
+
+<net id="114"><net_src comp="44" pin="2"/><net_sink comp="107" pin=0"/></net>
+
+<net id="115"><net_src comp="50" pin="2"/><net_sink comp="107" pin=0"/></net>
+
+<net id="119"><net_src comp="32" pin="2"/><net_sink comp="116" pin=0"/></net>
+
+<net id="120"><net_src comp="116" pin="1"/><net_sink comp="107" pin=0"/></net>
+
+<net id="124"><net_src comp="38" pin="2"/><net_sink comp="121" pin=0"/></net>
+
+<net id="125"><net_src comp="121" pin="1"/><net_sink comp="107" pin=0"/></net>
+
+<net id="129"><net_src comp="44" pin="2"/><net_sink comp="126" pin=0"/></net>
+
+<net id="130"><net_src comp="126" pin="1"/><net_sink comp="107" pin=0"/></net>
+
+<net id="134"><net_src comp="50" pin="2"/><net_sink comp="131" pin=0"/></net>
+
+<net id="135"><net_src comp="131" pin="1"/><net_sink comp="107" pin=0"/></net>
+
+<net id="139"><net_src comp="107" pin="2"/><net_sink comp="136" pin=0"/></net>
+
+<net id="140"><net_src comp="136" pin="1"/><net_sink comp="99" pin=1"/></net>
+
+<net id="144"><net_src comp="56" pin="3"/><net_sink comp="141" pin=0"/></net>
+
+<net id="145"><net_src comp="141" pin="1"/><net_sink comp="64" pin=0"/></net>
+
+<net id="149"><net_src comp="64" pin="2"/><net_sink comp="146" pin=0"/></net>
+
+<net id="150"><net_src comp="146" pin="1"/><net_sink comp="99" pin=0"/></net>
+
+<net id="154"><net_src comp="107" pin="2"/><net_sink comp="151" pin=0"/></net>
+
+<net id="155"><net_src comp="151" pin="1"/><net_sink comp="99" pin=1"/></net>
+
+<net id="159"><net_src comp="69" pin="3"/><net_sink comp="156" pin=0"/></net>
+
+<net id="160"><net_src comp="156" pin="1"/><net_sink comp="64" pin=3"/></net>
+
+<net id="164"><net_src comp="64" pin="5"/><net_sink comp="161" pin=0"/></net>
+
+<net id="165"><net_src comp="161" pin="1"/><net_sink comp="99" pin=0"/></net>
+
+<net id="169"><net_src comp="107" pin="2"/><net_sink comp="166" pin=0"/></net>
+
+<net id="170"><net_src comp="166" pin="1"/><net_sink comp="99" pin=1"/></net>
+
+<net id="174"><net_src comp="81" pin="3"/><net_sink comp="171" pin=0"/></net>
+
+<net id="175"><net_src comp="171" pin="1"/><net_sink comp="64" pin=3"/></net>
+
+<net id="176"><net_src comp="171" pin="1"/><net_sink comp="64" pin=0"/></net>
+
+<net id="180"><net_src comp="64" pin="5"/><net_sink comp="177" pin=0"/></net>
+
+<net id="181"><net_src comp="177" pin="1"/><net_sink comp="99" pin=0"/></net>
+
+<net id="185"><net_src comp="107" pin="2"/><net_sink comp="182" pin=0"/></net>
+
+<net id="186"><net_src comp="182" pin="1"/><net_sink comp="99" pin=1"/></net>
+
+<net id="190"><net_src comp="90" pin="3"/><net_sink comp="187" pin=0"/></net>
+
+<net id="191"><net_src comp="187" pin="1"/><net_sink comp="64" pin=3"/></net>
+
+<net id="192"><net_src comp="187" pin="1"/><net_sink comp="64" pin=0"/></net>
+
+<net id="196"><net_src comp="64" pin="5"/><net_sink comp="193" pin=0"/></net>
+
+<net id="197"><net_src comp="193" pin="1"/><net_sink comp="99" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: q | {14 15 16 17 }
+ - Input state : 
+	Port: integrateQdot : q | {5 6 7 8 9 }
+	Port: integrateQdot : p_read | {1 }
+	Port: integrateQdot : p_read1 | {2 }
+	Port: integrateQdot : p_read2 | {3 }
+	Port: integrateQdot : p_read3 | {4 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+		q_load : 1
+	State 6
+		tmp_8 : 1
+		q_load_1 : 1
+	State 7
+		tmp_8_1 : 1
+		q_load_2 : 1
+	State 8
+		tmp_8_2 : 1
+		q_load_3 : 1
+	State 9
+		tmp_8_3 : 1
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+		StgValue_81 : 1
+	State 15
+		StgValue_86 : 1
+	State 16
+		StgValue_90 : 1
+	State 17
+		StgValue_94 : 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|---------------------|---------|---------|---------|
+| Operation|   Functional Unit   |  DSP48E |    FF   |   LUT   |
+|----------|---------------------|---------|---------|---------|
+|   fadd   |      grp_fu_99      |    2    |   324   |   424   |
+|----------|---------------------|---------|---------|---------|
+|   fmul   |      grp_fu_107     |    3    |   151   |   325   |
+|----------|---------------------|---------|---------|---------|
+|          | p_read_4_read_fu_32 |    0    |    0    |    0    |
+|   read   | p_read_3_read_fu_38 |    0    |    0    |    0    |
+|          | p_read_2_read_fu_44 |    0    |    0    |    0    |
+|          | p_read_1_read_fu_50 |    0    |    0    |    0    |
+|----------|---------------------|---------|---------|---------|
+|   Total  |                     |    5    |   475   |   749   |
+|----------|---------------------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++----------------+--------+
+|                |   FF   |
++----------------+--------+
+|p_read_1_reg_131|   32   |
+|p_read_2_reg_126|   32   |
+|p_read_3_reg_121|   32   |
+|p_read_4_reg_116|   32   |
+|q_addr_1_reg_156|    2   |
+|q_addr_2_reg_171|    2   |
+|q_addr_3_reg_187|    2   |
+| q_addr_reg_141 |    2   |
+|q_load_1_reg_161|   32   |
+|q_load_2_reg_177|   32   |
+|q_load_3_reg_193|   32   |
+| q_load_reg_146 |   32   |
+|  tmp_1_reg_151 |   32   |
+|  tmp_2_reg_166 |   32   |
+|  tmp_3_reg_182 |   32   |
+|  tmp_s_reg_136 |   32   |
++----------------+--------+
+|      Total     |   392  |
++----------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------------|------|------|------|--------||---------||---------|
+|       Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------|------|------|------|--------||---------||---------|
+| grp_access_fu_64 |  p0  |   4  |   2  |    8   ||    21   |
+| grp_access_fu_64 |  p3  |   6  |   2  |   12   ||    33   |
+|     grp_fu_99    |  p0  |   6  |  32  |   192  ||    33   |
+|     grp_fu_99    |  p1  |   4  |  32  |   128  ||    21   |
+|    grp_fu_107    |  p0  |   8  |  32  |   256  ||    41   |
+|------------------|------|------|------|--------||---------||---------|
+|       Total      |      |      |      |   596  ||  9.6264 ||   149   |
+|------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           | DSP48E |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    5   |    -   |   475  |   749  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    9   |    -   |   149  |
+|  Register |    -   |    -   |   392  |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    5   |    9   |   867  |   898  |
++-----------+--------+--------+--------+--------+

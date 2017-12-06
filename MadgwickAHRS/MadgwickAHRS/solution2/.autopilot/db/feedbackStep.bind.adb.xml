@@ -1,0 +1,1523 @@
+<stg><name>feedbackStep</name>
+
+
+<trans_list>
+
+<trans id="100" from="1" to="2">
+<condition id="13">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="101" from="2" to="3">
+<condition id="14">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="102" from="3" to="4">
+<condition id="15">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="103" from="4" to="5">
+<condition id="16">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="104" from="5" to="6">
+<condition id="17">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="105" from="6" to="7">
+<condition id="18">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="106" from="7" to="8">
+<condition id="19">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="107" from="8" to="9">
+<condition id="20">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="108" from="9" to="10">
+<condition id="21">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="109" from="10" to="11">
+<condition id="22">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="110" from="11" to="12">
+<condition id="23">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="111" from="12" to="13">
+<condition id="24">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="112" from="13" to="14">
+<condition id="25">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="15" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:0  %s_3_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %s_3_read)
+
+]]></Node>
+<StgValue><ssdm name="s_3_read_1"/></StgValue>
+</operation>
+
+<operation id="16" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:1  %s_2_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %s_2_read)
+
+]]></Node>
+<StgValue><ssdm name="s_2_read_1"/></StgValue>
+</operation>
+
+<operation id="17" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:2  %s_1_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %s_1_read)
+
+]]></Node>
+<StgValue><ssdm name="s_1_read_1"/></StgValue>
+</operation>
+
+<operation id="18" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:3  %s_0_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %s_0_read)
+
+]]></Node>
+<StgValue><ssdm name="s_0_read_1"/></StgValue>
+</operation>
+
+<operation id="19" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:4  %beta_read = call float @_ssdm_op_Read.ap_auto.float(float %beta)
+
+]]></Node>
+<StgValue><ssdm name="beta_read"/></StgValue>
+</operation>
+
+<operation id="20" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:5  %qDot_3_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %qDot_3_read)
+
+]]></Node>
+<StgValue><ssdm name="qDot_3_read_1"/></StgValue>
+</operation>
+
+<operation id="21" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:6  %qDot_2_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %qDot_2_read)
+
+]]></Node>
+<StgValue><ssdm name="qDot_2_read_1"/></StgValue>
+</operation>
+
+<operation id="22" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:7  %qDot_1_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %qDot_1_read)
+
+]]></Node>
+<StgValue><ssdm name="qDot_1_read_1"/></StgValue>
+</operation>
+
+<operation id="23" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:8  %qDot_0_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %qDot_0_read)
+
+]]></Node>
+<StgValue><ssdm name="qDot_0_read_1"/></StgValue>
+</operation>
+
+<operation id="24" st_id="1" stage="5" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:10  %tmp_s = fmul float %s_0_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_s"/></StgValue>
+</operation>
+
+<operation id="25" st_id="1" stage="5" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:12  %tmp_1 = fmul float %s_1_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_1"/></StgValue>
+</operation>
+
+<operation id="26" st_id="1" stage="5" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="24" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:14  %tmp_2 = fmul float %s_2_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_2"/></StgValue>
+</operation>
+
+<operation id="27" st_id="1" stage="5" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:16  %tmp_3 = fmul float %s_3_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_3"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="28" st_id="2" stage="4" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:10  %tmp_s = fmul float %s_0_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_s"/></StgValue>
+</operation>
+
+<operation id="29" st_id="2" stage="4" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:12  %tmp_1 = fmul float %s_1_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_1"/></StgValue>
+</operation>
+
+<operation id="30" st_id="2" stage="4" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="24" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:14  %tmp_2 = fmul float %s_2_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_2"/></StgValue>
+</operation>
+
+<operation id="31" st_id="2" stage="4" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:16  %tmp_3 = fmul float %s_3_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_3"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="32" st_id="3" stage="3" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:10  %tmp_s = fmul float %s_0_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_s"/></StgValue>
+</operation>
+
+<operation id="33" st_id="3" stage="3" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:12  %tmp_1 = fmul float %s_1_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_1"/></StgValue>
+</operation>
+
+<operation id="34" st_id="3" stage="3" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="24" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:14  %tmp_2 = fmul float %s_2_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_2"/></StgValue>
+</operation>
+
+<operation id="35" st_id="3" stage="3" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:16  %tmp_3 = fmul float %s_3_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_3"/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="36" st_id="4" stage="2" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:10  %tmp_s = fmul float %s_0_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_s"/></StgValue>
+</operation>
+
+<operation id="37" st_id="4" stage="2" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:12  %tmp_1 = fmul float %s_1_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_1"/></StgValue>
+</operation>
+
+<operation id="38" st_id="4" stage="2" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="24" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:14  %tmp_2 = fmul float %s_2_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_2"/></StgValue>
+</operation>
+
+<operation id="39" st_id="4" stage="2" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:16  %tmp_3 = fmul float %s_3_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_3"/></StgValue>
+</operation>
+</state>
+
+<state id="5" st_id="5">
+
+<operation id="40" st_id="5" stage="1" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:10  %tmp_s = fmul float %s_0_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_s"/></StgValue>
+</operation>
+
+<operation id="41" st_id="5" stage="1" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:12  %tmp_1 = fmul float %s_1_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_1"/></StgValue>
+</operation>
+
+<operation id="42" st_id="5" stage="1" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="24" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:14  %tmp_2 = fmul float %s_2_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_2"/></StgValue>
+</operation>
+
+<operation id="43" st_id="5" stage="1" lat="5">
+<core>FMul</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:16  %tmp_3 = fmul float %s_3_read_1, %beta_read
+
+]]></Node>
+<StgValue><ssdm name="tmp_3"/></StgValue>
+</operation>
+</state>
+
+<state id="6" st_id="6">
+
+<operation id="44" st_id="6" stage="9" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:11  %qDot = fsub float %qDot_0_read_1, %tmp_s
+
+]]></Node>
+<StgValue><ssdm name="qDot"/></StgValue>
+</operation>
+
+<operation id="45" st_id="6" stage="9" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:13  %qDot_1 = fsub float %qDot_1_read_1, %tmp_1
+
+]]></Node>
+<StgValue><ssdm name="qDot_1"/></StgValue>
+</operation>
+
+<operation id="46" st_id="6" stage="9" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:15  %qDot_2 = fsub float %qDot_2_read_1, %tmp_2
+
+]]></Node>
+<StgValue><ssdm name="qDot_2"/></StgValue>
+</operation>
+
+<operation id="47" st_id="6" stage="9" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:17  %qDot_3 = fsub float %qDot_3_read_1, %tmp_3
+
+]]></Node>
+<StgValue><ssdm name="qDot_3"/></StgValue>
+</operation>
+</state>
+
+<state id="7" st_id="7">
+
+<operation id="48" st_id="7" stage="8" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:11  %qDot = fsub float %qDot_0_read_1, %tmp_s
+
+]]></Node>
+<StgValue><ssdm name="qDot"/></StgValue>
+</operation>
+
+<operation id="49" st_id="7" stage="8" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:13  %qDot_1 = fsub float %qDot_1_read_1, %tmp_1
+
+]]></Node>
+<StgValue><ssdm name="qDot_1"/></StgValue>
+</operation>
+
+<operation id="50" st_id="7" stage="8" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:15  %qDot_2 = fsub float %qDot_2_read_1, %tmp_2
+
+]]></Node>
+<StgValue><ssdm name="qDot_2"/></StgValue>
+</operation>
+
+<operation id="51" st_id="7" stage="8" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:17  %qDot_3 = fsub float %qDot_3_read_1, %tmp_3
+
+]]></Node>
+<StgValue><ssdm name="qDot_3"/></StgValue>
+</operation>
+</state>
+
+<state id="8" st_id="8">
+
+<operation id="52" st_id="8" stage="7" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:11  %qDot = fsub float %qDot_0_read_1, %tmp_s
+
+]]></Node>
+<StgValue><ssdm name="qDot"/></StgValue>
+</operation>
+
+<operation id="53" st_id="8" stage="7" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:13  %qDot_1 = fsub float %qDot_1_read_1, %tmp_1
+
+]]></Node>
+<StgValue><ssdm name="qDot_1"/></StgValue>
+</operation>
+
+<operation id="54" st_id="8" stage="7" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:15  %qDot_2 = fsub float %qDot_2_read_1, %tmp_2
+
+]]></Node>
+<StgValue><ssdm name="qDot_2"/></StgValue>
+</operation>
+
+<operation id="55" st_id="8" stage="7" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:17  %qDot_3 = fsub float %qDot_3_read_1, %tmp_3
+
+]]></Node>
+<StgValue><ssdm name="qDot_3"/></StgValue>
+</operation>
+</state>
+
+<state id="9" st_id="9">
+
+<operation id="56" st_id="9" stage="6" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:11  %qDot = fsub float %qDot_0_read_1, %tmp_s
+
+]]></Node>
+<StgValue><ssdm name="qDot"/></StgValue>
+</operation>
+
+<operation id="57" st_id="9" stage="6" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:13  %qDot_1 = fsub float %qDot_1_read_1, %tmp_1
+
+]]></Node>
+<StgValue><ssdm name="qDot_1"/></StgValue>
+</operation>
+
+<operation id="58" st_id="9" stage="6" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:15  %qDot_2 = fsub float %qDot_2_read_1, %tmp_2
+
+]]></Node>
+<StgValue><ssdm name="qDot_2"/></StgValue>
+</operation>
+
+<operation id="59" st_id="9" stage="6" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:17  %qDot_3 = fsub float %qDot_3_read_1, %tmp_3
+
+]]></Node>
+<StgValue><ssdm name="qDot_3"/></StgValue>
+</operation>
+</state>
+
+<state id="10" st_id="10">
+
+<operation id="60" st_id="10" stage="5" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:11  %qDot = fsub float %qDot_0_read_1, %tmp_s
+
+]]></Node>
+<StgValue><ssdm name="qDot"/></StgValue>
+</operation>
+
+<operation id="61" st_id="10" stage="5" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:13  %qDot_1 = fsub float %qDot_1_read_1, %tmp_1
+
+]]></Node>
+<StgValue><ssdm name="qDot_1"/></StgValue>
+</operation>
+
+<operation id="62" st_id="10" stage="5" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:15  %qDot_2 = fsub float %qDot_2_read_1, %tmp_2
+
+]]></Node>
+<StgValue><ssdm name="qDot_2"/></StgValue>
+</operation>
+
+<operation id="63" st_id="10" stage="5" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:17  %qDot_3 = fsub float %qDot_3_read_1, %tmp_3
+
+]]></Node>
+<StgValue><ssdm name="qDot_3"/></StgValue>
+</operation>
+</state>
+
+<state id="11" st_id="11">
+
+<operation id="64" st_id="11" stage="4" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:11  %qDot = fsub float %qDot_0_read_1, %tmp_s
+
+]]></Node>
+<StgValue><ssdm name="qDot"/></StgValue>
+</operation>
+
+<operation id="65" st_id="11" stage="4" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:13  %qDot_1 = fsub float %qDot_1_read_1, %tmp_1
+
+]]></Node>
+<StgValue><ssdm name="qDot_1"/></StgValue>
+</operation>
+
+<operation id="66" st_id="11" stage="4" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:15  %qDot_2 = fsub float %qDot_2_read_1, %tmp_2
+
+]]></Node>
+<StgValue><ssdm name="qDot_2"/></StgValue>
+</operation>
+
+<operation id="67" st_id="11" stage="4" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:17  %qDot_3 = fsub float %qDot_3_read_1, %tmp_3
+
+]]></Node>
+<StgValue><ssdm name="qDot_3"/></StgValue>
+</operation>
+</state>
+
+<state id="12" st_id="12">
+
+<operation id="68" st_id="12" stage="3" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:11  %qDot = fsub float %qDot_0_read_1, %tmp_s
+
+]]></Node>
+<StgValue><ssdm name="qDot"/></StgValue>
+</operation>
+
+<operation id="69" st_id="12" stage="3" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:13  %qDot_1 = fsub float %qDot_1_read_1, %tmp_1
+
+]]></Node>
+<StgValue><ssdm name="qDot_1"/></StgValue>
+</operation>
+
+<operation id="70" st_id="12" stage="3" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:15  %qDot_2 = fsub float %qDot_2_read_1, %tmp_2
+
+]]></Node>
+<StgValue><ssdm name="qDot_2"/></StgValue>
+</operation>
+
+<operation id="71" st_id="12" stage="3" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:17  %qDot_3 = fsub float %qDot_3_read_1, %tmp_3
+
+]]></Node>
+<StgValue><ssdm name="qDot_3"/></StgValue>
+</operation>
+</state>
+
+<state id="13" st_id="13">
+
+<operation id="72" st_id="13" stage="2" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:11  %qDot = fsub float %qDot_0_read_1, %tmp_s
+
+]]></Node>
+<StgValue><ssdm name="qDot"/></StgValue>
+</operation>
+
+<operation id="73" st_id="13" stage="2" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:13  %qDot_1 = fsub float %qDot_1_read_1, %tmp_1
+
+]]></Node>
+<StgValue><ssdm name="qDot_1"/></StgValue>
+</operation>
+
+<operation id="74" st_id="13" stage="2" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:15  %qDot_2 = fsub float %qDot_2_read_1, %tmp_2
+
+]]></Node>
+<StgValue><ssdm name="qDot_2"/></StgValue>
+</operation>
+
+<operation id="75" st_id="13" stage="2" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:17  %qDot_3 = fsub float %qDot_3_read_1, %tmp_3
+
+]]></Node>
+<StgValue><ssdm name="qDot_3"/></StgValue>
+</operation>
+</state>
+
+<state id="14" st_id="14">
+
+<operation id="76" st_id="14" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
+<![CDATA[
+:9  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="77" st_id="14" stage="1" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:11  %qDot = fsub float %qDot_0_read_1, %tmp_s
+
+]]></Node>
+<StgValue><ssdm name="qDot"/></StgValue>
+</operation>
+
+<operation id="78" st_id="14" stage="1" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:13  %qDot_1 = fsub float %qDot_1_read_1, %tmp_1
+
+]]></Node>
+<StgValue><ssdm name="qDot_1"/></StgValue>
+</operation>
+
+<operation id="79" st_id="14" stage="1" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:15  %qDot_2 = fsub float %qDot_2_read_1, %tmp_2
+
+]]></Node>
+<StgValue><ssdm name="qDot_2"/></StgValue>
+</operation>
+
+<operation id="80" st_id="14" stage="1" lat="9">
+<core>FAddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:17  %qDot_3 = fsub float %qDot_3_read_1, %tmp_3
+
+]]></Node>
+<StgValue><ssdm name="qDot_3"/></StgValue>
+</operation>
+
+<operation id="81" st_id="14" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="28" bw="128" op_0_bw="128" op_1_bw="32">
+<![CDATA[
+:18  %mrv = insertvalue { float, float, float, float } undef, float %qDot, 0
+
+]]></Node>
+<StgValue><ssdm name="mrv"/></StgValue>
+</operation>
+
+<operation id="82" st_id="14" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="29" bw="128" op_0_bw="128" op_1_bw="32">
+<![CDATA[
+:19  %mrv_1 = insertvalue { float, float, float, float } %mrv, float %qDot_1, 1
+
+]]></Node>
+<StgValue><ssdm name="mrv_1"/></StgValue>
+</operation>
+
+<operation id="83" st_id="14" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="30" bw="128" op_0_bw="128" op_1_bw="32">
+<![CDATA[
+:20  %mrv_2 = insertvalue { float, float, float, float } %mrv_1, float %qDot_2, 2
+
+]]></Node>
+<StgValue><ssdm name="mrv_2"/></StgValue>
+</operation>
+
+<operation id="84" st_id="14" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="31" bw="128" op_0_bw="128" op_1_bw="32">
+<![CDATA[
+:21  %mrv_3 = insertvalue { float, float, float, float } %mrv_2, float %qDot_3, 3
+
+]]></Node>
+<StgValue><ssdm name="mrv_3"/></StgValue>
+</operation>
+
+<operation id="85" st_id="14" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="32" bw="0" op_0_bw="128">
+<![CDATA[
+:22  ret { float, float, float, float } %mrv_3
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="113" name="qDot_0_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="qDot_0_read"/></StgValue>
+</port>
+<port id="114" name="qDot_1_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="qDot_1_read"/></StgValue>
+</port>
+<port id="115" name="qDot_2_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="qDot_2_read"/></StgValue>
+</port>
+<port id="116" name="qDot_3_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="qDot_3_read"/></StgValue>
+</port>
+<port id="117" name="beta" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="beta"/></StgValue>
+</port>
+<port id="118" name="s_0_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_0_read"/></StgValue>
+</port>
+<port id="119" name="s_1_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_1_read"/></StgValue>
+</port>
+<port id="120" name="s_2_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_2_read"/></StgValue>
+</port>
+<port id="121" name="s_3_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="s_3_read"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="123" from="_ssdm_op_Read.ap_auto.float" to="s_3_read_1" fromId="122" toId="15">
+</dataflow>
+<dataflow id="124" from="s_3_read" to="s_3_read_1" fromId="121" toId="15">
+</dataflow>
+<dataflow id="125" from="_ssdm_op_Read.ap_auto.float" to="s_2_read_1" fromId="122" toId="16">
+</dataflow>
+<dataflow id="126" from="s_2_read" to="s_2_read_1" fromId="120" toId="16">
+</dataflow>
+<dataflow id="127" from="_ssdm_op_Read.ap_auto.float" to="s_1_read_1" fromId="122" toId="17">
+</dataflow>
+<dataflow id="128" from="s_1_read" to="s_1_read_1" fromId="119" toId="17">
+</dataflow>
+<dataflow id="129" from="_ssdm_op_Read.ap_auto.float" to="s_0_read_1" fromId="122" toId="18">
+</dataflow>
+<dataflow id="130" from="s_0_read" to="s_0_read_1" fromId="118" toId="18">
+</dataflow>
+<dataflow id="131" from="_ssdm_op_Read.ap_auto.float" to="beta_read" fromId="122" toId="19">
+</dataflow>
+<dataflow id="132" from="beta" to="beta_read" fromId="117" toId="19">
+</dataflow>
+<dataflow id="133" from="_ssdm_op_Read.ap_auto.float" to="qDot_3_read_1" fromId="122" toId="20">
+</dataflow>
+<dataflow id="134" from="qDot_3_read" to="qDot_3_read_1" fromId="116" toId="20">
+</dataflow>
+<dataflow id="135" from="_ssdm_op_Read.ap_auto.float" to="qDot_2_read_1" fromId="122" toId="21">
+</dataflow>
+<dataflow id="136" from="qDot_2_read" to="qDot_2_read_1" fromId="115" toId="21">
+</dataflow>
+<dataflow id="137" from="_ssdm_op_Read.ap_auto.float" to="qDot_1_read_1" fromId="122" toId="22">
+</dataflow>
+<dataflow id="138" from="qDot_1_read" to="qDot_1_read_1" fromId="114" toId="22">
+</dataflow>
+<dataflow id="139" from="_ssdm_op_Read.ap_auto.float" to="qDot_0_read_1" fromId="122" toId="23">
+</dataflow>
+<dataflow id="140" from="qDot_0_read" to="qDot_0_read_1" fromId="113" toId="23">
+</dataflow>
+<dataflow id="141" from="s_0_read_1" to="tmp_s" fromId="18" toId="24">
+</dataflow>
+<dataflow id="142" from="beta_read" to="tmp_s" fromId="19" toId="24">
+</dataflow>
+<dataflow id="143" from="s_1_read_1" to="tmp_1" fromId="17" toId="25">
+</dataflow>
+<dataflow id="144" from="beta_read" to="tmp_1" fromId="19" toId="25">
+</dataflow>
+<dataflow id="145" from="s_2_read_1" to="tmp_2" fromId="16" toId="26">
+</dataflow>
+<dataflow id="146" from="beta_read" to="tmp_2" fromId="19" toId="26">
+</dataflow>
+<dataflow id="147" from="s_3_read_1" to="tmp_3" fromId="15" toId="27">
+</dataflow>
+<dataflow id="148" from="beta_read" to="tmp_3" fromId="19" toId="27">
+</dataflow>
+<dataflow id="149" from="s_0_read_1" to="tmp_s" fromId="18" toId="28">
+</dataflow>
+<dataflow id="150" from="beta_read" to="tmp_s" fromId="19" toId="28">
+</dataflow>
+<dataflow id="151" from="s_1_read_1" to="tmp_1" fromId="17" toId="29">
+</dataflow>
+<dataflow id="152" from="beta_read" to="tmp_1" fromId="19" toId="29">
+</dataflow>
+<dataflow id="153" from="s_2_read_1" to="tmp_2" fromId="16" toId="30">
+</dataflow>
+<dataflow id="154" from="beta_read" to="tmp_2" fromId="19" toId="30">
+</dataflow>
+<dataflow id="155" from="s_3_read_1" to="tmp_3" fromId="15" toId="31">
+</dataflow>
+<dataflow id="156" from="beta_read" to="tmp_3" fromId="19" toId="31">
+</dataflow>
+<dataflow id="157" from="s_0_read_1" to="tmp_s" fromId="18" toId="32">
+</dataflow>
+<dataflow id="158" from="beta_read" to="tmp_s" fromId="19" toId="32">
+</dataflow>
+<dataflow id="159" from="s_1_read_1" to="tmp_1" fromId="17" toId="33">
+</dataflow>
+<dataflow id="160" from="beta_read" to="tmp_1" fromId="19" toId="33">
+</dataflow>
+<dataflow id="161" from="s_2_read_1" to="tmp_2" fromId="16" toId="34">
+</dataflow>
+<dataflow id="162" from="beta_read" to="tmp_2" fromId="19" toId="34">
+</dataflow>
+<dataflow id="163" from="s_3_read_1" to="tmp_3" fromId="15" toId="35">
+</dataflow>
+<dataflow id="164" from="beta_read" to="tmp_3" fromId="19" toId="35">
+</dataflow>
+<dataflow id="165" from="s_0_read_1" to="tmp_s" fromId="18" toId="36">
+</dataflow>
+<dataflow id="166" from="beta_read" to="tmp_s" fromId="19" toId="36">
+</dataflow>
+<dataflow id="167" from="s_1_read_1" to="tmp_1" fromId="17" toId="37">
+</dataflow>
+<dataflow id="168" from="beta_read" to="tmp_1" fromId="19" toId="37">
+</dataflow>
+<dataflow id="169" from="s_2_read_1" to="tmp_2" fromId="16" toId="38">
+</dataflow>
+<dataflow id="170" from="beta_read" to="tmp_2" fromId="19" toId="38">
+</dataflow>
+<dataflow id="171" from="s_3_read_1" to="tmp_3" fromId="15" toId="39">
+</dataflow>
+<dataflow id="172" from="beta_read" to="tmp_3" fromId="19" toId="39">
+</dataflow>
+<dataflow id="173" from="s_0_read_1" to="tmp_s" fromId="18" toId="40">
+</dataflow>
+<dataflow id="174" from="beta_read" to="tmp_s" fromId="19" toId="40">
+</dataflow>
+<dataflow id="175" from="s_1_read_1" to="tmp_1" fromId="17" toId="41">
+</dataflow>
+<dataflow id="176" from="beta_read" to="tmp_1" fromId="19" toId="41">
+</dataflow>
+<dataflow id="177" from="s_2_read_1" to="tmp_2" fromId="16" toId="42">
+</dataflow>
+<dataflow id="178" from="beta_read" to="tmp_2" fromId="19" toId="42">
+</dataflow>
+<dataflow id="179" from="s_3_read_1" to="tmp_3" fromId="15" toId="43">
+</dataflow>
+<dataflow id="180" from="beta_read" to="tmp_3" fromId="19" toId="43">
+</dataflow>
+<dataflow id="181" from="qDot_0_read_1" to="qDot" fromId="23" toId="44">
+</dataflow>
+<dataflow id="182" from="tmp_s" to="qDot" fromId="40" toId="44">
+</dataflow>
+<dataflow id="183" from="qDot_1_read_1" to="qDot_1" fromId="22" toId="45">
+</dataflow>
+<dataflow id="184" from="tmp_1" to="qDot_1" fromId="41" toId="45">
+</dataflow>
+<dataflow id="185" from="qDot_2_read_1" to="qDot_2" fromId="21" toId="46">
+</dataflow>
+<dataflow id="186" from="tmp_2" to="qDot_2" fromId="42" toId="46">
+</dataflow>
+<dataflow id="187" from="qDot_3_read_1" to="qDot_3" fromId="20" toId="47">
+</dataflow>
+<dataflow id="188" from="tmp_3" to="qDot_3" fromId="43" toId="47">
+</dataflow>
+<dataflow id="189" from="qDot_0_read_1" to="qDot" fromId="23" toId="48">
+</dataflow>
+<dataflow id="190" from="tmp_s" to="qDot" fromId="40" toId="48">
+</dataflow>
+<dataflow id="191" from="qDot_1_read_1" to="qDot_1" fromId="22" toId="49">
+</dataflow>
+<dataflow id="192" from="tmp_1" to="qDot_1" fromId="41" toId="49">
+</dataflow>
+<dataflow id="193" from="qDot_2_read_1" to="qDot_2" fromId="21" toId="50">
+</dataflow>
+<dataflow id="194" from="tmp_2" to="qDot_2" fromId="42" toId="50">
+</dataflow>
+<dataflow id="195" from="qDot_3_read_1" to="qDot_3" fromId="20" toId="51">
+</dataflow>
+<dataflow id="196" from="tmp_3" to="qDot_3" fromId="43" toId="51">
+</dataflow>
+<dataflow id="197" from="qDot_0_read_1" to="qDot" fromId="23" toId="52">
+</dataflow>
+<dataflow id="198" from="tmp_s" to="qDot" fromId="40" toId="52">
+</dataflow>
+<dataflow id="199" from="qDot_1_read_1" to="qDot_1" fromId="22" toId="53">
+</dataflow>
+<dataflow id="200" from="tmp_1" to="qDot_1" fromId="41" toId="53">
+</dataflow>
+<dataflow id="201" from="qDot_2_read_1" to="qDot_2" fromId="21" toId="54">
+</dataflow>
+<dataflow id="202" from="tmp_2" to="qDot_2" fromId="42" toId="54">
+</dataflow>
+<dataflow id="203" from="qDot_3_read_1" to="qDot_3" fromId="20" toId="55">
+</dataflow>
+<dataflow id="204" from="tmp_3" to="qDot_3" fromId="43" toId="55">
+</dataflow>
+<dataflow id="205" from="qDot_0_read_1" to="qDot" fromId="23" toId="56">
+</dataflow>
+<dataflow id="206" from="tmp_s" to="qDot" fromId="40" toId="56">
+</dataflow>
+<dataflow id="207" from="qDot_1_read_1" to="qDot_1" fromId="22" toId="57">
+</dataflow>
+<dataflow id="208" from="tmp_1" to="qDot_1" fromId="41" toId="57">
+</dataflow>
+<dataflow id="209" from="qDot_2_read_1" to="qDot_2" fromId="21" toId="58">
+</dataflow>
+<dataflow id="210" from="tmp_2" to="qDot_2" fromId="42" toId="58">
+</dataflow>
+<dataflow id="211" from="qDot_3_read_1" to="qDot_3" fromId="20" toId="59">
+</dataflow>
+<dataflow id="212" from="tmp_3" to="qDot_3" fromId="43" toId="59">
+</dataflow>
+<dataflow id="213" from="qDot_0_read_1" to="qDot" fromId="23" toId="60">
+</dataflow>
+<dataflow id="214" from="tmp_s" to="qDot" fromId="40" toId="60">
+</dataflow>
+<dataflow id="215" from="qDot_1_read_1" to="qDot_1" fromId="22" toId="61">
+</dataflow>
+<dataflow id="216" from="tmp_1" to="qDot_1" fromId="41" toId="61">
+</dataflow>
+<dataflow id="217" from="qDot_2_read_1" to="qDot_2" fromId="21" toId="62">
+</dataflow>
+<dataflow id="218" from="tmp_2" to="qDot_2" fromId="42" toId="62">
+</dataflow>
+<dataflow id="219" from="qDot_3_read_1" to="qDot_3" fromId="20" toId="63">
+</dataflow>
+<dataflow id="220" from="tmp_3" to="qDot_3" fromId="43" toId="63">
+</dataflow>
+<dataflow id="221" from="qDot_0_read_1" to="qDot" fromId="23" toId="64">
+</dataflow>
+<dataflow id="222" from="tmp_s" to="qDot" fromId="40" toId="64">
+</dataflow>
+<dataflow id="223" from="qDot_1_read_1" to="qDot_1" fromId="22" toId="65">
+</dataflow>
+<dataflow id="224" from="tmp_1" to="qDot_1" fromId="41" toId="65">
+</dataflow>
+<dataflow id="225" from="qDot_2_read_1" to="qDot_2" fromId="21" toId="66">
+</dataflow>
+<dataflow id="226" from="tmp_2" to="qDot_2" fromId="42" toId="66">
+</dataflow>
+<dataflow id="227" from="qDot_3_read_1" to="qDot_3" fromId="20" toId="67">
+</dataflow>
+<dataflow id="228" from="tmp_3" to="qDot_3" fromId="43" toId="67">
+</dataflow>
+<dataflow id="229" from="qDot_0_read_1" to="qDot" fromId="23" toId="68">
+</dataflow>
+<dataflow id="230" from="tmp_s" to="qDot" fromId="40" toId="68">
+</dataflow>
+<dataflow id="231" from="qDot_1_read_1" to="qDot_1" fromId="22" toId="69">
+</dataflow>
+<dataflow id="232" from="tmp_1" to="qDot_1" fromId="41" toId="69">
+</dataflow>
+<dataflow id="233" from="qDot_2_read_1" to="qDot_2" fromId="21" toId="70">
+</dataflow>
+<dataflow id="234" from="tmp_2" to="qDot_2" fromId="42" toId="70">
+</dataflow>
+<dataflow id="235" from="qDot_3_read_1" to="qDot_3" fromId="20" toId="71">
+</dataflow>
+<dataflow id="236" from="tmp_3" to="qDot_3" fromId="43" toId="71">
+</dataflow>
+<dataflow id="237" from="qDot_0_read_1" to="qDot" fromId="23" toId="72">
+</dataflow>
+<dataflow id="238" from="tmp_s" to="qDot" fromId="40" toId="72">
+</dataflow>
+<dataflow id="239" from="qDot_1_read_1" to="qDot_1" fromId="22" toId="73">
+</dataflow>
+<dataflow id="240" from="tmp_1" to="qDot_1" fromId="41" toId="73">
+</dataflow>
+<dataflow id="241" from="qDot_2_read_1" to="qDot_2" fromId="21" toId="74">
+</dataflow>
+<dataflow id="242" from="tmp_2" to="qDot_2" fromId="42" toId="74">
+</dataflow>
+<dataflow id="243" from="qDot_3_read_1" to="qDot_3" fromId="20" toId="75">
+</dataflow>
+<dataflow id="244" from="tmp_3" to="qDot_3" fromId="43" toId="75">
+</dataflow>
+<dataflow id="246" from="_ssdm_op_SpecPipeline" to="StgValue_76" fromId="245" toId="76">
+</dataflow>
+<dataflow id="248" from="StgValue_247" to="StgValue_76" fromId="247" toId="76">
+</dataflow>
+<dataflow id="250" from="StgValue_249" to="StgValue_76" fromId="249" toId="76">
+</dataflow>
+<dataflow id="251" from="StgValue_249" to="StgValue_76" fromId="249" toId="76">
+</dataflow>
+<dataflow id="253" from="StgValue_252" to="StgValue_76" fromId="252" toId="76">
+</dataflow>
+<dataflow id="255" from="p_str2" to="StgValue_76" fromId="254" toId="76">
+</dataflow>
+<dataflow id="256" from="qDot_0_read_1" to="qDot" fromId="23" toId="77">
+</dataflow>
+<dataflow id="257" from="tmp_s" to="qDot" fromId="40" toId="77">
+</dataflow>
+<dataflow id="258" from="qDot_1_read_1" to="qDot_1" fromId="22" toId="78">
+</dataflow>
+<dataflow id="259" from="tmp_1" to="qDot_1" fromId="41" toId="78">
+</dataflow>
+<dataflow id="260" from="qDot_2_read_1" to="qDot_2" fromId="21" toId="79">
+</dataflow>
+<dataflow id="261" from="tmp_2" to="qDot_2" fromId="42" toId="79">
+</dataflow>
+<dataflow id="262" from="qDot_3_read_1" to="qDot_3" fromId="20" toId="80">
+</dataflow>
+<dataflow id="263" from="tmp_3" to="qDot_3" fromId="43" toId="80">
+</dataflow>
+<dataflow id="265" from="StgValue_264" to="mrv" fromId="264" toId="81">
+</dataflow>
+<dataflow id="266" from="qDot" to="mrv" fromId="77" toId="81">
+</dataflow>
+<dataflow id="267" from="mrv" to="mrv_1" fromId="81" toId="82">
+</dataflow>
+<dataflow id="268" from="qDot_1" to="mrv_1" fromId="78" toId="82">
+</dataflow>
+<dataflow id="269" from="mrv_1" to="mrv_2" fromId="82" toId="83">
+</dataflow>
+<dataflow id="270" from="qDot_2" to="mrv_2" fromId="79" toId="83">
+</dataflow>
+<dataflow id="271" from="mrv_2" to="mrv_3" fromId="83" toId="84">
+</dataflow>
+<dataflow id="272" from="qDot_3" to="mrv_3" fromId="80" toId="84">
+</dataflow>
+<dataflow id="273" from="mrv_3" to="StgValue_85" fromId="84" toId="85">
+</dataflow>
+</dataflows>
+
+
+</stg>

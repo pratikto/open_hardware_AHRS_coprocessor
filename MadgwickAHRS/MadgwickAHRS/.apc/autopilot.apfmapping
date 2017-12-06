@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="MadgwickAHRS.h" path="/home/toni/Documents/vivado_projects/MadgwickAHRS/MadgwickAHRS.h"/>
+    <originFiles name="MadgwickAHRS.cpp" path="/home/toni/Documents/vivado_projects/MadgwickAHRS/MadgwickAHRS.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="MadgwickAHRS_testbench.cpp" path="/home/toni/Documents/vivado_projects/MadgwickAHRS/MadgwickAHRS_testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
