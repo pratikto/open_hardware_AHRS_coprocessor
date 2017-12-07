@@ -2,17 +2,17 @@
 <Messages>
 	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1312" content="Analyzing design file &apos;MadgwickAHRS.cpp&apos; ... " tag=""/>
 	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 358.805 ; gain = 13.375 ; free physical = 372 ; free virtual = 6579" tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="473" content="Finished Linking Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 358.805 ; gain = 13.375 ; free physical = 371 ; free virtual = 6579" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="info" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 358.805 ; gain = 13.375 ; free physical = 275 ; free virtual = 7100" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="info" keynum="473" content="Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 358.805 ; gain = 13.375 ; free physical = 269 ; free virtual = 7100" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 358.805 ; gain = 13.375 ; free physical = 371 ; free virtual = 6579" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="info" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 358.820 ; gain = 13.391 ; free physical = 255 ; free virtual = 7092" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="info" keynum="794" content="Inlining function &apos;invSqrt&apos; into &apos;normalise&apos; (MadgwickAHRS.cpp:215) automatically." tag=""/>
-	<Message prefix="[XFORM 203-602]" severity="info" keynum="794" content="Inlining function &apos;feedbackStep&apos; into &apos;MadgwickAHRSupdateIMU&apos; (MadgwickAHRS.cpp:179) automatically." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="info" keynum="794" content="Inlining function &apos;integrateQdot&apos; into &apos;MadgwickAHRSupdateIMU&apos; (MadgwickAHRS.cpp:183) automatically." tag=""/>
-	<Message prefix="[XFORM 203-602]" severity="info" keynum="794" content="Inlining function &apos;feedbackStep&apos; into &apos;MadgwickAHRSupdate&apos; (MadgwickAHRS.cpp:117) automatically." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="info" keynum="794" content="Inlining function &apos;integrateQdot&apos; into &apos;MadgwickAHRSupdate&apos; (MadgwickAHRS.cpp:121) automatically." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 358.820 ; gain = 13.391 ; free physical = 371 ; free virtual = 6579" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="info" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 358.820 ; gain = 13.391 ; free physical = 255 ; free virtual = 7092" tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="info" keynum="817" content="Unrolling all loops for pipelining in function &apos;feedbackStep&apos; (MadgwickAHRS.cpp:229)." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="info" keynum="891" content="Unrolling loop &apos;loopfeedbackStep&apos; (MadgwickAHRS.cpp:230) in function &apos;feedbackStep&apos; completely." tag=""/>
 	<Message prefix="[XFORM 203-102]" severity="info" keynum="691" content="Automatically partitioning small array &apos;s&apos; (MadgwickAHRS.cpp:40) completely based on array size." tag=""/>
 	<Message prefix="[XFORM 203-102]" severity="info" keynum="691" content="Automatically partitioning small array &apos;qDot&apos; (MadgwickAHRS.cpp:41) completely based on array size." tag=""/>
 	<Message prefix="[XFORM 203-102]" severity="info" keynum="691" content="Automatically partitioning small array &apos;s&apos; (MadgwickAHRS.cpp:131) completely based on array size." tag=""/>
@@ -21,135 +21,4 @@
 	<Message prefix="[XFORM 203-101]" severity="info" keynum="692" content="Partitioning array &apos;qDot&apos; (MadgwickAHRS.cpp:41) in dimension 1 completely." tag=""/>
 	<Message prefix="[XFORM 203-101]" severity="info" keynum="692" content="Partitioning array &apos;s&apos; (MadgwickAHRS.cpp:131) in dimension 1 completely." tag=""/>
 	<Message prefix="[XFORM 203-101]" severity="info" keynum="692" content="Partitioning array &apos;qDot&apos; (MadgwickAHRS.cpp:132) in dimension 1 completely." tag=""/>
-	<Message prefix="[XFORM 203-602]" severity="info" keynum="794" content="Inlining function &apos;invSqrt&apos; into &apos;normalise&apos; (MadgwickAHRS.cpp:215) automatically." tag=""/>
-	<Message prefix="[XFORM 203-602]" severity="info" keynum="794" content="Inlining function &apos;invSqrt&apos; into &apos;normalise.1&apos; (MadgwickAHRS.cpp:215) automatically." tag=""/>
-	<Message prefix="[XFORM 203-602]" severity="info" keynum="794" content="Inlining function &apos;feedbackStep&apos; into &apos;MadgwickAHRSupdateIMU&apos; (MadgwickAHRS.cpp:179) automatically." tag=""/>
-	<Message prefix="[XFORM 203-602]" severity="info" keynum="794" content="Inlining function &apos;integrateQdot&apos; into &apos;MadgwickAHRSupdateIMU&apos; (MadgwickAHRS.cpp:183) automatically." tag=""/>
-	<Message prefix="[XFORM 203-602]" severity="info" keynum="794" content="Inlining function &apos;feedbackStep&apos; into &apos;MadgwickAHRSupdate&apos; (MadgwickAHRS.cpp:117) automatically." tag=""/>
-	<Message prefix="[XFORM 203-602]" severity="info" keynum="794" content="Inlining function &apos;integrateQdot&apos; into &apos;MadgwickAHRSupdate&apos; (MadgwickAHRS.cpp:121) automatically." tag=""/>
-	<Message prefix="[XFORM 203-401]" severity="info" keynum="809" content="Performing if-conversion on hyperblock from (MadgwickAHRS.cpp:209:44) to (MadgwickAHRS.cpp:209:38) in function &apos;normalise.1&apos;... converting 4 basic blocks." tag=""/>
-	<Message prefix="[XFORM 203-401]" severity="info" keynum="809" content="Performing if-conversion on hyperblock from (MadgwickAHRS.cpp:212:2) to (MadgwickAHRS.cpp:216:33) in function &apos;normalise.1&apos;... converting 3 basic blocks." tag=""/>
-	<Message prefix="[XFORM 203-401]" severity="info" keynum="809" content="Performing if-conversion on hyperblock from (MadgwickAHRS.cpp:219:2) to (MadgwickAHRS.cpp:224:1) in function &apos;normalise.1&apos;... converting 3 basic blocks." tag=""/>
-	<Message prefix="[XFORM 203-401]" severity="info" keynum="809" content="Performing if-conversion on hyperblock from (MadgwickAHRS.cpp:212:2) to (MadgwickAHRS.cpp:216:33) in function &apos;normalise&apos;... converting 3 basic blocks." tag=""/>
-	<Message prefix="[XFORM 203-401]" severity="info" keynum="809" content="Performing if-conversion on hyperblock from (MadgwickAHRS.cpp:219:2) to (MadgwickAHRS.cpp:224:1) in function &apos;normalise&apos;... converting 3 basic blocks." tag=""/>
-	<Message prefix="[XFORM 203-401]" severity="info" keynum="809" content="Performing if-conversion on hyperblock from (MadgwickAHRS.cpp:230:50) to (MadgwickAHRS.cpp:230:44) in function &apos;MadgwickAHRSupdateIMU&apos;... converting 6 basic blocks." tag=""/>
-	<Message prefix="[XFORM 203-401]" severity="info" keynum="809" content="Performing if-conversion on hyperblock from (MadgwickAHRS.cpp:230:50) to (MadgwickAHRS.cpp:230:44) in function &apos;MadgwickAHRSupdate&apos;... converting 6 basic blocks." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 486.801 ; gain = 141.371 ; free physical = 350 ; free virtual = 6559" tag=""/>
-	<Message prefix="[XFORM 203-631]" severity="warn" keynum="902" content="Renaming function &apos;MadgwickAHRSupdateIMU&apos; (MadgwickAHRS.cpp:136:45) into MadgwickAHRSupdateIM." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 486.801 ; gain = 141.371 ; free physical = 331 ; free virtual = 6540" tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1385" content="Synthesizing &apos;MadgwickAHRSupdate&apos; ..." tag=""/>
-	<Message prefix="[SYN 201-103]" severity="warn" keynum="534" content="Legalizing function name &apos;normalise.1&apos; to &apos;normalise_1&apos;." tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[HLS 200-42]" severity="info" keynum="HLS_42_1438" content="-- Implementing module &apos;normalise&apos; " tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[SCHED 204-11]" severity="info" keynum="139" content="Starting scheduling ..." tag=""/>
-	<Message prefix="[SCHED 204-11]" severity="info" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="474" content=" Elapsed time: 19.41 seconds; current allocated memory: 93.547 MB." tag=""/>
-	<Message prefix="[BIND 205-100]" severity="info" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
-	<Message prefix="[BIND 205-101]" severity="info" keynum="211" content="Performing variable lifetime analysis." tag=""/>
-	<Message prefix="[BIND 205-101]" severity="info" keynum="210" content="Exploring resource sharing." tag=""/>
-	<Message prefix="[BIND 205-101]" severity="info" keynum="206" content="Binding ..." tag=""/>
-	<Message prefix="[BIND 205-100]" severity="info" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="474" content=" Elapsed time: 0.18 seconds; current allocated memory: 94.013 MB." tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[HLS 200-42]" severity="info" keynum="HLS_42_1438" content="-- Implementing module &apos;normalise_1&apos; " tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[SCHED 204-11]" severity="info" keynum="139" content="Starting scheduling ..." tag=""/>
-	<Message prefix="[SCHED 204-11]" severity="info" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="474" content=" Elapsed time: 0.27 seconds; current allocated memory: 94.601 MB." tag=""/>
-	<Message prefix="[BIND 205-100]" severity="info" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
-	<Message prefix="[BIND 205-101]" severity="info" keynum="211" content="Performing variable lifetime analysis." tag=""/>
-	<Message prefix="[BIND 205-101]" severity="info" keynum="210" content="Exploring resource sharing." tag=""/>
-	<Message prefix="[BIND 205-101]" severity="info" keynum="206" content="Binding ..." tag=""/>
-	<Message prefix="[BIND 205-100]" severity="info" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="474" content=" Elapsed time: 0.13 seconds; current allocated memory: 94.995 MB." tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[HLS 200-42]" severity="info" keynum="HLS_42_1438" content="-- Implementing module &apos;MadgwickAHRSupdateIM&apos; " tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[SCHED 204-11]" severity="info" keynum="139" content="Starting scheduling ..." tag=""/>
-	<Message prefix="[SCHED 204-11]" severity="info" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="474" content=" Elapsed time: 0.66 seconds; current allocated memory: 96.515 MB." tag=""/>
-	<Message prefix="[BIND 205-100]" severity="info" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
-	<Message prefix="[BIND 205-101]" severity="info" keynum="211" content="Performing variable lifetime analysis." tag=""/>
-	<Message prefix="[BIND 205-101]" severity="info" keynum="210" content="Exploring resource sharing." tag=""/>
-	<Message prefix="[BIND 205-101]" severity="info" keynum="206" content="Binding ..." tag=""/>
-	<Message prefix="[BIND 205-100]" severity="info" keynum="218" content="After resource sharing, estimated clock period (5.53902ns) exceeds the target (target clock period: 5ns, clock uncertainty: 0.625ns, effective delay budget: 4.375ns)." tag=""/>
-	<Message prefix="[BIND 205-100]" severity="info" keynum="220" content="The critical path consists of the following:
-	&apos;fmul&apos; operation (&apos;tmp_6&apos;, MadgwickAHRS.cpp:138) (5.54 ns)" tag=""/>
-	<Message prefix="[BIND 205-100]" severity="info" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="474" content=" Elapsed time: 0.95 seconds; current allocated memory: 98.103 MB." tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[HLS 200-42]" severity="info" keynum="HLS_42_1438" content="-- Implementing module &apos;MadgwickAHRSupdate&apos; " tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[SCHED 204-11]" severity="info" keynum="139" content="Starting scheduling ..." tag=""/>
-	<Message prefix="[SCHED 204-11]" severity="info" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="474" content=" Elapsed time: 2.03 seconds; current allocated memory: 101.092 MB." tag=""/>
-	<Message prefix="[BIND 205-100]" severity="info" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
-	<Message prefix="[BIND 205-101]" severity="info" keynum="211" content="Performing variable lifetime analysis." tag=""/>
-	<Message prefix="[BIND 205-101]" severity="info" keynum="210" content="Exploring resource sharing." tag=""/>
-	<Message prefix="[BIND 205-101]" severity="info" keynum="206" content="Binding ..." tag=""/>
-	<Message prefix="[BIND 205-100]" severity="info" keynum="218" content="After resource sharing, estimated clock period (6.5806ns) exceeds the target (target clock period: 5ns, clock uncertainty: 0.625ns, effective delay budget: 4.375ns)." tag=""/>
-	<Message prefix="[BIND 205-100]" severity="info" keynum="220" content="The critical path consists of the following:
-	&apos;fsub&apos; operation (&apos;tmp_66&apos;, MadgwickAHRS.cpp:52) (6.58 ns)" tag=""/>
-	<Message prefix="[BIND 205-100]" severity="info" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="474" content=" Elapsed time: 2.56 seconds; current allocated memory: 104.720 MB." tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;normalise&apos; " tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="info" keynum="402" content="Renamed object name &apos;MadgwickAHRSupdate_faddfsub_32ns_32ns_32_9_full_dsp_1&apos; to &apos;MadgwickAHRSupdatbkb&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="info" keynum="402" content="Renamed object name &apos;MadgwickAHRSupdate_fmul_32ns_32ns_32_5_max_dsp_1&apos; to &apos;MadgwickAHRSupdatcud&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="info" keynum="402" content="Renamed object name &apos;MadgwickAHRSupdate_fcmp_32ns_32ns_1_4_1&apos; to &apos;MadgwickAHRSupdatdEe&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdatbkb&apos;: 1 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdatcud&apos;: 1 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdatdEe&apos;: 1 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="369" content="Finished creating RTL model for &apos;normalise&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="474" content=" Elapsed time: 2.51 seconds; current allocated memory: 105.852 MB." tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;normalise_1&apos; " tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdatbkb&apos;: 1 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdatcud&apos;: 1 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdatdEe&apos;: 1 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="369" content="Finished creating RTL model for &apos;normalise_1&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="474" content=" Elapsed time: 0.43 seconds; current allocated memory: 107.988 MB." tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;MadgwickAHRSupdateIM&apos; " tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="info" keynum="402" content="Renamed object name &apos;MadgwickAHRSupdate_mux_42_32_1_1&apos; to &apos;MadgwickAHRSupdateOg&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdatbkb&apos;: 4 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdatcud&apos;: 12 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdatdEe&apos;: 1 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdateOg&apos;: 3 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="369" content="Finished creating RTL model for &apos;MadgwickAHRSupdateIM&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="474" content=" Elapsed time: 0.55 seconds; current allocated memory: 111.994 MB." tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;MadgwickAHRSupdate&apos; " tag=""/>
-	<Message prefix="[HLS 200-10]" severity="info" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="info" keynum="73" content="Setting interface mode on port &apos;MadgwickAHRSupdate/g&apos; to &apos;ap_memory&apos;." tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="info" keynum="73" content="Setting interface mode on port &apos;MadgwickAHRSupdate/a&apos; to &apos;ap_memory&apos;." tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="info" keynum="73" content="Setting interface mode on port &apos;MadgwickAHRSupdate/m&apos; to &apos;ap_memory&apos;." tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="info" keynum="73" content="Setting interface mode on function &apos;MadgwickAHRSupdate&apos; to &apos;ap_ctrl_hs&apos;." tag=""/>
-	<Message prefix="[RTGEN 206-101]" severity="warn" keynum="374" content="Register &apos;beta&apos; is power-on initialization." tag=""/>
-	<Message prefix="[RTGEN 206-101]" severity="warn" keynum="375" content="Global scalar &apos;beta&apos; will not be exposed as RTL port." tag=""/>
-	<Message prefix="[RTGEN 206-101]" severity="warn" keynum="375" content="Global array &apos;q&apos; will not be exposed as RTL port." tag=""/>
-	<Message prefix="[SYN 201-210]" severity="info" keynum="402" content="Renamed object name &apos;MadgwickAHRSupdate_q&apos; to &apos;MadgwickAHRSupdatfYi&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="info" keynum="402" content="Renamed object name &apos;MadgwickAHRSupdate_fadd_32ns_32ns_32_9_full_dsp_1&apos; to &apos;MadgwickAHRSupdatg8j&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="info" keynum="402" content="Renamed object name &apos;MadgwickAHRSupdate_fsub_32ns_32ns_32_9_full_dsp_1&apos; to &apos;MadgwickAHRSupdathbi&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[SYN 201-210]" severity="info" keynum="402" content="Renamed object name &apos;MadgwickAHRSupdate_fsqrt_32ns_32ns_32_28_1&apos; to &apos;MadgwickAHRSupdatibs&apos; due to the length limit 20" tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdatbkb&apos;: 5 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdatcud&apos;: 10 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdatdEe&apos;: 1 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdateOg&apos;: 3 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdatg8j&apos;: 1 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdathbi&apos;: 1 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="368" content="Generating core module &apos;MadgwickAHRSupdatibs&apos;: 1 instance(s)." tag=""/>
-	<Message prefix="[RTGEN 206-100]" severity="info" keynum="369" content="Finished creating RTL model for &apos;MadgwickAHRSupdate&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="474" content=" Elapsed time: 2.42 seconds; current allocated memory: 121.278 MB." tag=""/>
-	<Message prefix="[RTMG 210-278]" severity="info" keynum="RTMG_278_1792" content="Implementing memory &apos;MadgwickAHRSupdatfYi_ram (RAM)&apos; using block RAMs with power-on initialization." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="info" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 550.801 ; gain = 205.371 ; free physical = 276 ; free virtual = 6501" tag=""/>
-	<Message prefix="[SYSC 207-301]" severity="info" keynum="SYSC_301_1065" content="Generating SystemC RTL for MadgwickAHRSupdate." tag=""/>
-	<Message prefix="[VHDL 208-304]" severity="info" keynum="VHDL_304_1066" content="Generating VHDL RTL for MadgwickAHRSupdate." tag=""/>
-	<Message prefix="[VLOG 209-307]" severity="info" keynum="VLOG_307_1067" content="Generating Verilog RTL for MadgwickAHRSupdate." tag=""/>
-	<Message prefix="[HLS 200-112]" severity="info" keynum="472" content="Total elapsed time: 37.4 seconds; peak allocated memory: 121.278 MB." tag=""/>
 </Messages>

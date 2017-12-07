@@ -12,19 +12,20 @@
 // Date			Author          Notesv
 // 29/09/2011	SOH Madgwick    Initial release
 // 02/10/2011	SOH Madgwick	Optimised for reduced CPU load
-// 19/02/2012	SOH Madgwick	Magnetometer measurement is normalised
+// 19/02/2012	SOH Madgwick	Magnetometer measurement is normalized
 // 03/12/2017	Pratikto S H	Change MadgwickAHRS.c to MadgwickAHRS.cpp
 //								make some functions that occurs both in IMU and MARG algorithm 
 //								convert variable to array
-//
+// 7/12/2017	Pratikto S H 	insert hls_math library
 //=====================================================================================================
 
 //---------------------------------------------------------------------------------------------------
 // Header files
 
-//#include "stdafx.h"
 #include "MadgwickAHRS.h"
-#include <math.h>
+//#include <math.h> 		//c mathematics lib
+//#include <cmath>			//c++ mathematics lib
+#include "hls_math.h"		//c++ hls mathematics lib
 
 //====================================================================================================
 // Functions
@@ -41,7 +42,7 @@ void MadgwickAHRSupdate(float g[4], float a[4], float m[4]) {
 	float hx, hy;
 	float _2q0mx, _2q0my, _2q0mz, _2q1mx, _2bx, _2bz, _4bx, _4bz, _2q0, _2q1, _2q2, _2q3, _2q0q2, _2q2q3, q0q0, q0q1, q0q2, q0q3, q1q1, q1q2, q1q3, q2q2, q2q3, q3q3;
 
-	// Use IMU algorithm if magnetometer measurement invalid (avoids NaN in magnetometer normalisation)
+	// Use IMU algorithm if magnetometer measurement invalid (avoids NaN in magnetometer normalization)
 	if ((m[1] == 0.0f) && (m[2] == 0.0f) && (m[3] == 0.0f)) {
 		MadgwickAHRSupdateIMU(g, a);
 		return;
@@ -57,14 +58,14 @@ void MadgwickAHRSupdate(float g[4], float a[4], float m[4]) {
 	qDot[3] = 0.5f * (q[0] * g[3] + q[1] * g[2] - q[2] * g[1]);
 //	qDot[3] = 0.5f * (q0 * gz + q1 * gy - q2 * gx);
 
-	// Compute feedback only if accelerometer measurement valid (avoids NaN in accelerometer normalisation)
+	// Compute feedback only if accelerometer measurement valid (avoids NaN in accelerometer normalization)
 	if (!((a[1] == 0.0f) && (a[2] == 0.0f) && (a[3] == 0.0f))) {
 
-		// Normalise accelerometer measurement
-		normalise(a);
+		// Normalize accelerometer measurement
+		normalize(a);
 
-		// Normalise magnetometer measurement
-		normalise(m);
+		// Normalize magnetometer measurement
+		normalize(m);
 
 		// Auxiliary variables to avoid repeated arithmetic
 		_2q0mx = 2.0f * q[0] * m[1];
@@ -77,11 +78,13 @@ void MadgwickAHRSupdate(float g[4], float a[4], float m[4]) {
 		_2q3 = 2.0f * q[3];
 		_2q0q2 = 2.0f * q[0] * q[2];
 		_2q2q3 = 2.0f * q[2] * q[3];
-		q0q0 = q[0] * q[0];
+//		q0q0 = q[0] * q[0];
+		q0q0 = hls::powrf(q[0],2);
 		q0q1 = q[0] * q[1];
 		q0q2 = q[0] * q[2];
 		q0q3 = q[0] * q[3];
-		q1q1 = q[1] * q[1];
+//		q1q1 = q[1] * q[1];
+		q1q1 = hls::powrf(q[1],2);
 		q1q2 = q[1] * q[2];
 		q1q3 = q[1] * q[3];
 		q2q2 = q[2] * q[2];
@@ -93,7 +96,7 @@ void MadgwickAHRSupdate(float g[4], float a[4], float m[4]) {
 		hx = m[1] * q0q0 - _2q0my * q[3] + _2q0mz * q[2] + m[1] * q1q1 + _2q1 * m[2] * q[2] + _2q1 * m[3] * q[3] - m[1] * q2q2 - m[1] * q3q3;
 	//	hy = _2q0mx * q3 + my * q0q0 - _2q0mz * q1 + _2q1mx * q2 - my * q1q1 + my * q2q2 + _2q2 * mz * q3 - my * q3q3;
 		hy = _2q0mx * q[3] + m[2] * q0q0 - _2q0mz * q[1] + _2q1mx * q[2] - m[2] * q1q1 + m[2] * q2q2 + _2q2 * m[3] * q[3] - m[2] * q3q3;
-		_2bx = sqrt(hx * hx + hy * hy);
+		_2bx = hls::sqrtf(hx * hx + hy * hy);
 	//	_2bz = -_2q0mx * q2 + _2q0my * q1 + mz * q0q0 + _2q1mx * q3 - mz * q1q1 + _2q2 * my * q3 - mz * q2q2 + mz * q3q3;
 		_2bz = -_2q0mx * q[2] + _2q0my * q[1] + m[3] * q0q0 + _2q1mx * q[3] - m[3] * q1q1 + _2q2 * m[2] * q[3] - m[3] * q2q2 + m[3] * q3q3;
 		_4bx = 2.0f * _2bx;
@@ -109,8 +112,8 @@ void MadgwickAHRSupdate(float g[4], float a[4], float m[4]) {
 	//	s[3] = _2q1 * (2.0f * q1q3 - _2q0q2 - ax) + _2q2 * (2.0f * q0q1 + _2q2q3 - ay) + (-_4bx * q3 + _2bz * q1) * (_2bx * (0.5f - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - mx) + (-_2bx * q0 + _2bz * q2) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - my) + _2bx * q1 * (_2bx * (q0q2 + q1q3) + _2bz * (0.5f - q1q1 - q2q2) - mz);
 		s[3] = _2q1 * (2.0f * q1q3 - _2q0q2 - a[1]) + _2q2 * (2.0f * q0q1 + _2q2q3 - a[2]) + (-_4bx * q[3] + _2bz * q[1]) * (_2bx * (0.5f - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - m[1]) + (-_2bx * q[0] + _2bz * q[2]) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - m[2]) + _2bx * q[1] * (_2bx * (q0q2 + q1q3) + _2bz * (0.5f - q1q1 - q2q2) - m[3]);
 		
-		// normalise step magnitude
-		normalise(s);
+		// normalize step magnitude
+		normalize(s);
 
 		// Apply feedback step
 		feedbackStep(qDot, beta, s);
@@ -119,8 +122,8 @@ void MadgwickAHRSupdate(float g[4], float a[4], float m[4]) {
 	// Integrate rate of change of quaternion to yield quaternion
 	integrateQdot(q, qDot);
 
-	// Normalise quaternion
-	normalise(q);	
+	// normalize quaternion
+	normalize(q);
 }
 
 //---------------------------------------------------------------------------------------------------
@@ -140,11 +143,11 @@ void MadgwickAHRSupdateIMU(float g[4], float a[4]) {
 //	qDot[3] = 0.5f * (q0 * gz + q1 * gy - q2 * gx);
 	qDot[3] = 0.5f * (q[0] * g[3] + q[1] * g[2] - q[2] * g[1]);
 
-	// Compute feedback only if accelerometer measurement valid (avoids NaN in accelerometer normalisation)
+	// Compute feedback only if accelerometer measurement valid (avoids NaN in accelerometer normalization)
 	if (!((a[1] == 0.0f) && (a[2] == 0.0f) && (a[3] == 0.0f))) {
 
-		// Normalise accelerometer measurement
-		normalise(a);
+		// normalize accelerometer measurement
+		normalize(a);
 
 		// Auxiliary variables to avoid repeated arithmetic
 		_2q0 = 2.0f * q[0];
@@ -171,8 +174,8 @@ void MadgwickAHRSupdateIMU(float g[4], float a[4]) {
 	//	s[3] = 4.0f * q1q1 * q3 - _2q1 * ax + 4.0f * q2q2 * q3 - _2q2 * ay;
 		s[3] = 4.0f * q1q1 * q[3] - _2q1 * a[1] + 4.0f * q2q2 * q[3] - _2q2 * a[2];
 
-		// normalise step magnitude
-		normalise(s);
+		// normalize step magnitude
+		normalize(s);
 
 		// Apply feedback step
 		feedbackStep(qDot, beta, s);
@@ -181,8 +184,8 @@ void MadgwickAHRSupdateIMU(float g[4], float a[4]) {
 	// Integrate rate of change of quaternion to yield quaternion
 	integrateQdot(q, qDot);
 
-	// Normalise quaternion
-	normalise(q);
+	// normalize quaternion
+	normalize(q);
 }
 
 //---------------------------------------------------------------------------------------------------
@@ -200,18 +203,22 @@ float invSqrt(float x) {
 }
 
 //---------------------------------------------------------------------------------------------------
-// normalise
+// normalize
 
-void normalise(float in[4]) {
+void normalize(float in[4]) {
 	float recipNorm = 0;
 	float SumOfSquare = 0;
 	SumOfSquare: for (int i = 1; i < 4; i++) {
-		SumOfSquare += (in[i] * in[i]);
+//		SumOfSquare += (in[i] * in[i]);
+		SumOfSquare += hls::powrf(in[i],2);	// square of in[3 downto 1]
 	}
 	if (in[0] != 0)
-		SumOfSquare += (in[0] * in[0]);
+//		SumOfSquare += (in[0] * in[0]);
+		SumOfSquare += hls::powrf(in[0],2);	//square of in[0]
 
-	recipNorm = invSqrt(SumOfSquare);
+//	recipNorm = invSqrt(SumOfSquare);		// Fast inverse square-root
+	recipNorm = hls::rsqrtf(SumOfSquare);	// inverse square-root from math_hls lib
+
 	calculateQ1to3 : for (int i = 1; i < 3; i++) {
 		in[i] *= recipNorm;
 	}

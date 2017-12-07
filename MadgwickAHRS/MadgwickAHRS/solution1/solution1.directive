@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
-  <sourceFile name="MadgwickAHRS.cpp">
-    <directive functionName="feedbackStep" label=" " functionLabel=" ">
-      <pragma name="PIPELINE"/>
-    </directive>
-    <directive functionName="normalise" label="SumOfSquare" functionLabel=" ">
-      <pragma name="PIPELINE"/>
-    </directive>
-    <directive functionName="normalise" label="calculateQ1to3" functionLabel=" ">
-      <pragma name="PIPELINE"/>
-    </directive>
-    <directive functionName="integrateQdot" label="loop_integrateQdot" functionLabel=" ">
-      <pragma name="PIPELINE"/>
-    </directive>
-  </sourceFile>
+    <sourceFile name="">
+        <directive functionName="feedbackStep" label="" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="normalise" label="SumOfSquare" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="normalise" label="calculateQ1to3" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="integrateQdot" label="loop_integrateQdot" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+    </sourceFile>
 </AutoPilot:ProjectResources>
+

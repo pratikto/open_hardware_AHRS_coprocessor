@@ -30,6 +30,7 @@
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.3/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.3/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.3/include/etc"/>
+									<listOptionValue builtIn="false" value="/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.102252944" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="AESL_TB"/>
@@ -47,6 +48,7 @@
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.3/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.3/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.3/include/etc"/>
+									<listOptionValue builtIn="false" value="/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.302032121" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="AESL_TB"/>
@@ -117,6 +119,7 @@
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.3/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.3/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.3/include/etc"/>
+									<listOptionValue builtIn="false" value="/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1999678512" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -129,6 +132,7 @@
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.3/lnx64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.3/lnx64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2017.3/include/etc"/>
+									<listOptionValue builtIn="false" value="/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1738689533" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>

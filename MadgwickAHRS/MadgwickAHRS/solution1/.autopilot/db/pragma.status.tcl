@@ -1,0 +1,4 @@
+lappend pragmaStatus0 {pragma "PIPELINE" source "/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS.cpp" location "feedbackStep" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus1 {pragma "PIPELINE" source "/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS.cpp" location "normalise/SumOfSquare" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus2 {pragma "PIPELINE" source "/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS.cpp" location "normalise/calculateQ1to3" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus3 {pragma "PIPELINE" source "/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS.cpp" location "integrateQdot/loop_integrateQdot" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}

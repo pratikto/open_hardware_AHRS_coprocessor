@@ -1,5 +1,5 @@
-# 1 "/home/toni/Documents/vivado_projects/MadgwickAHRS/MadgwickAHRS/solution1/.autopilot/db/MadgwickAHRS.pragma.1.cpp"
-# 1 "/home/toni/Documents/vivado_projects/MadgwickAHRS/MadgwickAHRS/solution1/.autopilot/db/MadgwickAHRS.pragma.1.cpp" 1
+# 1 "/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS/solution1/.autopilot/db/MadgwickAHRS.pragma.1.cpp"
+# 1 "/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS/solution1/.autopilot/db/MadgwickAHRS.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -143,7 +143,7 @@ extern "C" {
 }
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "/home/toni/Documents/vivado_projects/MadgwickAHRS/MadgwickAHRS/solution1/.autopilot/db/MadgwickAHRS.pragma.1.cpp" 2
+# 1 "/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS/solution1/.autopilot/db/MadgwickAHRS.pragma.1.cpp" 2
 # 1 "MadgwickAHRS.cpp"
 # 1 "MadgwickAHRS.cpp" 1
 # 1 "<built-in>" 1
@@ -306,10 +306,25 @@ void normalise(float in[4]);
 void feedbackStep(float qDot[4], float beta, float s[4]);
 void integrateQdot(float q[4], float qDot[4]);
 # 27 "MadgwickAHRS.cpp" 2
-extern "C" {
 
-# 1 "/usr/include/math.h" 1 3 4
-# 26 "/usr/include/math.h" 3 4
+# 1 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
+# 41 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+# 41 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+
+# 1 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 1 3
+# 153 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
+namespace std
+{
+  typedef long unsigned int size_t;
+  typedef long int ptrdiff_t;
+
+
+
+
+}
+# 393 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 3
+# 1 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h" 1 3
+# 40 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h" 3
 # 1 "/usr/include/features.h" 1 3 4
 # 345 "/usr/include/features.h" 3 4
 # 1 "/usr/include/stdc-predef.h" 1 3 4
@@ -326,8 +341,530 @@ extern "C" {
 # 1 "/usr/include/x86_64-linux-gnu/gnu/stubs-64.h" 1 3 4
 # 11 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 2 3 4
 # 392 "/usr/include/features.h" 2 3 4
-# 27 "/usr/include/math.h" 2 3 4
+# 41 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h" 2 3
+# 394 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 2 3
 
+
+# 1 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/cpu_defines.h" 1 3
+# 397 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 2 3
+# 43 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
+# 1 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 1 3
+# 36 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+# 36 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+# 68 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
+{
+
+
+  template<typename _Iterator, typename _Container>
+    class __normal_iterator;
+
+
+}
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  struct __true_type { };
+  struct __false_type { };
+
+  template<bool>
+    struct __truth_type
+    { typedef __false_type __type; };
+
+  template<>
+    struct __truth_type<true>
+    { typedef __true_type __type; };
+
+
+
+  template<class _Sp, class _Tp>
+    struct __traitor
+    {
+      enum { __value = bool(_Sp::__value) || bool(_Tp::__value) };
+      typedef typename __truth_type<__value>::__type __type;
+    };
+
+
+  template<typename, typename>
+    struct __are_same
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<typename _Tp>
+    struct __are_same<_Tp, _Tp>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<typename _Tp>
+    struct __is_void
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<>
+    struct __is_void<void>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+
+  template<typename _Tp>
+    struct __is_integer
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+
+
+
+  template<>
+    struct __is_integer<bool>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<signed char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<>
+    struct __is_integer<wchar_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+# 198 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+ template<>
+    struct __is_integer<short>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned short>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<int>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned int>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<long long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned long long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+
+  template<typename _Tp>
+    struct __is_floating
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+
+  template<>
+    struct __is_floating<float>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_floating<double>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_floating<long double>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+
+  template<typename _Tp>
+    struct __is_pointer
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<typename _Tp>
+    struct __is_pointer<_Tp*>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+
+  template<typename _Tp>
+    struct __is_normal_iterator
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<typename _Iterator, typename _Container>
+    struct __is_normal_iterator< __gnu_cxx::__normal_iterator<_Iterator,
+             _Container> >
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+
+  template<typename _Tp>
+    struct __is_arithmetic
+    : public __traitor<__is_integer<_Tp>, __is_floating<_Tp> >
+    { };
+
+
+
+
+  template<typename _Tp>
+    struct __is_fundamental
+    : public __traitor<__is_void<_Tp>, __is_arithmetic<_Tp> >
+    { };
+
+
+
+
+  template<typename _Tp>
+    struct __is_scalar
+    : public __traitor<__is_arithmetic<_Tp>, __is_pointer<_Tp> >
+    { };
+
+
+
+
+  template<typename _Tp>
+    struct __is_char
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<>
+    struct __is_char<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<>
+    struct __is_char<wchar_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<typename _Tp>
+    struct __is_byte
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<>
+    struct __is_byte<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_byte<signed char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_byte<unsigned char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+
+  template<typename _Tp>
+    struct __is_move_iterator
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+# 422 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+}
+# 44 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
+# 1 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 1 3
+# 33 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3
+# 33 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3
+
+
+
+
+namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
+{
+
+
+
+  template<bool, typename>
+    struct __enable_if
+    { };
+
+  template<typename _Tp>
+    struct __enable_if<true, _Tp>
+    { typedef _Tp __type; };
+
+
+
+  template<bool _Cond, typename _Iftrue, typename _Iffalse>
+    struct __conditional_type
+    { typedef _Iftrue __type; };
+
+  template<typename _Iftrue, typename _Iffalse>
+    struct __conditional_type<false, _Iftrue, _Iffalse>
+    { typedef _Iffalse __type; };
+
+
+
+  template<typename _Tp>
+    struct __add_unsigned
+    {
+    private:
+      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
+
+    public:
+      typedef typename __if_type::__type __type;
+    };
+
+  template<>
+    struct __add_unsigned<char>
+    { typedef unsigned char __type; };
+
+  template<>
+    struct __add_unsigned<signed char>
+    { typedef unsigned char __type; };
+
+  template<>
+    struct __add_unsigned<short>
+    { typedef unsigned short __type; };
+
+  template<>
+    struct __add_unsigned<int>
+    { typedef unsigned int __type; };
+
+  template<>
+    struct __add_unsigned<long>
+    { typedef unsigned long __type; };
+
+  template<>
+    struct __add_unsigned<long long>
+    { typedef unsigned long long __type; };
+
+
+  template<>
+    struct __add_unsigned<bool>;
+
+  template<>
+    struct __add_unsigned<wchar_t>;
+
+
+
+  template<typename _Tp>
+    struct __remove_unsigned
+    {
+    private:
+      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
+
+    public:
+      typedef typename __if_type::__type __type;
+    };
+
+  template<>
+    struct __remove_unsigned<char>
+    { typedef signed char __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned char>
+    { typedef signed char __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned short>
+    { typedef short __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned int>
+    { typedef int __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned long>
+    { typedef long __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned long long>
+    { typedef long long __type; };
+
+
+  template<>
+    struct __remove_unsigned<bool>;
+
+  template<>
+    struct __remove_unsigned<wchar_t>;
+
+
+
+  template<typename _Type>
+    inline bool
+    __is_null_pointer(_Type* __ptr)
+    { return __ptr == 0; }
+
+  template<typename _Type>
+    inline bool
+    __is_null_pointer(_Type)
+    { return false; }
+
+
+
+  template<typename _Tp, bool = std::__is_integer<_Tp>::__value>
+    struct __promote
+    { typedef double __type; };
+
+
+
+
+  template<typename _Tp>
+    struct __promote<_Tp, false>
+    { };
+
+  template<>
+    struct __promote<long double>
+    { typedef long double __type; };
+
+  template<>
+    struct __promote<double>
+    { typedef double __type; };
+
+  template<>
+    struct __promote<float>
+    { typedef float __type; };
+
+  template<typename _Tp, typename _Up,
+           typename _Tp2 = typename __promote<_Tp>::__type,
+           typename _Up2 = typename __promote<_Up>::__type>
+    struct __promote_2
+    {
+      typedef __typeof__(_Tp2() + _Up2()) __type;
+    };
+
+  template<typename _Tp, typename _Up, typename _Vp,
+           typename _Tp2 = typename __promote<_Tp>::__type,
+           typename _Up2 = typename __promote<_Up>::__type,
+           typename _Vp2 = typename __promote<_Vp>::__type>
+    struct __promote_3
+    {
+      typedef __typeof__(_Tp2() + _Up2() + _Vp2()) __type;
+    };
+
+  template<typename _Tp, typename _Up, typename _Vp, typename _Wp,
+           typename _Tp2 = typename __promote<_Tp>::__type,
+           typename _Up2 = typename __promote<_Up>::__type,
+           typename _Vp2 = typename __promote<_Vp>::__type,
+           typename _Wp2 = typename __promote<_Wp>::__type>
+    struct __promote_4
+    {
+      typedef __typeof__(_Tp2() + _Up2() + _Vp2() + _Wp2()) __type;
+    };
+
+
+}
+# 45 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
+extern "C" {
+
+# 1 "/usr/include/math.h" 1 3 4
+# 28 "/usr/include/math.h" 3 4
 extern "C" {
 
 
@@ -1334,10 +1871,514 @@ struct __exception
 extern int matherr (struct __exception *__exc) throw ();
 # 534 "/usr/include/math.h" 3 4
 }
-# 28 "MadgwickAHRS.cpp" 2
+# 46 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
 }
-# 28 "MadgwickAHRS.cpp"
+# 46 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath"
+# 76 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+namespace std __attribute__ ((__visibility__ ("default")))
+{
 
+
+  inline double
+  abs(double __x)
+  { return __builtin_fabs(__x); }
+
+  inline float
+  abs(float __x)
+  { return __builtin_fabsf(__x); }
+
+  inline long double
+  abs(long double __x)
+  { return __builtin_fabsl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    abs(_Tp __x)
+    { return __builtin_fabs(__x); }
+
+  using ::acos;
+
+  inline float
+  acos(float __x)
+  { return __builtin_acosf(__x); }
+
+  inline long double
+  acos(long double __x)
+  { return __builtin_acosl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    acos(_Tp __x)
+    { return __builtin_acos(__x); }
+
+  using ::asin;
+
+  inline float
+  asin(float __x)
+  { return __builtin_asinf(__x); }
+
+  inline long double
+  asin(long double __x)
+  { return __builtin_asinl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    asin(_Tp __x)
+    { return __builtin_asin(__x); }
+
+  using ::atan;
+
+  inline float
+  atan(float __x)
+  { return __builtin_atanf(__x); }
+
+  inline long double
+  atan(long double __x)
+  { return __builtin_atanl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    atan(_Tp __x)
+    { return __builtin_atan(__x); }
+
+  using ::atan2;
+
+  inline float
+  atan2(float __y, float __x)
+  { return __builtin_atan2f(__y, __x); }
+
+  inline long double
+  atan2(long double __y, long double __x)
+  { return __builtin_atan2l(__y, __x); }
+
+  template<typename _Tp, typename _Up>
+    inline
+    typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
+    atan2(_Tp __y, _Up __x)
+    {
+      typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
+      return atan2(__type(__y), __type(__x));
+    }
+
+  using ::ceil;
+
+  inline float
+  ceil(float __x)
+  { return __builtin_ceilf(__x); }
+
+  inline long double
+  ceil(long double __x)
+  { return __builtin_ceill(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    ceil(_Tp __x)
+    { return __builtin_ceil(__x); }
+
+  using ::cos;
+
+  inline float
+  cos(float __x)
+  { return __builtin_cosf(__x); }
+
+  inline long double
+  cos(long double __x)
+  { return __builtin_cosl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    cos(_Tp __x)
+    { return __builtin_cos(__x); }
+
+  using ::cosh;
+
+  inline float
+  cosh(float __x)
+  { return __builtin_coshf(__x); }
+
+  inline long double
+  cosh(long double __x)
+  { return __builtin_coshl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    cosh(_Tp __x)
+    { return __builtin_cosh(__x); }
+
+  using ::exp;
+
+  inline float
+  exp(float __x)
+  { return __builtin_expf(__x); }
+
+  inline long double
+  exp(long double __x)
+  { return __builtin_expl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    exp(_Tp __x)
+    { return __builtin_exp(__x); }
+
+  using ::fabs;
+
+  inline float
+  fabs(float __x)
+  { return __builtin_fabsf(__x); }
+
+  inline long double
+  fabs(long double __x)
+  { return __builtin_fabsl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    fabs(_Tp __x)
+    { return __builtin_fabs(__x); }
+
+  using ::floor;
+
+  inline float
+  floor(float __x)
+  { return __builtin_floorf(__x); }
+
+  inline long double
+  floor(long double __x)
+  { return __builtin_floorl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    floor(_Tp __x)
+    { return __builtin_floor(__x); }
+
+  using ::fmod;
+
+  inline float
+  fmod(float __x, float __y)
+  { return __builtin_fmodf(__x, __y); }
+
+  inline long double
+  fmod(long double __x, long double __y)
+  { return __builtin_fmodl(__x, __y); }
+
+  using ::frexp;
+
+  inline float
+  frexp(float __x, int* __exp)
+  { return __builtin_frexpf(__x, __exp); }
+
+  inline long double
+  frexp(long double __x, int* __exp)
+  { return __builtin_frexpl(__x, __exp); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    frexp(_Tp __x, int* __exp)
+    { return __builtin_frexp(__x, __exp); }
+
+  using ::ldexp;
+
+  inline float
+  ldexp(float __x, int __exp)
+  { return __builtin_ldexpf(__x, __exp); }
+
+  inline long double
+  ldexp(long double __x, int __exp)
+  { return __builtin_ldexpl(__x, __exp); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+  ldexp(_Tp __x, int __exp)
+  { return __builtin_ldexp(__x, __exp); }
+
+  using ::log;
+
+  inline float
+  log(float __x)
+  { return __builtin_logf(__x); }
+
+  inline long double
+  log(long double __x)
+  { return __builtin_logl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    log(_Tp __x)
+    { return __builtin_log(__x); }
+
+  using ::log10;
+
+  inline float
+  log10(float __x)
+  { return __builtin_log10f(__x); }
+
+  inline long double
+  log10(long double __x)
+  { return __builtin_log10l(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    log10(_Tp __x)
+    { return __builtin_log10(__x); }
+
+  using ::modf;
+
+  inline float
+  modf(float __x, float* __iptr)
+  { return __builtin_modff(__x, __iptr); }
+
+  inline long double
+  modf(long double __x, long double* __iptr)
+  { return __builtin_modfl(__x, __iptr); }
+
+  using ::pow;
+
+  inline float
+  pow(float __x, float __y)
+  { return __builtin_powf(__x, __y); }
+
+  inline long double
+  pow(long double __x, long double __y)
+  { return __builtin_powl(__x, __y); }
+
+
+
+
+  inline double
+  pow(double __x, int __i)
+  { return __builtin_powi(__x, __i); }
+
+  inline float
+  pow(float __x, int __n)
+  { return __builtin_powif(__x, __n); }
+
+  inline long double
+  pow(long double __x, int __n)
+  { return __builtin_powil(__x, __n); }
+
+
+  template<typename _Tp, typename _Up>
+    inline
+    typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
+    pow(_Tp __x, _Up __y)
+    {
+      typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
+      return pow(__type(__x), __type(__y));
+    }
+
+  using ::sin;
+
+  inline float
+  sin(float __x)
+  { return __builtin_sinf(__x); }
+
+  inline long double
+  sin(long double __x)
+  { return __builtin_sinl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    sin(_Tp __x)
+    { return __builtin_sin(__x); }
+
+  using ::sinh;
+
+  inline float
+  sinh(float __x)
+  { return __builtin_sinhf(__x); }
+
+  inline long double
+  sinh(long double __x)
+  { return __builtin_sinhl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    sinh(_Tp __x)
+    { return __builtin_sinh(__x); }
+
+  using ::sqrt;
+
+  inline float
+  sqrt(float __x)
+  { return __builtin_sqrtf(__x); }
+
+  inline long double
+  sqrt(long double __x)
+  { return __builtin_sqrtl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    sqrt(_Tp __x)
+    { return __builtin_sqrt(__x); }
+
+  using ::tan;
+
+  inline float
+  tan(float __x)
+  { return __builtin_tanf(__x); }
+
+  inline long double
+  tan(long double __x)
+  { return __builtin_tanl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    tan(_Tp __x)
+    { return __builtin_tan(__x); }
+
+  using ::tanh;
+
+  inline float
+  tanh(float __x)
+  { return __builtin_tanhf(__x); }
+
+  inline long double
+  tanh(long double __x)
+  { return __builtin_tanhl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    tanh(_Tp __x)
+    { return __builtin_tanh(__x); }
+
+
+}
+# 480 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+# 730 "/opt/Xilinx/Vivado/2017.3/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+ template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    fpclassify(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_fpclassify(0, 1, 4,
+      3, 2, __type(__f));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isfinite(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isfinite(__type(__f));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isinf(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isinf(__type(__f));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isnan(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isnan(__type(__f));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isnormal(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isnormal(__type(__f));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    signbit(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_signbit(__type(__f));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isgreater(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isgreater(__type(__f1), __type(__f2));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isgreaterequal(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isgreaterequal(__type(__f1), __type(__f2));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isless(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isless(__type(__f1), __type(__f2));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    islessequal(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_islessequal(__type(__f1), __type(__f2));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    islessgreater(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_islessgreater(__type(__f1), __type(__f2));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isunordered(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isunordered(__type(__f1), __type(__f2));
+    }
+
+
+
+
+}
+# 29 "MadgwickAHRS.cpp" 2
 
 
 
@@ -1519,6 +2560,9 @@ void normalise(float in[4]) {_ssdm_SpecArrayDimSize(in,4);
  float recipNorm = 0;
  float SumOfSquare = 0;
  SumOfSquare: for (int i = 1; i < 4; i++) {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+# 209 "MadgwickAHRS.cpp"
+
   SumOfSquare += (in[i] * in[i]);
  }
  if (in[0] != 0)
@@ -1526,6 +2570,9 @@ void normalise(float in[4]) {_ssdm_SpecArrayDimSize(in,4);
 
  recipNorm = invSqrt(SumOfSquare);
  calculateQ1to3 : for (int i = 1; i < 3; i++) {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+# 216 "MadgwickAHRS.cpp"
+
   in[i] *= recipNorm;
  }
  if (in[0] != 0)
@@ -1539,6 +2586,9 @@ void normalise(float in[4]) {_ssdm_SpecArrayDimSize(in,4);
 
 
 void feedbackStep(float qDot[4], float beta, float s[4]) {_ssdm_SpecArrayDimSize(s,4);_ssdm_SpecArrayDimSize(qDot,4);
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+# 229 "MadgwickAHRS.cpp"
+
  loopfeedbackStep : for (int i = 0; i < 4; i++) {
   qDot[i] -= beta * s[i];
  }
@@ -1549,6 +2599,9 @@ void feedbackStep(float qDot[4], float beta, float s[4]) {_ssdm_SpecArrayDimSize
 
 void integrateQdot(float q[4], float qDot[4]) {_ssdm_SpecArrayDimSize(q,4);_ssdm_SpecArrayDimSize(qDot,4);
  loop_integrateQdot: for (int i = 0; i < 4; i++) {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+# 239 "MadgwickAHRS.cpp"
+
   q[i] += qDot[i] * (1.0f / 512.0f);
  }
 }
