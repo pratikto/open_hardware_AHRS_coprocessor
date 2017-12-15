@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="MadgwickAHRSoriginal" solutionName="solution1" date="2017-12-16T00:16:45.139+0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="MadgwickAHRSoriginal" solutionName="solution1" date="2017-12-16T00:01:48.143+0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="MadgwickAHRSoriginal" solutionName="solution1" date="2017-12-15T19:12:05.803+0700"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Global scalar 'beta' will not be exposed as RTL port." projectName="MadgwickAHRSoriginal" solutionName="solution1" date="2017-12-15T16:22:31.874+0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'beta' is power-on initialization." projectName="MadgwickAHRSoriginal" solutionName="solution1" date="2017-12-15T16:22:31.630+0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global scalar 'q0' will not be exposed as RTL port." projectName="MadgwickAHRSoriginal" solutionName="solution1" date="2017-12-15T16:22:31.616+0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'q0' is power-on initialization." projectName="MadgwickAHRSoriginal" solutionName="solution1" date="2017-12-15T16:22:31.588+0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global scalar 'q3' will not be exposed as RTL port." projectName="MadgwickAHRSoriginal" solutionName="solution1" date="2017-12-15T16:22:31.574+0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'q3' is power-on initialization." projectName="MadgwickAHRSoriginal" solutionName="solution1" date="2017-12-15T16:22:31.553+0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global scalar 'q2' will not be exposed as RTL port." projectName="MadgwickAHRSoriginal" solutionName="solution1" date="2017-12-15T16:22:31.529+0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'q2' is power-on initialization." projectName="MadgwickAHRSoriginal" solutionName="solution1" date="2017-12-15T16:22:31.509+0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global scalar 'q1' will not be exposed as RTL port." projectName="MadgwickAHRSoriginal" solutionName="solution1" date="2017-12-15T16:22:31.478+0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'q1' is power-on initialization." projectName="MadgwickAHRSoriginal" solutionName="solution1" date="2017-12-15T16:22:31.456+0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'MadgwickAHRSupdateIMU' (MadgwickAHRS.cpp:150:2) into MadgwickAHRSupdateIM." projectName="MadgwickAHRSoriginal" solutionName="solution1" date="2017-12-15T16:22:16.805+0700" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

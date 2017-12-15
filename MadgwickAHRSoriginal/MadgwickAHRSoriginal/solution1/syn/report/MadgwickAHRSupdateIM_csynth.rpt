@@ -1,0 +1,282 @@
+
+
+================================================================
+== Vivado HLS Report for 'MadgwickAHRSupdateIM'
+================================================================
+* Date:           Fri Dec 15 16:22:30 2017
+
+* Version:        2017.3.1 (Build 2033595 on Fri Oct 20 14:40:16 MDT 2017)
+* Project:        MadgwickAHRSoriginal
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     10.54|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   74|  204|   74|  204|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    308|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|     32|    2162|   4845|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|   2160|
+|Register         |        -|      -|    2190|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|     32|    4352|   7313|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|     14|       4|     13|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+-------+-----+-----+
+    |         Instance         |        Module        | BRAM_18K| DSP48E|  FF | LUT |
+    +--------------------------+----------------------+---------+-------+-----+-----+
+    |MadgwickAHRSupdatbkb_U1   |MadgwickAHRSupdatbkb  |        0|      2|  205|  390|
+    |MadgwickAHRSupdatbkb_U2   |MadgwickAHRSupdatbkb  |        0|      2|  205|  390|
+    |MadgwickAHRSupdatbkb_U3   |MadgwickAHRSupdatbkb  |        0|      2|  205|  390|
+    |MadgwickAHRSupdatbkb_U4   |MadgwickAHRSupdatbkb  |        0|      2|  205|  390|
+    |MadgwickAHRSupdatcud_U5   |MadgwickAHRSupdatcud  |        0|      3|  143|  321|
+    |MadgwickAHRSupdatcud_U6   |MadgwickAHRSupdatcud  |        0|      3|  143|  321|
+    |MadgwickAHRSupdatcud_U7   |MadgwickAHRSupdatcud  |        0|      3|  143|  321|
+    |MadgwickAHRSupdatcud_U8   |MadgwickAHRSupdatcud  |        0|      3|  143|  321|
+    |MadgwickAHRSupdatcud_U9   |MadgwickAHRSupdatcud  |        0|      3|  143|  321|
+    |MadgwickAHRSupdatcud_U10  |MadgwickAHRSupdatcud  |        0|      3|  143|  321|
+    |MadgwickAHRSupdatcud_U11  |MadgwickAHRSupdatcud  |        0|      3|  143|  321|
+    |MadgwickAHRSupdatcud_U12  |MadgwickAHRSupdatcud  |        0|      3|  143|  321|
+    |MadgwickAHRSupdatdEe_U13  |MadgwickAHRSupdatdEe  |        0|      0|   66|  239|
+    |MadgwickAHRSupdatdEe_U14  |MadgwickAHRSupdatdEe  |        0|      0|   66|  239|
+    |MadgwickAHRSupdatdEe_U15  |MadgwickAHRSupdatdEe  |        0|      0|   66|  239|
+    +--------------------------+----------------------+---------+-------+-----+-----+
+    |Total                     |                      |        0|     32| 2162| 4845|
+    +--------------------------+----------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name   | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |y_1_fu_695_p2       |     -    |      0|  0|  39|          31|          32|
+    |y_3_fu_723_p2       |     -    |      0|  0|  39|          31|          32|
+    |y_5_fu_775_p2       |     -    |      0|  0|  39|          31|          32|
+    |or_cond1_fu_672_p2  |    and   |      0|  0|   8|           1|           1|
+    |tmp1_fu_666_p2      |    and   |      0|  0|   8|           1|           1|
+    |tmp_102_fu_621_p2   |    and   |      0|  0|   8|           1|           1|
+    |tmp_107_fu_661_p2   |    and   |      0|  0|   8|           1|           1|
+    |tmp_75_fu_581_p2    |    and   |      0|  0|   8|           1|           1|
+    |notlhs4_fu_603_p2   |   icmp   |      0|  0|  11|           8|           2|
+    |notlhs6_fu_643_p2   |   icmp   |      0|  0|  11|           8|           2|
+    |notlhs_fu_563_p2    |   icmp   |      0|  0|  11|           8|           2|
+    |notrhs5_fu_609_p2   |   icmp   |      0|  0|  18|          23|           1|
+    |notrhs7_fu_649_p2   |   icmp   |      0|  0|  18|          23|           1|
+    |notrhs_fu_569_p2    |   icmp   |      0|  0|  18|          23|           1|
+    |tmp_100_fu_615_p2   |    or    |      0|  0|   8|           1|           1|
+    |tmp_105_fu_655_p2   |    or    |      0|  0|   8|           1|           1|
+    |tmp_22_fu_575_p2    |    or    |      0|  0|   8|           1|           1|
+    |tmp_neg_fu_535_p2   |    xor   |      0|  0|  40|          32|          33|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |Total               |          |      0|  0| 308|         226|         146|
+    +--------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------+-----+-----------+-----+-----------+
+    |              Name              | LUT | Input Size| Bits| Total Bits|
+    +--------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                       |  889|        206|    1|        206|
+    |ap_phi_mux_qDot5_phi_fu_107_p4  |    9|          2|   32|         64|
+    |ap_phi_mux_qDot_phi_fu_97_p4    |    9|          2|   32|         64|
+    |grp_fu_134_opcode               |   15|          3|    2|          6|
+    |grp_fu_134_p0                   |   53|         12|   32|        384|
+    |grp_fu_134_p1                   |   56|         13|   32|        416|
+    |grp_fu_138_opcode               |   15|          3|    2|          6|
+    |grp_fu_138_p0                   |   38|          7|   32|        224|
+    |grp_fu_138_p1                   |   47|         10|   32|        320|
+    |grp_fu_142_opcode               |   15|          3|    2|          6|
+    |grp_fu_142_p0                   |   21|          4|   32|        128|
+    |grp_fu_142_p1                   |   21|          4|   32|        128|
+    |grp_fu_146_opcode               |   15|          3|    2|          6|
+    |grp_fu_146_p0                   |   21|          4|   32|        128|
+    |grp_fu_146_p1                   |   21|          4|   32|        128|
+    |grp_fu_151_p0                   |  149|         33|   32|       1056|
+    |grp_fu_151_p1                   |  145|         32|   32|       1024|
+    |grp_fu_156_p0                   |   93|         19|   32|        608|
+    |grp_fu_156_p1                   |   85|         17|   32|        544|
+    |grp_fu_161_p0                   |   50|         11|   32|        352|
+    |grp_fu_161_p1                   |   47|         10|   32|        320|
+    |grp_fu_166_p0                   |   47|         10|   32|        320|
+    |grp_fu_166_p1                   |   47|         10|   32|        320|
+    |grp_fu_171_p0                   |   27|          5|   32|        160|
+    |grp_fu_171_p1                   |   27|          5|   32|        160|
+    |grp_fu_176_p0                   |   21|          4|   32|        128|
+    |grp_fu_176_p1                   |   21|          4|   32|        128|
+    |grp_fu_181_p0                   |   15|          3|   32|         96|
+    |grp_fu_181_p1                   |   15|          3|   32|         96|
+    |grp_fu_186_p0                   |   15|          3|   32|         96|
+    |grp_fu_186_p1                   |   15|          3|   32|         96|
+    |q0_o                            |   15|          3|   32|         96|
+    |q1_o                            |   15|          3|   32|         96|
+    |q2_o                            |   15|          3|   32|         96|
+    |q3_o                            |   15|          3|   32|         96|
+    |qDot5_reg_104                   |    9|          2|   32|         64|
+    |qDot6_reg_114                   |    9|          2|   32|         64|
+    |qDot7_reg_124                   |    9|          2|   32|         64|
+    |qDot_reg_94                     |    9|          2|   32|         64|
+    +--------------------------------+-----+-----------+-----+-----------+
+    |Total                           | 2160|        472| 1097|       8358|
+    +--------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------+-----+----+-----+-----------+
+    |         Name         |  FF | LUT| Bits| Const Bits|
+    +----------------------+-----+----+-----+-----------+
+    |ap_CS_fsm             |  205|   0|  205|          0|
+    |beta_load_1_reg_1013  |   32|   0|   32|          0|
+    |beta_load_2_reg_1018  |   32|   0|   32|          0|
+    |beta_load_reg_1008    |   32|   0|   32|          0|
+    |or_cond1_reg_875      |    1|   0|    1|          0|
+    |p_2q1_reg_936         |   32|   0|   32|          0|
+    |p_2q2_reg_942         |   32|   0|   32|          0|
+    |p_4q2_reg_968         |   32|   0|   32|          0|
+    |q1_load_6_reg_900     |   32|   0|   32|          0|
+    |q1q1_reg_948          |   32|   0|   32|          0|
+    |q2_load_5_reg_895     |   32|   0|   32|          0|
+    |q2_load_6_reg_905     |   32|   0|   32|          0|
+    |q2q2_reg_955          |   32|   0|   32|          0|
+    |qDot2_1_reg_1028      |   32|   0|   32|          0|
+    |qDot3_1_reg_1033      |   32|   0|   32|          0|
+    |qDot4_1_reg_1038      |   32|   0|   32|          0|
+    |qDot5_reg_104         |   32|   0|   32|          0|
+    |qDot6_reg_114         |   32|   0|   32|          0|
+    |qDot7_reg_124         |   32|   0|   32|          0|
+    |qDot_reg_94           |   32|   0|   32|          0|
+    |reg_273               |   32|   0|   32|          0|
+    |reg_281               |   32|   0|   32|          0|
+    |reg_288               |   32|   0|   32|          0|
+    |reg_296               |   32|   0|   32|          0|
+    |reg_303               |   32|   0|   32|          0|
+    |reg_311               |   32|   0|   32|          0|
+    |reg_318               |   32|   0|   32|          0|
+    |reg_324               |   32|   0|   32|          0|
+    |reg_337               |   32|   0|   32|          0|
+    |reg_346               |   32|   0|   32|          0|
+    |reg_354               |   32|   0|   32|          0|
+    |reg_361               |   32|   0|   32|          0|
+    |reg_368               |   32|   0|   32|          0|
+    |reg_375               |   32|   0|   32|          0|
+    |reg_381               |   32|   0|   32|          0|
+    |reg_387               |   32|   0|   32|          0|
+    |reg_393               |   32|   0|   32|          0|
+    |reg_406               |   32|   0|   32|          0|
+    |reg_420               |   32|   0|   32|          0|
+    |reg_430               |   32|   0|   32|          0|
+    |reg_439               |   32|   0|   32|          0|
+    |reg_446               |   32|   0|   32|          0|
+    |reg_452               |   32|   0|   32|          0|
+    |reg_458               |   32|   0|   32|          0|
+    |reg_470               |   32|   0|   32|          0|
+    |reg_478               |   32|   0|   32|          0|
+    |reg_488               |   32|   0|   32|          0|
+    |reg_494               |   32|   0|   32|          0|
+    |reg_502               |   32|   0|   32|          0|
+    |reg_508               |   32|   0|   32|          0|
+    |reg_516               |   32|   0|   32|          0|
+    |reg_524               |   32|   0|   32|          0|
+    |s2_reg_990            |   32|   0|   32|          0|
+    |tmp_101_reg_865       |    1|   0|    1|          0|
+    |tmp_106_reg_870       |    1|   0|    1|          0|
+    |tmp_1_i1_reg_1048     |   32|   0|   32|          0|
+    |tmp_1_i5_reg_1002     |   32|   0|   32|          0|
+    |tmp_1_i_reg_884       |   32|   0|   32|          0|
+    |tmp_27_reg_860        |    1|   0|    1|          0|
+    |tmp_33_reg_975        |   32|   0|   32|          0|
+    |tmp_37_reg_920        |   32|   0|   32|          0|
+    |tmp_49_reg_963        |   32|   0|   32|          0|
+    |tmp_53_reg_980        |   32|   0|   32|          0|
+    |tmp_61_reg_985        |   32|   0|   32|          0|
+    |tmp_i1_reg_1043       |   31|   0|   31|          0|
+    |tmp_i3_reg_997        |   31|   0|   31|          0|
+    |tmp_i_reg_879         |   31|   0|   31|          0|
+    +----------------------+-----+----+-----+-----------+
+    |Total                 | 2190|   0| 2190|          0|
+    +----------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------+-----+-----+------------+----------------------+--------------+
+|  RTL Ports  | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-------------+-----+-----+------------+----------------------+--------------+
+|ap_clk       |  in |    1| ap_ctrl_hs | MadgwickAHRSupdateIM | return value |
+|ap_rst       |  in |    1| ap_ctrl_hs | MadgwickAHRSupdateIM | return value |
+|ap_start     |  in |    1| ap_ctrl_hs | MadgwickAHRSupdateIM | return value |
+|ap_done      | out |    1| ap_ctrl_hs | MadgwickAHRSupdateIM | return value |
+|ap_idle      | out |    1| ap_ctrl_hs | MadgwickAHRSupdateIM | return value |
+|ap_ready     | out |    1| ap_ctrl_hs | MadgwickAHRSupdateIM | return value |
+|gx           |  in |   32|   ap_none  |          gx          |    scalar    |
+|gy           |  in |   32|   ap_none  |          gy          |    scalar    |
+|gz           |  in |   32|   ap_none  |          gz          |    scalar    |
+|ax           |  in |   32|   ap_none  |          ax          |    scalar    |
+|ay           |  in |   32|   ap_none  |          ay          |    scalar    |
+|az           |  in |   32|   ap_none  |          az          |    scalar    |
+|q1_i         |  in |   32|   ap_ovld  |          q1          |    pointer   |
+|q1_o         | out |   32|   ap_ovld  |          q1          |    pointer   |
+|q1_o_ap_vld  | out |    1|   ap_ovld  |          q1          |    pointer   |
+|q2_i         |  in |   32|   ap_ovld  |          q2          |    pointer   |
+|q2_o         | out |   32|   ap_ovld  |          q2          |    pointer   |
+|q2_o_ap_vld  | out |    1|   ap_ovld  |          q2          |    pointer   |
+|q3_i         |  in |   32|   ap_ovld  |          q3          |    pointer   |
+|q3_o         | out |   32|   ap_ovld  |          q3          |    pointer   |
+|q3_o_ap_vld  | out |    1|   ap_ovld  |          q3          |    pointer   |
+|q0_i         |  in |   32|   ap_ovld  |          q0          |    pointer   |
+|q0_o         | out |   32|   ap_ovld  |          q0          |    pointer   |
+|q0_o_ap_vld  | out |    1|   ap_ovld  |          q0          |    pointer   |
+|beta         |  in |   32|   ap_none  |         beta         |    pointer   |
++-------------+-----+-----+------------+----------------------+--------------+
+

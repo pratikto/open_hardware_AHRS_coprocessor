@@ -1,36 +1,13 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2017.3.1 (64-bit)
+  **** SW Build 2035080 on Fri Oct 20 14:20:00 MDT 2017
+  **** IP Build 2034413 on Fri Oct 20 15:56:25 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2017.3/scripts/vivado_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'toni' on host 'Unyil' (Linux_x86_64 version 4.4.0-101-generic) on Thu Dec 07 19:13:35 WIB 2017
+INFO: [HLS 200-10] For user 'toni' on host 'Unyil' (Linux_x86_64 version 4.4.0-103-generic) on Tue Dec 12 15:04:29 WIB 2017
 INFO: [HLS 200-10] On os Ubuntu 16.04.3 LTS
 INFO: [HLS 200-10] In directory '/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS'
-INFO: [HLS 200-10] Opening project '/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS'.
-INFO: [HLS 200-10] Adding design file 'MadgwickAHRS.h' to the project
-INFO: [HLS 200-10] Adding design file 'MadgwickAHRS.cpp' to the project
-INFO: [HLS 200-10] Adding test bench file 'MadgwickAHRS_testbench.cpp' to the project
-INFO: [HLS 200-10] Opening solution '/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS/solution1'.
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
-INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
-INFO: [HLS 200-10] Analyzing design file 'MadgwickAHRS.cpp' ... 
-INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 358.805 ; gain = 13.375 ; free physical = 275 ; free virtual = 7100
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 358.805 ; gain = 13.375 ; free physical = 269 ; free virtual = 7100
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 358.820 ; gain = 13.391 ; free physical = 255 ; free virtual = 7092
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'invSqrt' into 'normalise' (MadgwickAHRS.cpp:215) automatically.
-INFO: [XFORM 203-602] Inlining function 'integrateQdot' into 'MadgwickAHRSupdateIMU' (MadgwickAHRS.cpp:183) automatically.
-INFO: [XFORM 203-602] Inlining function 'integrateQdot' into 'MadgwickAHRSupdate' (MadgwickAHRS.cpp:121) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 358.820 ; gain = 13.391 ; free physical = 255 ; free virtual = 7092
-INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'feedbackStep' (MadgwickAHRS.cpp:229).
-INFO: [XFORM 203-501] Unrolling loop 'loopfeedbackStep' (MadgwickAHRS.cpp:230) in function 'feedbackStep' completely.
-INFO: [XFORM 203-102] Automatically partitioning small array 's' (MadgwickAHRS.cpp:40) completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'qDot' (MadgwickAHRS.cpp:41) completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 's' (MadgwickAHRS.cpp:131) completely based on array size.
-INFO: [XFORM 203-102] Automatically partitioning small array 'qDot' (MadgwickAHRS.cpp:132) completely based on array size.
-INFO: [XFORM 203-101] Partitioning array 's' (MadgwickAHRS.cpp:40) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'qDot' (MadgwickAHRS.cpp:41) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 's' (MadgwickAHRS.cpp:131) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'qDot' (MadgwickAHRS.cpp:132) in dimension 1 completely.
-Stack dump:
-0.	Running pass 'Array partition' on module '/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS/solution1/.autopilot/db/a.o.1.bc'.
-Abnormal program termination (11)
-Please check '/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/hs_err_pid26999.log' for details
+INFO: [HLS 200-10] Bringing up Vivado HLS GUI ... 
+INFO: [Common 17-206] Exiting vivado_hls at Tue Dec 12 15:50:33 2017...

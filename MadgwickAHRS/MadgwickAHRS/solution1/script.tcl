@@ -5,8 +5,8 @@
 ############################################################
 open_project MadgwickAHRS
 set_top MadgwickAHRSupdate
-add_files MadgwickAHRS.h
 add_files MadgwickAHRS.cpp
+add_files MadgwickAHRS.h
 add_files -tb MadgwickAHRS_testbench.cpp
 open_solution "solution1"
 set_part {xc7z020clg400-1} -tool vivado

@@ -14,11 +14,19 @@
 #ifndef MadgwickAHRS_h
 #define MadgwickAHRS_h
 
+#include "ap_fixed.h"
+
 //---------------------------------------------------------------------------------------------------
 // Definitions
 
 #define sampleFreq	512.0f		// sample frequency in Hz
 #define betaDef		0.1f		// 2 * proportional gain
+
+
+typedef ap_fixed<6,15> acceleroType;
+typedef ap_fixed<12,8> gyroType;
+typedef ap_fixed<6,13> magnetoType;
+typedef ap_fixed<12,15> tempType;
 
 //----------------------------------------------------------------------------------------------------
 // Variable declaration
@@ -29,7 +37,9 @@ float q[4] = { 1.0f, 0.0f, 0.0f, 0.0f }; // quaternion of sensor frame relative 
 //---------------------------------------------------------------------------------------------------
 // Function declarations
 
-void MadgwickAHRSupdate(float g[4], float a[4], float m[4]);
+//void MadgwickAHRSupdate(float g[4], float a[4], float m[4]);
+void MadgwickAHRSupdate(gyroType g[4], acceleroType a[4], magnetoType m[4]);
+void MadgwickAHRSupdateIMU(gyroType g[4], acceleroType a[4]);
 void MadgwickAHRSupdateIMU(float g[4], float a[4]);
 float invSqrt(float x);
 void normalise(float in[4]);

@@ -47,6 +47,11 @@
 			<location>/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS/solution2/.tcls</location>
 		</link>
 		<link>
+			<name>solution3/constraints</name>
+			<type>2</type>
+			<location>/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS/solution3/.tcls</location>
+		</link>
+		<link>
 			<name>source/MadgwickAHRS.cpp</name>
 			<type>1</type>
 			<location>/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS.cpp</location>
@@ -90,6 +95,21 @@
 			<name>solution2/constraints/script.tcl</name>
 			<type>1</type>
 			<location>/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS/solution2/script.tcl</location>
+		</link>
+		<link>
+			<name>solution3/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS/solution3/solution3.directive</location>
+		</link>
+		<link>
+			<name>solution3/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS/solution3/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution3/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS/MadgwickAHRS/solution3/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

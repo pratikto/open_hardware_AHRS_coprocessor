@@ -33,7 +33,8 @@
 //---------------------------------------------------------------------------------------------------
 // AHRS algorithm update
 
-void MadgwickAHRSupdate(float g[4], float a[4], float m[4]) {
+//void MadgwickAHRSupdate(float g[4], float a[4], float m[4]) {
+void MadgwickAHRSupdate(gyroType g[4], acceleroType a[4], magnetoType m[4]) {
 	g[0] = 0;
 	a[0] = 0;
 	m[0] = 0;
@@ -129,7 +130,8 @@ void MadgwickAHRSupdate(float g[4], float a[4], float m[4]) {
 //---------------------------------------------------------------------------------------------------
 // IMU algorithm update
 
-void MadgwickAHRSupdateIMU(float g[4], float a[4]) {
+//void MadgwickAHRSupdateIMU(float g[4], float a[4]) {
+void MadgwickAHRSupdateIMU(gyroType g[4], acceleroType a[4]) {
 	float s[4];
 	float qDot[4];
 	float _2q0, _2q1, _2q2, _2q3, _4q0, _4q1, _4q2, _8q1, _8q2, q0q0, q1q1, q2q2, q3q3;
@@ -189,23 +191,9 @@ void MadgwickAHRSupdateIMU(float g[4], float a[4]) {
 }
 
 //---------------------------------------------------------------------------------------------------
-// Fast inverse square-root
-// See: http://en.wikipedia.org/wiki/Fast_inverse_square_root
-
-float invSqrt(float x) {
-	float halfx = 0.5f * x;
-	float y = x;
-	long i = *(long*)&y;
-	i = 0x5f3759df - (i >> 1);
-	y = *(float*)&i;
-	y = y * (1.5f - (halfx * y * y));
-	return y;
-}
-
-//---------------------------------------------------------------------------------------------------
 // normalize
 
-void normalize(float in[4]) {
+void normalize(tempType in[4]) {
 	float recipNorm = 0;
 	float SumOfSquare = 0;
 	SumOfSquare: for (int i = 1; i < 4; i++) {
