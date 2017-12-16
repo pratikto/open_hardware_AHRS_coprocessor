@@ -1,0 +1,15 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'toni' on host 'Unyil' (Linux_x86_64 version 4.4.0-104-generic) on Sat Dec 16 21:56:00 WIB 2017
+INFO: [HLS 200-10] On os Ubuntu 16.04.3 LTS
+INFO: [HLS 200-10] In directory '/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS_original/madgwick_algorithm_C++'
+INFO: [HLS 200-10] Opening project '/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS_original/madgwick_algorithm_C++/MadgwickAHRSoriginal'.
+INFO: [HLS 200-10] Opening solution '/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS_original/madgwick_algorithm_C++/MadgwickAHRSoriginal/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../MadgwickAHRS_testbench1.cpp in debug mode
+   Compiling ../../../../csv.cpp in debug mode
+   Generating csim.exe
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="MadgwickAHRS.cpp" path="/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS_original/madgwick_algorithm_C++/MadgwickAHRS.cpp"/>
+    <originFiles name="MadgwickAHRS.h" path="/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS_original/madgwick_algorithm_C++/MadgwickAHRS.h"/>
+    <originFiles name="csv.cpp" path="/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS_original/madgwick_algorithm_C++/csv.cpp"/>
+    <originFiles name="csv.h" path="/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS_original/madgwick_algorithm_C++/csv.h"/>
+  </source>
+  <testbench>
+    <originFiles name="MadgwickAHRS_testbench1.cpp" path="/media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS_original/madgwick_algorithm_C++/MadgwickAHRS_testbench1.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
