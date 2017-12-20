@@ -1,4 +1,4 @@
-INFO: [HLS 200-0] Workspace /media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS_original/madgwick_algorithm_C++/MadgwickAHRSoriginal/solution1 opened at Sat Dec 16 21:56:00 WIB 2017
+INFO: [HLS 200-0] Workspace /media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS_original/madgwick_algorithm_C++/MadgwickAHRSoriginal/solution1 opened at Sat Dec 16 22:04:42 WIB 2017
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Command     config_clock returned 0; 0 sec.
@@ -14,9 +14,9 @@ Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/interface/axi4.lib 
 Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/interface/maxi.lib 
-Command           ap_source returned 0; 0 sec.
-Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/interface/saxilite.lib 
 Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/interface/saxilite.lib 
+Command           ap_source returned 0; 0 sec.
 Command         ap_source returned 0; 0.01 sec.
 Execute         source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/dsp48.lib 
 Command         ap_source returned 0; 0 sec.
@@ -26,7 +26,7 @@ Execute         source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/ip/xfi
 Command         ap_source returned 0; 0 sec.
 Execute         source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/ip/xfft.lib 
 Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0.02 sec.
 Execute       source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/xilinx_old.lib 
 Command       ap_source returned 0; 0 sec.
 Execute       source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/xilinx_vivado.lib 
@@ -41,8 +41,8 @@ Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/inte
 Command           ap_source returned 0; 0 sec.
 Command         ap_source returned 0; 0 sec.
 Execute         source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/dsp48.hlp 
-Command         ap_source returned 0; 0.01 sec.
-Command       ap_source returned 0; 0.01 sec.
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
 Execute       source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/zynq/dsp48e1.hlp 
 Command       ap_source returned 0; 0 sec.
 Execute       get_default_platform 
@@ -61,14 +61,14 @@ Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/inte
 Command           ap_source returned 0; 0 sec.
 Command         ap_source returned 0; 0 sec.
 Execute         source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/dsp48.hlp 
-Command         ap_source returned 0; 0.01 sec.
-Command       ap_source returned 0; 0.01 sec.
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
 Command     import_lib returned 0; 0.04 sec.
 Execute     source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/zynq/zynq.gen 
 Execute       source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/virtex.gen 
 Execute         source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/xilinx.gen 
 Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/interface/plb46.gen 
-Command           ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/interface/fsl.gen 
 Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/interface/axi4.gen 
@@ -84,25 +84,25 @@ Command           ap_source returned 0; 0.02 sec.
 Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
 Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/ip/xfir.gen 
 Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/ip/util.gen 
 Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.14 sec.
-Command         ap_source returned 0; 0.2 sec.
+Command           ap_source returned 0; 0.17 sec.
+Command         ap_source returned 0; 0.24 sec.
 Execute         source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/dsp48.gen 
 Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.2 sec.
-Command     ap_source returned 0; 0.2 sec.
+Command       ap_source returned 0; 0.24 sec.
+Command     ap_source returned 0; 0.24 sec.
 Execute     open_platform DefaultPlatform 
 Command     open_platform returned 0; 0 sec.
 Execute     import_lib /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/zynq/zynq_fpv6 
 Execute       source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/xilinx_fpv7.lib 
 Execute         source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/xilinx_hp.lib 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.01 sec.
+Command         ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0.02 sec.
 Execute       source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/xilinx_fpv.hlp 
 Execute         source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/xilinx.hlp 
 Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/target_info.tcl 
@@ -114,12 +114,12 @@ Execute             source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/in
 Command             ap_source returned 0; 0 sec.
 Command           ap_source returned 0; 0 sec.
 Execute           source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/dsp48.hlp 
-Command           ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
 Command         ap_source returned 0; 0.01 sec.
 Command       ap_source returned 0; 0.01 sec.
 Execute       source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/zynq/zynq_hp.hlp 
 Command       ap_source returned 0; 0 sec.
-Command     import_lib returned 0; 0.04 sec.
+Command     import_lib returned 0; 0.05 sec.
 Execute     source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source /opt/Xilinx/Vivado/2017.3/common/technology/xilinx/common/xilinx_fpv6.gen 
 Command       ap_source returned 0; 0 sec.
@@ -129,29 +129,29 @@ Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
 Execute         license_isbetapart xc7z020 
-Command         license_isbetapart returned 1; 0.01 sec.
+Command         license_isbetapart returned 1; 0.02 sec.
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
 Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
 Command         config_chip_info returned 0; 0 sec.
 Execute         config_chip_info -quiet -speed slow 
 Command         config_chip_info returned 0; 0 sec.
-Command       add_library returned 0; 0.03 sec.
+Command       add_library returned 0; 0.04 sec.
 Execute       add_library xilinx/zynq/zynq_fpv6 
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
-Command       add_library returned 0; 0 sec.
+Command       add_library returned 0; 0.01 sec.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
 Execute       get_default_platform 
 Command       get_default_platform returned 0; 0 sec.
-Command     set_part returned 0; 0.1 sec.
+Command     set_part returned 0; 0.13 sec.
 Execute     get_default_platform 
 Command     get_default_platform returned 0; 0 sec.
 Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
 Command     config_chip_info returned 0; 0 sec.
 Execute     config_chip_info -quiet -speed slow 
 Command     config_chip_info returned 0; 0 sec.
-Command   open_solution returned 0; 0.41 sec.
+Command   open_solution returned 0; 0.51 sec.
 Execute   csim_design -compiler gcc -quiet 
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
@@ -170,7 +170,7 @@ Command     is_encrypted returned 0; 0 sec.
 Execute     is_xip /media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS_original/madgwick_algorithm_C++/MadgwickAHRS.h 
 Command     is_xip returned 0; 0 sec.
 Execute     is_encrypted /media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS_original/madgwick_algorithm_C++/csv.cpp 
-Command     is_encrypted returned 0; 0.01 sec.
+Command     is_encrypted returned 0; 0 sec.
 Execute     is_xip /media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS_original/madgwick_algorithm_C++/csv.cpp 
 Command     is_xip returned 0; 0 sec.
 Execute     is_encrypted /media/toni/Data/digilent_contest/open_hardware_AHRS_coprocessor/MadgwickAHRS_original/madgwick_algorithm_C++/csv.h 
@@ -180,10 +180,10 @@ Command     is_xip returned 0; 0 sec.
 Execute     get_default_platform 
 Command     get_default_platform returned 0; 0 sec.
 Execute     source run_sim.tcl 
-Command     ap_source returned 0; 0.16 sec.
+Command     ap_source returned 0; 0.18 sec.
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-Command   csim_design returned 0; 1.71 sec.
-Command ap_source returned 0; 2.13 sec.
+Command   csim_design returned 0; 1.13 sec.
+Command ap_source returned 0; 1.65 sec.
 Execute cleanup_all 
 Command cleanup_all returned 0; 0 sec.

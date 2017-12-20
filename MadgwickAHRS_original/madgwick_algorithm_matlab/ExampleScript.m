@@ -29,10 +29,17 @@ clc;                                % clear the command terminal
 
 load('ExampleData.mat');
 
+%%comment this for double precision
+m = single(Magnetometer);
+g = single(Gyroscope);
+a = single(Accelerometer);
+%%
+
 figure('Name', 'Sensor Data');
 axis(1) = subplot(3,1,1);
 hold on;
 plot(time, Gyroscope(:,1), 'r');
+plot(time, g(:,1), 'b');
 plot(time, Gyroscope(:,2), 'g');
 plot(time, Gyroscope(:,3), 'b');
 legend('X', 'Y', 'Z');
@@ -65,14 +72,19 @@ linkaxes(axis, 'x');
 %% Process sensor data through algorithm
 
 AHRS = MadgwickAHRS('SamplePeriod', 1/256, 'Beta', 0.1);
+AHRS1 = MadgwickAHRS_32('SamplePeriod', 1/256, 'Beta', 0.1);
 % AHRS = MahonyAHRS('SamplePeriod', 1/256, 'Kp', 0.5);
 
 quaternion = zeros(length(time), 4);
+quaternion1 = zeros(length(time), 4, 'single');
 for t = 1:length(time)
     AHRS.Update(Gyroscope(t,:) * (pi/180), Accelerometer(t,:), Magnetometer(t,:));	% gyroscope units must be radians
+    AHRS1.Update(g(t,:) * (pi/180), a(t,:), m(t,:));	% gyroscope units must be radians
     quaternion(t, :) = AHRS.Quaternion;
+    quaternion1(t, :) = AHRS.Quaternion;
 end
-save('ExampleData.mat','quaternion', '-append');
+q = single(quaternion);
+%save('ExampleData.mat','quaternion', '-append');
 %% Plot algorithm output as Euler angles
 % The first and third Euler angles in the sequence (phi and psi) become
 % unreliable when the middle angles of the sequence (theta) approaches �90
@@ -93,5 +105,8 @@ legend('\phi', '\theta', '\psi');
 hold off;
 
 %%
-dlmwrite("gold.csv", [Magnetometer Gyroscope Accelerometer quaternion]);
+dlmwrite('gold.float.64bit.csv', [Magnetometer Gyroscope Accelerometer quaternion]);
+%dlmwrite('gold.float.32bit.csv', [m g a q]);
+dlmwrite('gold.float.32bit.csv', [m g a quaternion1]);
+%dlmwrite("gold.double.csv", [Magnetometer Gyroscope Accelerometer quaternion]);
 %% End of script
