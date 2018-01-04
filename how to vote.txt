@@ -1,0 +1,11 @@
+1.	register untuk vote. lengkapi form informasi diri, maskan captcha. lalu submit 
+	http://www.innovatefpga.com/ap/user_register.html
+	
+2.	masuk ke email yang digunakan untuk registrasi. buka inbox "[Innovate FPGA (APJ)]Activate your account". 
+	klil link pada bagian "Activate Your Account".
+	
+3. log in sebagai "community login". 
+	http://www.innovatefpga.com/cgi-bin/innovate/login.pl?Code=AP
+	
+4. masuk 
+	http://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AP028

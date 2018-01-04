@@ -1,8 +1,0 @@
-INFO: [SIM 2] *************** CSIM start ***************
-INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../../MadgwickAHRS_testbench.cpp in debug mode
-csim.mk:76: recipe for target 'obj/MadgwickAHRS_testbench.o' failed
-../../../../MadgwickAHRS_testbench.cpp:8:2: error: ‘string’ does not name a type
-make: *** [obj/MadgwickAHRS_testbench.o] Error 1
-CRITICAL WARNING: [SIM 100] 'csim_design' failed: compilation error(s).
-INFO: [SIM 3] *************** CSIM finish ***************
