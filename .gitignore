@@ -1,2 +1,8 @@
 
 MadgwickAHRS_HW_development/
+!*.tcl
+!*.cpp
+!*.c
+!*.h
+!*.m
+!*.gitignore
