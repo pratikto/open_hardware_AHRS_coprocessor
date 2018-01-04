@@ -9,7 +9,7 @@ MadgwickAHRS_HW_development/
 #!*.m
 #!*.tcl
 
-!MadgwickAHRS_HW_development/MadgwickAHRS/*/*.tcl 
+!MadgwickAHRS_HW_development/MadgwickAHRS/solution*/*.tcl 
 !MadgwickAHRS_HW_development/*.cpp 
 !MadgwickAHRS_HW_development/*.c 
 !MadgwickAHRS_HW_development/*.h 
