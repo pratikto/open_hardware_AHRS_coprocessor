@@ -92,6 +92,7 @@ q = single(quaternion);
 % See: http://en.wikipedia.org/wiki/Gimbal_lock
 
 euler = quatern2euler(quaternConj(quaternion)) * (180/pi);	% use conjugate for sensor frame relative to Earth and convert to degrees.
+eulerRad = quatern2euler(quaternConj(quaternion));	% use conjugate for sensor frame relative to Earth and convert to radian.
 
 figure('Name', 'Euler Angles');
 hold on;
@@ -105,8 +106,8 @@ legend('\phi', '\theta', '\psi');
 hold off;
 
 %%
-dlmwrite('gold.float.64bit.csv', [Magnetometer Gyroscope Accelerometer quaternion]);
+dlmwrite('gold.float.64bit.csv', [Magnetometer Gyroscope Accelerometer quaternion eulerRad]);
 %dlmwrite('gold.float.32bit.csv', [m g a q]);
-dlmwrite('gold.float.32bit.csv', [m g a quaternion1]);
+dlmwrite('gold.float.32bit.csv', [m g a quaternion1 euler]);
 %dlmwrite("gold.double.csv", [Magnetometer Gyroscope Accelerometer quaternion]);
 %% End of script
