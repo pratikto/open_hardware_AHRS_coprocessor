@@ -1,8 +1,10 @@
+*
 
-MadgwickAHRS_HW_development/
-!*.tcl
-!*.cpp
-!*.c
-!*.h
-!*.m
+#MadgwickAHRS_HW_development/
+!MadgwickAHRS_HW_development/**/*.tcl
+!MadgwickAHRS_HW_development/**/*.cpp
+!MadgwickAHRS_HW_development/**/*.c
+!MadgwickAHRS_HW_development/**/*.h
+!MadgwickAHRS_HW_development/**/*.m
+
 !*.gitignore
