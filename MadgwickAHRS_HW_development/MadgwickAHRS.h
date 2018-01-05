@@ -30,6 +30,20 @@
 // Variable
 
 //static float q[4] = {1.0f, 0.0f, 0.0f, 0.0f};
+static float q0q1 = 0.0f;
+static float q0q2 = 0.0f;
+static float q0q3 = 0.0f;
+
+static float q1q2 = 0.0f;
+static float q1q3 = 0.0f;
+
+static float q2q3 = 0.0f;
+
+static float q1q1 = 0.0f;
+static float q2q2 = 0.0f;
+static float q3q3 = 0.0f;
+
+//static bool firstInit = 1;
 
 //============================================================================================
 // Functions declaration

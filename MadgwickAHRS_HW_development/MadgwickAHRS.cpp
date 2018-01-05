@@ -29,11 +29,20 @@
 //
 void update(float g[3], float a[3], float m[3], float q[4], float euler[3])
 {
-	float s[4] = {0.0f, 0.0f, 0.0f, 0.0f};
-	float qDot[4] = {0.0f, 0.0f, 0.0f, 0.0f};
-	float hx = 0, hy = 0;
-	float _2q0mx, _2q0my, _2q0mz, _2q1mx, _2bx, _2bz, _4bx, _4bz, _2q0, _2q1, _2q2, _2q3,
-		  _2q0q2, _2q2q3, q0q0, q0q1, q0q2, q0q3, q1q1, q1q2, q1q3, q2q2, q2q3, q3q3,
+//	float s[4] = {0.0f, 0.0f, 0.0f, 0.0f};
+//	float qDot[4] = {0.0f, 0.0f, 0.0f, 0.0f};
+//	float hx = 0, hy = 0;
+	float s[4];
+	float qDot[4];
+	float hx, hy;
+//	float _2q0mx, _2q0my, _2q0mz, _2q1mx, _2bx, _2bz, _4bx, _4bz, _2q0, _2q1, _2q2, _2q3,
+//		  _2q0q2, _2q2q3, q0q0, q0q1, q0q2, q0q3, q1q1, q1q2, q1q3, q2q2, q2q3, q3q3,
+//		  _4q0, _4q1, _4q2 ,_8q1, _8q2;
+	float _2q0mx, _2q0my, _2q0mz, _2q1mx,
+		  _2bx, _2bz, _4bx, _4bz,
+		  _2q0, _2q1, _2q2, _2q3,
+		  _2q0q2, _2q2q3,
+		  q0q0,
 		  _4q0, _4q1, _4q2 ,_8q1, _8q2;
 
 	// Convert gyroscope degrees/sec to radians/sec
@@ -58,9 +67,9 @@ void update(float g[3], float a[3], float m[3], float q[4], float euler[3])
 		_2q2 = q[2] + q[2];
 		_2q3 = q[3] + q[3];
 		q0q0 = q[0] * q[0];
-		q1q1 = q[1] * q[1];
-		q2q2 = q[2] * q[2];
-		q3q3 = q[3] * q[3];
+//		q1q1 = q[1] * q[1];
+//		q2q2 = q[2] * q[2];
+//		q3q3 = q[3] * q[3];
 
 		// Use IMU algorithm if magnetometer measurement invalid (avoids NaN in magnetometer normalisation)
 		if((m[0] == 0.0f) && (m[1] == 0.0f) && (m[2] == 0.0f)) {
@@ -95,12 +104,12 @@ void update(float g[3], float a[3], float m[3], float q[4], float euler[3])
 			_2q0my = _2q0 * m[1];
 			_2q0mz = _2q0 * m[2];
 			_2q1mx = _2q1 * m[0];
-			q0q1 = q[0] * q[1];
-			q0q2 = q[0] * q[2];
-			q0q3 = q[0] * q[3];
-			q1q2 = q[1] * q[2];
+//			q0q1 = q[0] * q[1];
+//			q0q2 = q[0] * q[2];
+//			q0q3 = q[0] * q[3];
+//			q1q2 = q[1] * q[2];
 			q1q3 = q[1] * q[3];
-			q2q3 = q[2] * q[3];
+//			q2q3 = q[2] * q[3];
 			_2q0q2 = q0q2 + q0q2;
 			_2q2q3 = q2q3 + q2q3;
 
@@ -138,9 +147,22 @@ void update(float g[3], float a[3], float m[3], float q[4], float euler[3])
 //	normType2(q);
 	normType3(q);
 
-	euler[0] = hls::atan2f(q[0]*q[1] + q[2]*q[3], 0.5f - q[1]*q[1] - q[2]*q[2]);
-	euler[1] = hls::asinf(-2.0f * (q[1]*q[3] - q[0]*q[2]));
-	euler[2] = hls::atan2f(q[1]*q[2] + q[0]*q[3], 0.5f - q[2]*q[2] - q[3]*q[3]);
+	q0q1 = q[0] * q[1];
+	q0q2 = q[0] * q[2];
+	q0q3 = q[0] * q[3];
+
+	q1q2 = q[1] * q[2];
+	q1q3 = q[1] * q[3];
+
+	q2q3 = q[2] * q[3];
+
+	q1q1 = q[1] * q[1];
+	q2q2 = q[2] * q[2];
+	q3q3 = q[3] * q[3];
+
+	euler[0] = hls::atan2f(q0q1 + q2q3, 0.5f - q1q1 - q2q2);
+	euler[1] = hls::asinf(-2.0f * (q1q3 - q0q2));
+	euler[2] = hls::atan2f(q1q2 + q0q3, 0.5f - q2q2 - q3q3);
 }
 
 //-------------------------------------------------------------------------------------------
