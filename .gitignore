@@ -1,7 +1,4 @@
-#*
-
-MadgwickAHRS_HW_development/
-
+Xilinx/*
 #!*.gitignore
 #!*.cpp
 #!*.c
@@ -9,10 +6,13 @@ MadgwickAHRS_HW_development/
 #!*.m
 #!*.tcl
 
-!MadgwickAHRS_HW_development/MadgwickAHRS/solution*/*.tcl
-!MadgwickAHRS_HW_development/*.cpp
-!MadgwickAHRS_HW_development/*.c
-!MadgwickAHRS_HW_development/*.h
-!MadgwickAHRS_HW_development/*.m
+!Xilinx/MadgwickAHRS_HW_development/MadgwickAHRS/solution*/*.tcl
+!Xilinx/MadgwickAHRS_HW_development/*.cpp
+!Xilinx/MadgwickAHRS_HW_development/*.c
+!Xilinx/MadgwickAHRS_HW_development/*.h
+!Xilinx/MadgwickAHRS_HW_development/*.m
 
+!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.c
+!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.cpp
+!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.h
 #!*/
