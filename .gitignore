@@ -1,4 +1,5 @@
 Xilinx/*
+MadgwickAHRS_original/*
 #!*.gitignore
 #!*.cpp
 #!*.c
@@ -12,7 +13,17 @@ Xilinx/*
 !Xilinx/MadgwickAHRS_HW_development/*.h
 !Xilinx/MadgwickAHRS_HW_development/*.m
 
-!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.c
-!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.cpp
-!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.h
-#!*/
+#!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.c
+#!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.cpp
+#!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.h
+
+!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/ZYBO_Z7_NAV_MADGWICK/src/*.c
+!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/ZYBO_Z7_NAV_MADGWICK/src/*.cpp
+!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/ZYBO_Z7_NAV_MADGWICK/src/*.h
+
+!MadgwickAHRS_original/madgwick_algorithm_matlab
+!MadgwickAHRS_original/madgwick_algorithm_C++/*.c
+!MadgwickAHRS_original/madgwick_algorithm_C++/*.cpp
+!MadgwickAHRS_original/madgwick_algorithm_C++/*.h
+!MadgwickAHRS_original/madgwick_algorithm_C++/*.csv
+!MadgwickAHRS_original/madgwick_algorithm_C++/*.dat

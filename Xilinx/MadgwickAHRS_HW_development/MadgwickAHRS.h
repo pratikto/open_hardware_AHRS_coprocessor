@@ -29,7 +29,7 @@
 //-------------------------------------------------------------------------------------------
 // Variable
 
-//static float q[4] = {1.0f, 0.0f, 0.0f, 0.0f};
+//static float Q[4] = {1.0f, 0.0f, 0.0f, 0.0f};
 static float q0q1 = 0.0f;
 static float q0q2 = 0.0f;
 static float q0q3 = 0.0f;
@@ -57,7 +57,8 @@ void computeAngles(float q[4], float euler[3]);	//in radians
 void addMulConstanta1(float result[4], float vector[4], float constanta);
 void addMulConstanta2(float result[4], float vector[4], float constanta);
 void mulConstanta(float vector[4], float constanta);
-void update(float g[3], float a[3], float m[3], float q[4], float euler[3]);
+void updateType1(float g[3], float a[3], float m[3], float q[4], float euler[3]);
+void updateType2(float g[3], float a[3], float m[3], float q[4], float euler[3]);
 //void update(float g[3], float a[3], float m[3], bool sel, float out [4]);
 void updateMARG(float g[3], float a[3], float m[3], float q[4], float euler[3]);
 void updateIMU(float g[3], float a[3], float q[4], float euler[3]);

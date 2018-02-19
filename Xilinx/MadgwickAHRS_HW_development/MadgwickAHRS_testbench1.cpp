@@ -19,7 +19,7 @@ int main(){
 			gyro[j] = file.read(i,j+3);
 			accelero[j] = file.read(i,j+6);
 		}
-		update(
+		updateType2(
 				gyro,
 				accelero,
 				magneto,
@@ -36,8 +36,6 @@ int main(){
 		cout <<endl;
 	}
 	file.writeFile("output2.csv");
-//	cout <<file.getRow();
-//	cout <<file.getColl();
 
 	return 0;
 }
