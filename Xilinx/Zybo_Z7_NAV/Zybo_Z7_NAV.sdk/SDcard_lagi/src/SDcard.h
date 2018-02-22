@@ -14,25 +14,34 @@
 #include "xil_printf.h"
 #include "ff.h"
 #include "xil_cache.h"
+#include <string>
 
 //FATFS SD; 	// File System instance
 //FIL fileInput;
 class SDcard {
 	FATFS SD;
-	char *path;
-	char *filename;
 	FIL fileInput;
 	FRESULT result;
+	char *path;
+	char *filename;
 public:
 	SDcard();
 	SDcard(char *_path, char *_filename);
 	int mount();
 	int mount(char *_path);
 	int unmount();
-	void setPath(char *_path);
-	void setFile(char *_filename);
+	void setPath(std::string _path);
+	void setFile(std::string _filename);
+	int accesFile(char *_filename, int reg);
 	int openFile(char *_filename);
-
+	int openFile();
+	int createFile(char *_filename);
+	int createFile();
+	int readFile(char *data, unsigned int length);
+	int readBit(char *data);
+	int writeFile(char *data, unsigned int length);
+	int writeBit(char *data);
+	int closeFile();
 	virtual ~SDcard();
 };
 
