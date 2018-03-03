@@ -73,6 +73,14 @@ int SDcard::unmount(){
 	}
 }
 
+int SDcard::format(){
+	result = f_mkfs(path, 0, 0);
+	if (result != FR_OK) {
+		return XST_FAILURE;
+	}
+	return XST_SUCCESS;
+}
+
 void SDcard::setPath(std::string _path){
 //	*path = *_path;
 	path = const_cast<char*>(_path.c_str());
@@ -115,8 +123,10 @@ int SDcard::openFile(){
 	return XST_SUCCESS;
 }
 
-int SDcard::createFile(char *_filename){
-	result = f_open(&fileInput, _filename, FA_CREATE_NEW | FA_WRITE | FA_READ);
+int SDcard::createFile(std::string _filename){
+	filename = const_cast<char*>(_filename.c_str());
+//	filename = (char *) _filename;
+	result = f_open(&fileInput, filename, FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
 	if (result !=0) {
 		return XST_FAILURE;
 		xil_printf("fail to create this file!\r\n");
@@ -128,7 +138,7 @@ int SDcard::createFile(char *_filename){
 }
 
 int SDcard::createFile(){
-	result = f_open(&fileInput, filename, FA_CREATE_NEW | FA_WRITE | FA_READ);
+	result = f_open(&fileInput, filename, FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
 	if (result !=0) {
 		return XST_FAILURE;
 		xil_printf("fail to create this file!\r\n");
@@ -141,32 +151,49 @@ int SDcard::createFile(){
 
 int SDcard::readFile(char *data, unsigned int length){
 	unsigned int count;
+	char *temp;
 	result = f_read(&fileInput, data, length, &count);
 	if (result !=0) {
-		return XST_FAILURE;
+//		return XST_FAILURE;
 		xil_printf("fail to read File!\r\n");
 		xil_printf("ERROR : f_read return %d\r\n", result);
 	}
-	return XST_SUCCESS;
+	//filtering unwanted characters
+//	char temp[count];
+	for(uint i=0; i<count; i++){
+		temp[i]=data[i];
+	}
+	data = temp;
+//	return XST_SUCCESS;
+	return count;
 }
 
 int SDcard::readBit(char *data){
 	return readFile(data, 1);
 }
 
-int SDcard::writeFile(char *data, unsigned int length){
+//int SDcard::writeFile(char *data, unsigned int length){
+//int SDcard::writeFile(std::string data){
+int SDcard::writeFile(std::string data){
+	int length = data.length()+1;
+//	buffer = data;
 	unsigned int count;
-	result = f_write(&fileInput, data, length, &count);
+	char *dataToWrite = const_cast<char*>(data.c_str());
+	result = f_write(&fileInput, (const void*)dataToWrite, length, &count);
 	if (result !=0) {
 		return XST_FAILURE;
 		xil_printf("fail to write File!\r\n");
 		xil_printf("ERROR : f_read return %d\r\n", result);
 	}
+	else if (length = count){
+		return 2;
+	}
+
 	return XST_SUCCESS;
 }
 
 int SDcard::writeBit(char *data){
-	return writeFile(data, 1);
+	return writeFile(data);
 }
 
 int SDcard::closeFile(){
@@ -176,4 +203,3 @@ int SDcard::closeFile(){
 SDcard::~SDcard() {
 	// TODO Auto-generated destructor stub
 }
-
