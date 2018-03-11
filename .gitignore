@@ -1,17 +1,17 @@
 Xilinx/*
 MadgwickAHRS_original/*
-#!*.gitignore
+!*.gitignore
 #!*.cpp
 #!*.c
 #!*.h
 #!*.m
 #!*.tcl
 
-!Xilinx/MadgwickAHRS_HW_development/MadgwickAHRS/solution*/*.tcl
-!Xilinx/MadgwickAHRS_HW_development/*.cpp
-!Xilinx/MadgwickAHRS_HW_development/*.c
-!Xilinx/MadgwickAHRS_HW_development/*.h
-!Xilinx/MadgwickAHRS_HW_development/*.m
+!Xilinx/openHW_AHRS/MadgwickAHRS/solution*/*.tcl
+!Xilinx/openHW_AHRS/*.cpp
+!Xilinx/openHW_AHRS/*.c
+!Xilinx/openHW_AHRS/*.h
+!Xilinx/openHW_AHRS/*.m
 
 #!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.c
 #!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.cpp

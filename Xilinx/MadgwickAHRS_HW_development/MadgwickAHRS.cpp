@@ -17,10 +17,7 @@
 //=============================================================================================
 //-------------------------------------------------------------------------------------------
 // Header files
-
 #include "MadgwickAHRS.h"
-//#include <math.h>
-#include "hls_math.h"
 
 //-------------------------------------------------------------------------------------------
 // Variable
@@ -30,10 +27,14 @@ static float Q[4] = {1.0f, 0.0f, 0.0f, 0.0f};
 //============================================================================================
 // Functions
 
+
 //-------------------------------------------------------------------------------------------
 //
-void updateType1(float g[3], float a[3], float m[3], float q[4], float euler[3])
+void madgwick(float g[3], float a[3], float m[3], float q[4], float euler[3], float periode, bool *block_start, bool *q_done, bool *e_done)
 {
+	*block_start = 1;
+	*q_done = 0;
+	*e_done = 0;
 	float s[4];
 	float qDot[4];
 	float hx, hy;
@@ -48,149 +49,14 @@ void updateType1(float g[3], float a[3], float m[3], float q[4], float euler[3])
 	mulConstanta(g, rad2degConst);
 
 	// Rate of change of quaternion from gyroscope
-	computeQDot(qDot, q, g);
+	Qmul(qDot, Q, g);
+	mulConstanta(qDot, 0.5f);
 
 
 	// Compute feedback only if accelerometer measurement valid (avoids NaN in accelerometer normalisation)
 	if(!((a[0] == 0.0f) && (a[1] == 0.0f) && (a[2] == 0.0f))) {
 
 		// Normalise accelerometer measurement
-//		normType1(_a);
-//		normType2(_a);
-//		normType3(_a);
-		normType4(a);
-
-		// Auxiliary variables to avoid repeated arithmetic
-		_2q0 = q[0] + q[0];
-		_2q1 = q[1] + q[1];
-		_2q2 = q[2] + q[2];
-		_2q3 = q[3] + q[3];
-		q0q0 = q[0] * q[0];
-//		q1q1 = q[1] * q[1];
-//		q2q2 = q[2] * q[2];
-//		q3q3 = q[3] * q[3];
-
-		// Use IMU algorithm if magnetometer measurement invalid (avoids NaN in magnetometer normalisation)
-		if((m[0] == 0.0f) && (m[1] == 0.0f) && (m[2] == 0.0f)) {
-
-			// Auxiliary variables to avoid repeated arithmetic
-			_4q0 = _2q0 + _2q0;
-			_4q1 = _2q1 + _2q1;
-			_4q2 = _2q2 + _2q2;
-
-//			_8q1 = _2q1 + _2q1 + _2q1 + _2q1;
-			_8q1 = _4q1 + _4q1;
-//			_8q2 = _2q2 + _2q2 + _2q2 + _2q2;
-			_8q2 = _4q2 + _4q2;
-
-			// Gradient decent algorithm corrective step
-			s[0] = _4q0 * q2q2 + _2q2 * a[0] + _4q0 * q1q1 - _2q1 * a[1];
-			s[1] = _4q1 * q3q3 - _2q3 * a[0] + 4.0f * q0q0 * q[1] - _2q0 * a[1] - _4q1 + _8q1 * q1q1 + _8q1 * q2q2 + _4q1 * a[2];
-			s[2] = 4.0f * q0q0 * q[2] + _2q0 * a[0] + _4q2 * q3q3 - _2q3 * a[1] - _4q2 + _8q2 * q1q1 + _8q2 * q2q2 + _4q2 * a[2];
-			s[3] = 4.0f * q1q1 * q[3] - _2q1 * a[0] + 4.0f * q2q2 * q[3] - _2q2 * a[1];
-
-		}
-		else{
-
-			// Normalise magnetometer measurement
-//			normType1(_m);
-	//		normType2(_m);
-//			normType3(_m);
-			normType4(m);
-
-			// Auxiliary variables to avoid repeated arithmetic
-			_2q0mx = _2q0 * m[0];
-			_2q0my = _2q0 * m[1];
-			_2q0mz = _2q0 * m[2];
-			_2q1mx = _2q1 * m[0];
-//			q0q1 = q[0] * q[1];
-//			q0q2 = q[0] * q[2];
-//			q0q3 = q[0] * q[3];
-//			q1q2 = q[1] * q[2];
-			q1q3 = q[1] * q[3];
-//			q2q3 = q[2] * q[3];
-			_2q0q2 = q0q2 + q0q2;
-			_2q2q3 = q2q3 + q2q3;
-
-			// Reference direction of Earth's magnetic field
-			hx = m[0] * q0q0 - _2q0my * q[3] + _2q0mz * q[2] + m[0] * q1q1 + _2q1 * m[1] * q[2] + _2q1 * m[2] * q[3] - m[0] * q2q2 - m[0] * q3q3;
-			hy = _2q0mx * q[3] + m[1] * q0q0 - _2q0mz * q[1] + _2q1mx * q[2] - m[1] * q1q1 + m[1] * q2q2 + _2q2 * m[2] * q[3] - m[1] * q3q3;
-			_2bx = hls::sqrtf(hx * hx + hy * hy);
-			_2bz = -_2q0mx * q[2] + _2q0my * q[1] + m[2] * q0q0 + _2q1mx * q[3] - m[2] * q1q1 + _2q2 * m[1] * q[3] - m[2] * q2q2 + m[2] * q3q3;
-			_4bx = 2.0f * _2bx;
-			_4bz = 2.0f * _2bz;
-
-			// Gradient decent algorithm corrective step
-			s[0] = -_2q2 * (2.0f * q1q3 - _2q0q2 - a[0]) + _2q1 * (2.0f * q0q1 + _2q2q3 - a[1]) - _2bz * q[2] * (_2bx * (0.5f - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - m[0]) + (-_2bx * q[3] + _2bz * q[1]) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - m[1]) + _2bx * q[2] * (_2bx * (q0q2 + q1q3) + _2bz * (0.5f - q1q1 - q2q2) - m[2]);
-			s[1] = _2q3 * (2.0f * q1q3 - _2q0q2 - a[0]) + _2q0 * (2.0f * q0q1 + _2q2q3 - a[1]) - 4.0f * q[1] * (1 - 2.0f * q1q1 - 2.0f * q2q2 - a[2]) + _2bz * q[3] * (_2bx * (0.5f - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - m[0]) + (_2bx * q[2] + _2bz * q[0]) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - m[1]) + (_2bx * q[3] - _4bz * q[1]) * (_2bx * (q0q2 + q1q3) + _2bz * (0.5f - q1q1 - q2q2) - m[2]);
-			s[2] = -_2q0 * (2.0f * q1q3 - _2q0q2 - a[0]) + _2q3 * (2.0f * q0q1 + _2q2q3 - a[1]) - 4.0f * q[2] * (1 - 2.0f * q1q1 - 2.0f * q2q2 - a[2]) + (-_4bx * q[2] - _2bz * q[0]) * (_2bx * (0.5f - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - m[0]) + (_2bx * q[1] + _2bz * q[3]) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - m[1]) + (_2bx * q[0] - _4bz * q[2]) * (_2bx * (q0q2 + q1q3) + _2bz * (0.5f - q1q1 - q2q2) - m[2]);
-			s[3] = _2q1 * (2.0f * q1q3 - _2q0q2 - a[0]) + _2q2 * (2.0f * q0q1 + _2q2q3 - a[1]) + (-_4bx * q[3] + _2bz * q[1]) * (_2bx * (0.5f - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - m[0]) + (-_2bx * q[0] + _2bz * q[2]) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - m[1]) + _2bx * q[1] * (_2bx * (q0q2 + q1q3) + _2bz * (0.5f - q1q1 - q2q2) - m[2]);
-		}
-
-		// normalise step magnitude
-//		normType1(s);
-//		normType2(s);
-		normType3(s);
-
-		// Apply feedback step
-		addMulConstanta1(qDot, s, negBeta);
-//		addMulConstanta2(qDot, s, negBeta);
-	}
-
-	// Integrate rate of change of quaternion to yield quaternion
-	addMulConstanta1(q, qDot, invSampleFreq);
-//	addMulConstanta2(q, qDot, invSampleFreq);
-
-	// Normalise quaternion
-//	normType1(q);
-//	normType2(q);
-	normType3(q);
-
-	q0q1 = q[0] * q[1];
-	q0q2 = q[0] * q[2];
-	q0q3 = q[0] * q[3];
-
-	q1q2 = q[1] * q[2];
-	q1q3 = q[1] * q[3];
-
-	q2q3 = q[2] * q[3];
-
-	q1q1 = q[1] * q[1];
-	q2q2 = q[2] * q[2];
-	q3q3 = q[3] * q[3];
-
-	euler[0] = hls::atan2f(q0q1 + q2q3, 0.5f - q1q1 - q2q2);
-	euler[1] = hls::asinf(-2.0f * (q1q3 - q0q2));
-	euler[2] = hls::atan2f(q1q2 + q0q3, 0.5f - q2q2 - q3q3);
-}
-
-//-------------------------------------------------------------------------------------------
-//
-void updateType2(float g[3], float a[3], float m[3], float q[4], float euler[3])
-{
-	float s[4];
-	float qDot[4];
-	float hx, hy;
-	float _2q0mx, _2q0my, _2q0mz, _2q1mx,
-		  _2bx, _2bz, _4bx, _4bz,
-		  _2q0, _2q1, _2q2, _2q3,
-		  _2q0q2, _2q2q3,
-		  q0q0,
-		  _4q0, _4q1, _4q2 ,_8q1, _8q2;
-
-	// Convert gyroscope degrees/sec to radians/sec
-	mulConstanta(g, rad2degConst);
-
-	// Rate of change of quaternion from gyroscope
-	computeQDot(qDot, Q, g);
-
-	// Compute feedback only if accelerometer measurement valid (avoids NaN in accelerometer normalisation)
-	if(!((a[0] == 0.0f) && (a[1] == 0.0f) && (a[2] == 0.0f))) {
-
-		// Normalise accelerometer measurement
-//		normType1(_a);
-//		normType2(_a);
-//		normType3(_a);
 		normType4(a);
 
 		// Auxiliary variables to avoid repeated arithmetic
@@ -199,9 +65,6 @@ void updateType2(float g[3], float a[3], float m[3], float q[4], float euler[3])
 		_2q2 = Q[2] + Q[2];
 		_2q3 = Q[3] + Q[3];
 		q0q0 = Q[0] * Q[0];
-//		q1q1 = Q[1] * Q[1];
-//		q2q2 = Q[2] * Q[2];
-//		q3q3 = Q[3] * Q[3];
 
 		// Use IMU algorithm if magnetometer measurement invalid (avoids NaN in magnetometer normalisation)
 		if((m[0] == 0.0f) && (m[1] == 0.0f) && (m[2] == 0.0f)) {
@@ -211,9 +74,7 @@ void updateType2(float g[3], float a[3], float m[3], float q[4], float euler[3])
 			_4q1 = _2q1 + _2q1;
 			_4q2 = _2q2 + _2q2;
 
-//			_8q1 = _2q1 + _2q1 + _2q1 + _2q1;
 			_8q1 = _4q1 + _4q1;
-//			_8q2 = _2q2 + _2q2 + _2q2 + _2q2;
 			_8q2 = _4q2 + _4q2;
 
 			// Gradient decent algorithm corrective step
@@ -223,12 +84,10 @@ void updateType2(float g[3], float a[3], float m[3], float q[4], float euler[3])
 			s[3] = 4.0f * q1q1 * Q[3] - _2q1 * a[0] + 4.0f * q2q2 * Q[3] - _2q2 * a[1];
 
 		}
+		// MARG algorithm
 		else{
 
 			// Normalise magnetometer measurement
-//			normType1(_m);
-	//		normType2(_m);
-//			normType3(_m);
 			normType4(m);
 
 			// Auxiliary variables to avoid repeated arithmetic
@@ -236,12 +95,7 @@ void updateType2(float g[3], float a[3], float m[3], float q[4], float euler[3])
 			_2q0my = _2q0 * m[1];
 			_2q0mz = _2q0 * m[2];
 			_2q1mx = _2q1 * m[0];
-//			q0q1 = Q[0] * Q[1];
-//			q0q2 = Q[0] * Q[2];
-//			q0q3 = Q[0] * Q[3];
-//			q1q2 = Q[1] * Q[2];
 			q1q3 = Q[1] * Q[3];
-//			q2q3 = Q[2] * Q[3];
 			_2q0q2 = q0q2 + q0q2;
 			_2q2q3 = q2q3 + q2q3;
 
@@ -261,23 +115,25 @@ void updateType2(float g[3], float a[3], float m[3], float q[4], float euler[3])
 		}
 
 		// normalise step magnitude
-//		normType1(s);
-//		normType2(s);
-		normType3(s);
+		normType4(s);
 
 		// Apply feedback step
-		addMulConstanta1(qDot, s, negBeta);
-//		addMulConstanta2(qDot, s, negBeta);
+		mulConstanta(s, negBeta);
+		add2vector(qDot, s);
 	}
 
 	// Integrate rate of change of quaternion to yield quaternion
-	addMulConstanta1(Q, qDot, invSampleFreq);
-//	addMulConstanta2(q, qDot, invSampleFreq);
+	mulConstanta(qDot, periode);
+	add2vector(Q, qDot);
 
 	// Normalise quaternion
-//	normType1(q);
-//	normType2(q);
-	normType3(Q);
+	normType4(Q);
+
+	*q_done = 1;
+
+	loop_assign_q : for (int i=0; i<4; i++){
+		q[i]=Q[i];
+	}
 
 	q0q1 = Q[0] * Q[1];
 	q0q2 = Q[0] * Q[2];
@@ -292,222 +148,17 @@ void updateType2(float g[3], float a[3], float m[3], float q[4], float euler[3])
 	q2q2 = Q[2] * Q[2];
 	q3q3 = Q[3] * Q[3];
 
-	loop_assign_q : for (int i=0; i<4; i++){
-		q[i]=Q[i];
-	}
-
 	euler[0] = hls::atan2f(q0q1 + q2q3, 0.5f - q1q1 - q2q2);
 	euler[1] = hls::asinf(-2.0f * (q1q3 - q0q2));
 	euler[2] = hls::atan2f(q1q2 + q0q3, 0.5f - q2q2 - q3q3);
-//	q = Q;
-}
 
-//-------------------------------------------------------------------------------------------
-//MARG algorithm update
-void updateMARG(float g[3], float a[3], float m[3], float q[4], float euler[3])
-{
-//	float recipNorm;
-	float _a[4] = {0, a[0], a[1], a[2]};
-	float _m[4] = {0, m[0], m[1], m[2]};
-	float s[4] = {0.0f, 0.0f, 0.0f, 0.0f};
-	float qDot[4] = {0.0f, 0.0f, 0.0f, 0.0f};
-	float hx = 0, hy = 0;
-	float _2q0mx, _2q0my, _2q0mz, _2q1mx, _2bx, _2bz, _4bx, _4bz, _2q0, _2q1, _2q2, _2q3, _2q0q2, _2q2q3, q0q0, q0q1, q0q2, q0q3, q1q1, q1q2, q1q3, q2q2, q2q3, q3q3;
-//	int anglesComputed = 0;
-
-	// Use IMU algorithm if magnetometer measurement invalid (avoids NaN in magnetometer normalisation)
-	if((m[0] == 0.0f) && (m[1] == 0.0f) && (m[2] == 0.0f)) {
-		updateIMU(g, a, q, euler);
-		return;
-	}
-
-	// Convert gyroscope degrees/sec to radians/sec
-	conv2radPerSecond(g);
-
-	// Rate of change of quaternion from gyroscope
-	computeQDot(qDot, q, g);
-
-
-	// Compute feedback only if accelerometer measurement valid (avoids NaN in accelerometer normalisation)
-	if(!((a[0] == 0.0f) && (a[1] == 0.0f) && (a[2] == 0.0f))) {
-
-		// Normalise accelerometer measurement
-//		normType1(_a);
-//		normType2(_a);
-		normType3(_a);
-
-		// Normalise magnetometer measurement
-//		normType1(_m);
-//		normType2(_m);
-		normType3(_m);
-
-		// Auxiliary variables to avoid repeated arithmetic
-		_2q0mx = 2.0f * q[0] * m[0];
-		_2q0my = 2.0f * q[0] * m[1];
-		_2q0mz = 2.0f * q[0] * m[2];
-		_2q1mx = 2.0f * q[1] * m[0];
-		_2q0 = 2.0f * q[0];
-		_2q1 = 2.0f * q[1];
-		_2q2 = 2.0f * q[2];
-		_2q3 = 2.0f * q[3];
-		_2q0q2 = 2.0f * q[0] * q[2];
-		_2q2q3 = 2.0f * q[2] * q[3];
-//		q0q0 = hls::pow(q[0], 2);
-		q0q0 = q[0] * q[0];
-		q0q1 = q[0] * q[1];
-		q0q2 = q[0] * q[2];
-		q0q3 = q[0] * q[3];
-//		q1q1 = hls::pow(q[1], 2);
-		q1q1 = q[1] * q[1];
-		q1q2 = q[1] * q[2];
-		q1q3 = q[1] * q[3];
-//		q2q2 = hls::pow(q[2], 2);
-		q2q2 = q[2] * q[2];
-		q2q3 = q[2] * q[3];
-//		q3q3 = hls::pow(q[3], 2);
-		q3q3 = q[3] * q[3];
-
-		// Reference direction of Earth's magnetic field
-		hx = m[0] * q0q0 - _2q0my * q[3] + _2q0mz * q[2] + m[0] * q1q1 + _2q1 * m[1] * q[2] + _2q1 * m[2] * q[3] - m[0] * q2q2 - m[0] * q3q3;
-		hy = _2q0mx * q[3] + m[1] * q0q0 - _2q0mz * q[1] + _2q1mx * q[2] - m[1] * q1q1 + m[1] * q2q2 + _2q2 * m[2] * q[3] - m[1] * q3q3;
-		_2bx = hls::sqrtf(hx * hx + hy * hy);
-		_2bz = -_2q0mx * q[2] + _2q0my * q[1] + m[2] * q0q0 + _2q1mx * q[3] - m[2] * q1q1 + _2q2 * m[1] * q[3] - m[2] * q2q2 + m[2] * q3q3;
-		_4bx = 2.0f * _2bx;
-		_4bz = 2.0f * _2bz;
-
-		// Gradient decent algorithm corrective step
-		s[0] = -_2q2 * (2.0f * q1q3 - _2q0q2 - a[0]) + _2q1 * (2.0f * q0q1 + _2q2q3 - a[1]) - _2bz * q[2] * (_2bx * (0.5f - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - m[0]) + (-_2bx * q[3] + _2bz * q[1]) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - m[1]) + _2bx * q[2] * (_2bx * (q0q2 + q1q3) + _2bz * (0.5f - q1q1 - q2q2) - m[2]);
-		s[1] = _2q3 * (2.0f * q1q3 - _2q0q2 - a[0]) + _2q0 * (2.0f * q0q1 + _2q2q3 - a[1]) - 4.0f * q[1] * (1 - 2.0f * q1q1 - 2.0f * q2q2 - a[2]) + _2bz * q[3] * (_2bx * (0.5f - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - m[0]) + (_2bx * q[2] + _2bz * q[0]) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - m[1]) + (_2bx * q[3] - _4bz * q[1]) * (_2bx * (q0q2 + q1q3) + _2bz * (0.5f - q1q1 - q2q2) - m[2]);
-		s[2] = -_2q0 * (2.0f * q1q3 - _2q0q2 - a[0]) + _2q3 * (2.0f * q0q1 + _2q2q3 - a[1]) - 4.0f * q[2] * (1 - 2.0f * q1q1 - 2.0f * q2q2 - a[2]) + (-_4bx * q[2] - _2bz * q[0]) * (_2bx * (0.5f - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - m[0]) + (_2bx * q[1] + _2bz * q[3]) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - m[1]) + (_2bx * q[0] - _4bz * q[2]) * (_2bx * (q0q2 + q1q3) + _2bz * (0.5f - q1q1 - q2q2) - m[2]);
-		s[3] = _2q1 * (2.0f * q1q3 - _2q0q2 - a[0]) + _2q2 * (2.0f * q0q1 + _2q2q3 - a[1]) + (-_4bx * q[3] + _2bz * q[1]) * (_2bx * (0.5f - q2q2 - q3q3) + _2bz * (q1q3 - q0q2) - m[0]) + (-_2bx * q[0] + _2bz * q[2]) * (_2bx * (q1q2 - q0q3) + _2bz * (q0q1 + q2q3) - m[1]) + _2bx * q[1] * (_2bx * (q0q2 + q1q3) + _2bz * (0.5f - q1q1 - q2q2) - m[2]);
-
-		// normalise step magnitude
-//		normType1(s);
-//		normType2(s);
-		normType3(s);
-
-		// Apply feedback step
-		addMulConstanta2(qDot, s, negBeta);
-	}
-
-	// Integrate rate of change of quaternion to yield quaternion
-	addMulConstanta2(q, qDot, invSampleFreq);
-
-	// Normalise quaternion
-//	normType1(q);
-//	normType2(q);
-	normType3(q);
-
-//	anglesComputed = 0;
-}
-
-//-------------------------------------------------------------------------------------------
-// IMU algorithm update
-void updateIMU(float g[3], float a[3], float q[4], float euler[3]) {
-	float _a[4] = {0, a[0], a[1], a[2]};
-	float s[4] = {0.0f, 0.0f, 0.0f, 0.0f};
-	float qDot[4] = {0.0f, 0.0f, 0.0f, 0.0f};
-	float _2q0, _2q1, _2q2, _2q3, _4q0, _4q1, _4q2 ,_8q1, _8q2, q0q0, q1q1, q2q2, q3q3;
-//	int anglesComputed = 0;
-
-	// Convert gyroscope degrees/sec to radians/sec
-	conv2radPerSecond(g);
-
-	// Rate of change of quaternion from gyroscope
-	computeQDot(qDot, q, g);
-
-	// Compute feedback only if accelerometer measurement valid (avoids NaN in accelerometer normalisation)
-	if(!((a[0] == 0.0f) && (a[1] == 0.0f) && (a[2] == 0.0f))) {
-
-		// Normalise accelerometer measurement
-//		normType1(_a);
-		normType3(_a);
-
-		// Auxiliary variables to avoid repeated arithmetic
-		_2q0 = 2.0f * q[0];
-		_2q1 = 2.0f * q[1];
-		_2q2 = 2.0f * q[2];
-		_2q3 = 2.0f * q[3];
-		_4q0 = 4.0f * q[0];
-		_4q1 = 4.0f * q[1];
-		_4q2 = 4.0f * q[2];
-		_8q1 = 8.0f * q[1];
-		_8q2 = 8.0f * q[2];
-		q0q0 = q[0] * q[0];
-		q1q1 = q[1] * q[1];
-		q2q2 = q[2] * q[2];
-		q3q3 = q[3] * q[3];
-
-		// Gradient decent algorithm corrective step
-		s[0] = _4q0 * q2q2 + _2q2 * a[0] + _4q0 * q1q1 - _2q1 * a[1];
-		s[1] = _4q1 * q3q3 - _2q3 * a[0] + 4.0f * q0q0 * q[1] - _2q0 * a[1] - _4q1 + _8q1 * q1q1 + _8q1 * q2q2 + _4q1 * a[2];
-		s[2] = 4.0f * q0q0 * q[2] + _2q0 * a[0] + _4q2 * q3q3 - _2q3 * a[1] - _4q2 + _8q2 * q1q1 + _8q2 * q2q2 + _4q2 * a[2];
-		s[3] = 4.0f * q1q1 * q[3] - _2q1 * a[0] + 4.0f * q2q2 * q[3] - _2q2 * a[1];
-
-		// normalise step magnitude
-//		normType1(s);
-		normType3(s);
-
-		// Apply feedback step
-		addMulConstanta2(qDot, s, negBeta);
-	}
-
-	// Integrate rate of change of quaternion to yield quaternion
-	addMulConstanta2(q, qDot, invSampleFreq);
-
-	// Normalise quaternion
-//	normType1(q);
-	normType3(q);
-
-//	anglesComputed = 0;
+	*e_done = 1;
+	*block_start = 0;
 }
 
 //-------------------------------------------------------------------------------------------
 //
-void conv2radPerSecond(float gyro[3]){
-	convert_to_rad : for (int i=0; i<3; i++){
-		gyro[i] *= 0.0174533;
-	}
-}
-
-//-------------------------------------------------------------------------------------------
-//
-void normType1(float input[4]){
-	float recipNorm = 0;
-	float temp[3] = {input[1], input [2], input[3]};
-	if (input[0] == 0.0f){
-		recipNorm = hls::rsqrtf(input[1] * input[1] + input[2] * input[2] + input[3] * input[3]);
-	}
-	else{
-//		recipNorm = hls::sqrtf(hls::powf(input[0], 2) + hls::powf(input[1], 2) + hls::powf(input[2], 2) + hls::powf(input[3], 2));
-		recipNorm = hls::rsqrtf(input[0] * input[0] + input[1] * input[1] + input[2] * input[2] + input[3] * input[3]);
-		input[0] *= recipNorm;
-//		std::cout << "neq 0" <<std::endl;
-	}
-
-//	loop_norm :for (int i = 1; i<4; i++){
-//		input[i] *= recipNorm;
-//	}
-
-	mulConstanta(temp, recipNorm);
-//	std::cout << recipNorm <<std::endl;
-}
-
-//-------------------------------------------------------------------------------------------
-//
-void normType2(float input[4]){
-	float recipNorm = 0;
-	recipNorm = hls::sqrtf(hls::powf(input[0], 2) + hls::powf(input[1], 2) + hls::powf(input[2], 2) + hls::powf(input[3], 2));
-	loop_norm :for (int i = 1; i<4; i++){
-		input[i] *= recipNorm;
-	}
-	if (input[0] != 0)
-		input[0] *= recipNorm;
-}
-
-//-------------------------------------------------------------------------------------------
-//
-void normType3(float input[4]){
+void normType4(float input[4]){
 	float recipNorm;
 	recipNorm = hls::rsqrtf(input[0] * input[0] + input[1] * input[1] + input[2] * input[2] + input[3] * input[3]);
 	loop_norm: for(int i = 0; i<4; i++){
@@ -518,7 +169,7 @@ void normType3(float input[4]){
 
 //-------------------------------------------------------------------------------------------
 //
-void normType4(float input[3]){
+void normType3(float input[3]){
 	float recipNorm;
 	recipNorm = hls::rsqrtf(input[0] * input[0] + input[1] * input[1] + input[2] * input[2]);
 	loop_norm: for(int i = 0; i<3; i++){
@@ -528,21 +179,11 @@ void normType4(float input[3]){
 
 //-------------------------------------------------------------------------------------------
 //
-void computeQDot(float result[4], float Q[4], float gyro[3]){
-	result[0] = 0.5f * (-Q[1] * gyro[0] - Q[2] * gyro[1] - Q[3] * gyro[2]);
-	result[1] = 0.5f * (Q[0] * gyro[0] + Q[2] * gyro[2] - Q[3] * gyro[1]);
-	result[2] = 0.5f * (Q[0] * gyro[1] - Q[1] * gyro[2] + Q[3] * gyro[0]);
-	result[3] = 0.5f * (Q[0] * gyro[2] + Q[1] * gyro[1] - Q[2] * gyro[0]);
-}
-
-//-------------------------------------------------------------------------------------------
-//
-void computeAngles(float q[4], float euler[3])
-{
-	euler[0] = hls::atan2f(q[0]*q[1] + q[2]*q[3], 0.5f - q[1]*q[1] - q[2]*q[2]);
-	euler[1] = hls::asinf(-2.0f * (q[1]*q[3] - q[0]*q[2]));
-	euler[2] = hls::atan2f(q[1]*q[2] + q[0]*q[3], 0.5f - q[2]*q[2] - q[3]*q[3]);
-//	anglesComputed = 1;
+void Qmul(float result[4], float a[4], float b[3]){
+	result[0] = (-a[1] * b[0] - a[2] * b[1] - a[3] * b[2]);
+	result[1] = (a[0] * b[0] + a[2] * b[2] - a[3] * b[1]);
+	result[2] = (a[0] * b[1] - a[1] * b[2] + a[3] * b[0]);
+	result[3] = (a[0] * b[2] + a[1] * b[1] - a[2] * b[0]);
 }
 
 //-------------------------------------------------------------------------------------------
@@ -555,20 +196,14 @@ void addMulConstanta1(float result[4], float vector[4], float constanta){
 
 //-------------------------------------------------------------------------------------------
 //
-void addMulConstanta2(float result[4], float vector[4], float constanta){
-	float temp[3] = {vector[1], vector[2], vector[3]};
-	mulConstanta(temp, constanta);
-	loop_addMullConstanta : for(int i=1; i<4; i++){
-//		result[i] += vector[i]*constanta;
-		result[i] = result[i] + temp[i-1];
+void mulConstanta(float vector[4], float constanta){
+	loop_mulConstanta : for (int i=0; i<4; i++){
+		vector[i] *= constanta;
 	}
-	result[0] += vector[0] * constanta;
 }
 
-//-------------------------------------------------------------------------------------------
-//
-void mulConstanta(float vector[3], float constanta){
-	loop_mulConstanta : for (int i=0; i<3; i++){
-		vector[i] *= constanta;
+void add2vector(float a[4], float b[4]){
+	loop_add2vector : for (int i=0; i<4; i++){
+		a[i] += a[i] + b[i];
 	}
 }
