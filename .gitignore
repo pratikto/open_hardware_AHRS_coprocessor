@@ -7,7 +7,7 @@ MadgwickAHRS_original/*
 #!*.m
 #!*.tcl
 
-!Xilinx/MadgwickAHRS_HW_development/openHW_AHRS/solution*/*.tcl
+!Xilinx/MadgwickAHRS_HW_development/openHW_AHRS/solution??/*.tcl
 !Xilinx/MadgwickAHRS_HW_development/*.cpp
 !Xilinx/MadgwickAHRS_HW_development/*.c
 !Xilinx/MadgwickAHRS_HW_development/*.h
@@ -21,9 +21,9 @@ MadgwickAHRS_original/*
 !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/ZYBO_Z7_NAV_MADGWICK/src/*.cpp
 !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/ZYBO_Z7_NAV_MADGWICK/src/*.h
 
-!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/SDcard_lagi/src/*.c
-!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/SDcard_lagi/src/*.cpp
-!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/SDcard_lagi/src/*.h
+!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/SDcard/src/*.c
+!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/SDcard/src/*.cpp
+!Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/SDcard/src/*.h
 
 !MadgwickAHRS_original/madgwick_algorithm_matlab
 !MadgwickAHRS_original/madgwick_algorithm_C++/*.c

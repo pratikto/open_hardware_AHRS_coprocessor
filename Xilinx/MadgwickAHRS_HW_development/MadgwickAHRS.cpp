@@ -129,7 +129,7 @@ void madgwick(float g[3], float a[3], float m[3], float q[4], float euler[3], fl
 	// Normalise quaternion
 	normType4(Q);
 
-	*q_done = 1;
+	*q_done = not *q_done;
 
 	loop_assign_q : for (int i=0; i<4; i++){
 		q[i]=Q[i];
@@ -152,8 +152,8 @@ void madgwick(float g[3], float a[3], float m[3], float q[4], float euler[3], fl
 	euler[1] = hls::asinf(-2.0f * (q1q3 - q0q2));
 	euler[2] = hls::atan2f(q1q2 + q0q3, 0.5f - q2q2 - q3q3);
 
-	*e_done = 1;
-	*block_start = 0;
+	*e_done = not *e_done;
+	*block_start = not *block_start;
 }
 
 //-------------------------------------------------------------------------------------------

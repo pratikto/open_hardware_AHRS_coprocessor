@@ -109,5 +109,11 @@ hold off;
 dlmwrite('gold.float.64bit.csv', [Magnetometer Gyroscope Accelerometer quaternion eulerRad]);
 %dlmwrite('gold.float.32bit.csv', [m g a q]);
 dlmwrite('gold.float.32bit.csv', [m g a quaternion1 euler]);
+
+
+dlmwrite ('magnetometer.csv', Magnetometer, "delimiter", ",", "newline", "},\n{")
+dlmwrite ('Accelerometer.csv', Accelerometer, "delimiter", ",", "newline", "},\n{")
+dlmwrite ('Gyroscope.csv', Gyroscope, "delimiter", ",", "newline", "},\n{")
+
 %dlmwrite("gold.double.csv", [Magnetometer Gyroscope Accelerometer quaternion]);
 %% End of script
