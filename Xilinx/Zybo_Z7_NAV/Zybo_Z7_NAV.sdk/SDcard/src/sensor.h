@@ -8,7 +8,7 @@
 #ifndef SENSOR_H_
 #define SENSOR_H_
 
-float magnetometer[6959][3] =
+float magneto[6959][3] =
 {
 		{0.2099609,0.03125,-0.4487305},
 		{0.2099609,0.03125,-0.4487305},
