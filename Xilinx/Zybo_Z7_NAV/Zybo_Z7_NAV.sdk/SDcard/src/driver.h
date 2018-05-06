@@ -8,6 +8,7 @@
 #ifndef SRC_DRIVER_H_
 #define SRC_DRIVER_H_
 
+#include <stdio.h>
 #include "xmadgwick.h" // Device driver for HLS HW block
 #include <stdlib.h> // Standard C functions, e.g. exit()
 #include <stdbool.h> // Provides a Boolean data type for ANSI/ISO-C

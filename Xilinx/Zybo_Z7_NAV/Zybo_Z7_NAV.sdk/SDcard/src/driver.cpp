@@ -129,7 +129,8 @@ int setup_interrupt(XScuGic _ScuGic, XMadgwick _HlsMadgwick){
  *send gyroscope float data to coprosessor
  */
 u32 XMadgwick_Writef_g_Words(XMadgwick *InstancePtr, int offset, float *data, int length){
-    Xil_AssertNonvoid(InstancePtr != NULL);
+    char* buffer;
+	Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
 
     int i;
@@ -139,7 +140,9 @@ u32 XMadgwick_Writef_g_Words(XMadgwick *InstancePtr, int offset, float *data, in
     xil_printf("\ngyro : \t\t");
     for (i = 0; i < length; i++) {
         *(float *)(InstancePtr->Coprocessor_bus_BaseAddress + XMADGWICK_COPROCESSOR_BUS_ADDR_G_BASE + (offset + i)*4) = *(data + i);
-        xil_printf("%f\t\t", *(data + i));
+//        xil_printf("%f\t\t", *(data + i));
+        sprintf(buffer, "%f\t\t", *(data + i));
+        print(buffer);
     }
     return length;
 }
@@ -167,6 +170,7 @@ u32 XMadgwick_Readf_g_Words(XMadgwick *InstancePtr, int offset, float *data, int
  *send accelerometer float data to coprosessor
  */
 u32 XMadgwick_Writef_a_Words(XMadgwick *InstancePtr, int offset, float *data, int length){
+	char *buffer;
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
 
@@ -178,7 +182,9 @@ u32 XMadgwick_Writef_a_Words(XMadgwick *InstancePtr, int offset, float *data, in
     xil_printf("\naccel : \t\t");
     for (i = 0; i < length; i++) {
         *(float *)(InstancePtr->Coprocessor_bus_BaseAddress + XMADGWICK_COPROCESSOR_BUS_ADDR_A_BASE + (offset + i)*4) = *(data + i);
-        xil_printf("%f\t\t", *(data + i));
+//        xil_printf("%f\t\t", *(data + i));
+        sprintf(buffer, "%f\t\t", *(data + i));
+        print(buffer);
     }
     return length;
 }
@@ -196,6 +202,7 @@ u32 XMadgwick_Readf_a_Words(XMadgwick *InstancePtr, int offset, float *data, int
 u32 XMadgwick_Writef_m_Words(XMadgwick *InstancePtr, int offset, float *data, int length){
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr -> IsReady == XIL_COMPONENT_IS_READY);
+    char *buffer;
 
     int i;
 
@@ -205,7 +212,9 @@ u32 XMadgwick_Writef_m_Words(XMadgwick *InstancePtr, int offset, float *data, in
     xil_printf("\nmagneto : \t\t");
     for (i = 0; i < length; i++) {
         *(float *)(InstancePtr->Coprocessor_bus_BaseAddress + XMADGWICK_COPROCESSOR_BUS_ADDR_M_BASE + (offset + i)*4) = *(data + i);
-        xil_printf("%f\t\t", *(data + i));
+//        xil_printf("%f\t\t", *(data + i));
+        sprintf(buffer, "%f\t\t", *(data + i));
+        print(buffer);
     }
     return length;
 }

@@ -16,8 +16,13 @@
 //=============================================================================================
 #ifndef MadgwickAHRS_h
 #define MadgwickAHRS_h
-#include "hls_math.h"
-#include "ap_int.h"
+// #include "hls_math.h"
+#include <HLS/math.h>
+#include <HLS/extendedmath.h>
+// #include "ap_int.h"
+#include "HLS/hls.h"
+#include "HLS/stdio.h"
+#include "assert.h"
 
 //-------------------------------------------------------------------------------------------
 // Definitions
