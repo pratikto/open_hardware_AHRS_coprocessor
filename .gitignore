@@ -14,6 +14,7 @@ MadgwickAHRS_original/*
 !Xilinx/MadgwickAHRS_HW_development/*.c
 !Xilinx/MadgwickAHRS_HW_development/*.h
 !Xilinx/MadgwickAHRS_HW_development/*.m
+!**/*.tcl
 
 !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.c
 !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.cpp
