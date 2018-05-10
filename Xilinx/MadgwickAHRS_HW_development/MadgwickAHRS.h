@@ -34,4 +34,5 @@ void mulConstanta(float vector[4], float constanta);
 void Qmul(float result[4], float a[4], float b[3]);
 void add2vector(float a[4], float b[4]);
 void madgwick(float g[3], float a[3], float m[3], float q[4], float euler[3], float periode, float negBeta, bool reset, bool* start_cprsr, bool* q_done, bool* e_done);
+//void madgwick1(float g[3], float a[3], float m[3], float q[4], float euler[3], float periode, float negBeta, bool reset, bool* start_cprsr, bool* q_done, bool* e_done);
 #endif

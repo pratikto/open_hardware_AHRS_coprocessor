@@ -40,10 +40,10 @@ int main(){
 		}
 		madgwick(gyro, accelero, magneto, q, euler, T, NEGBeta, setn, &start, &q_done, &e_done);
 
-		file.addDataColl(i, 16, q1, 4);
-		file.addDataColl(i, 20, euler1, 3);
-		file.addDataColl(i, 23, q, 4);
-		file.addDataColl(i, 27, euler, 3);
+		file.addDataColl(i, 16, q, 4);
+		file.addDataColl(i, 20, euler, 3);
+		file.addDataColl(i, 23, q1, 4);
+		file.addDataColl(i, 27, euler1, 3);
 
 		for (int f = 0; f<4; f++){
 			cout <<q[f] <<"\t";

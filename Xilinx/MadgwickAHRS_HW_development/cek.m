@@ -26,15 +26,24 @@ e1_HLS    = dlmread('output2.csv', ',', [0 27 totalData 29]);
 %  RMSE_q(4) = sqrt(mean((q_HLS(4) - q1_HLS(4)).^2));  % Root Mean Squared Error
 
 %%calculate Root Mean Square Error
+%for i = 1:3
+%  %(q_HLS(i) - q1_HLS(i))    % Errors
+%  %(q_HLS(i) - q1_HLS(i)).^2   % Squared Error
+%  %mean(q_HLS(i) - q1_HLS(i)).^2)   % Mean Squared Error
+%  RMSE_q(:,i) = sqrt(mean((q_HLS(:,i) - q1_HLS(:,i)).^2));  % Root Mean Squared Error
+%  RMSE_euler(:,i) = sqrt(mean((e_HLS(:,i) - e1_HLS(:,i)).^2));  % Root Mean Squared Error
+%end
+%  RMSE_q(:,4) = sqrt(mean((q_HLS(:,4) - q1_HLS(:,4)).^2));  % Root Mean Squared Error
+
 for i = 1:3
   %(q_HLS(i) - q1_HLS(i))    % Errors
   %(q_HLS(i) - q1_HLS(i)).^2   % Squared Error
   %mean(q_HLS(i) - q1_HLS(i)).^2)   % Mean Squared Error
-  RMSE_q(:,i) = sqrt(mean((q_HLS(:,i) - q1_HLS(:,i)).^2));  % Root Mean Squared Error
-  RMSE_euler(:,i) = sqrt(mean((e_HLS(:,i) - e1_HLS(:,i)).^2));  % Root Mean Squared Error
+  RMSE_q(:,i) = sqrt(mean((q_HLS(:,i) - q_matlab(:,i)).^2));  % Root Mean Squared Error
+  RMSE_euler(:,i) = sqrt(mean((e_HLS(:,i) - e_matlab(:,i)).^2));  % Root Mean Squared Error
 end
-  RMSE_q(:,4) = sqrt(mean((q_HLS(:,4) - q1_HLS(:,4)).^2));  % Root Mean Squared Error
-
+  RMSE_q(:,4) = sqrt(mean((q_HLS(:,4) - q_matlab(:,4)).^2));  % Root Mean Squared Error
+  
 %for col = 1:3
 %  for row = 1: totalData+1
 %    RMSE_q(row,col) = sqrt(mean((q_HLS(row,col) - q1_HLS(:,i)).^2));  % Root Mean Squared Error
