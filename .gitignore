@@ -7,7 +7,7 @@ MadgwickAHRS_original/*
 #!*.c
 #!*.h
 #!*.m
-#!*.tcl
+!*.tcl
 !Xilinx/MadgwickAHRS_HW_development/madgwick/solution?/*.tcl
 !Xilinx/MadgwickAHRS_HW_development/madgwick/*/*.tcl
 !Xilinx/MadgwickAHRS_HW_development/*.cpp
