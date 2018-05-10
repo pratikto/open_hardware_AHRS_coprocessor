@@ -8,10 +8,10 @@ g         = dlmread('output2.csv', ',', [0 3 totalData 5]);
 a         = dlmread('output2.csv', ',', [0 6 totalData 8]);
 q_matlab  = dlmread('output2.csv', ',', [0 9 totalData 12]);
 e_matlab  = dlmread('output2.csv', ',', [0 13 totalData 15]);
-%q_HLS     = dlmread('output2.csv', ',', [0 16 totalData 19]);
-%e_HLS     = dlmread('output2.csv', ',', [0 20 totalData 22]);
-q_HLS    = dlmread('outputHW.csv', ',', [0 0 totalData 3]);
-e_HLS    = dlmread('outputHW.csv', ',', [0 4 totalData 6]);
+q_HLS     = dlmread('output2.csv', ',', [0 16 totalData 19]);
+e_HLS     = dlmread('output2.csv', ',', [0 20 totalData 22]);
+%q_HLS    = dlmread('outputHW.csv', ',', [0 0 totalData 3]);
+%e_HLS    = dlmread('outputHW.csv', ',', [0 4 totalData 6]);
 q1_HLS    = dlmread('output2.csv', ',', [0 23 totalData 26]);
 e1_HLS    = dlmread('output2.csv', ',', [0 27 totalData 29]);
 
