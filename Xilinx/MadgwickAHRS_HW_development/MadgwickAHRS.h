@@ -28,11 +28,16 @@
 
 //============================================================================================
 // Functions declaration
-void normType3(float input[3]);
 void normType4(float input[4]);
-void mulConstanta(float vector[4], float constanta);
-void Qmul(float result[4], float a[4], float b[3]);
+void mulConstanta(float result[4], float vector[4], float constanta);
+//void Qmul(float result[4], float a[4], float b[3]);
+void Qmul(float result[4], float a[4], float b[4]);
 void add2vector(float a[4], float b[4]);
-void madgwick(float g[3], float a[3], float m[3], float q[4], float euler[3], float periode, float negBeta, bool reset, bool* start_cprsr, bool* q_done, bool* e_done);
+void madgwick(
+		float g[3], float a[3], float m[3],
+		float q[4], float euler[3],
+		float periode,
+		float negBeta,
+		bool reset);
 //void madgwick1(float g[3], float a[3], float m[3], float q[4], float euler[3], float periode, float negBeta, bool reset, bool* start_cprsr, bool* q_done, bool* e_done);
 #endif

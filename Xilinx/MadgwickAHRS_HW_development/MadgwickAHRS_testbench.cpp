@@ -13,37 +13,20 @@ int main(){
 	float temp[4];
 	float q[4] = {1.0f, 0.0f, 0.0f, 0.0f};
 	float euler[3] = {0.0f, 0.0f, 0.0f};
-	float q1[4] = {1.0f, 0.0f, 0.0f, 0.0f};
-	float euler1[3] = {0.0f, 0.0f, 0.0f};
 	float magneto[3], accelero[3], gyro[3];
-	bool q_done, e_done, start;
-	bool q1_done, e1_done, start1;
 	int i=0, j=0;
 
-//	for(j = 0; j<3; j++){
-//		magneto[j] = file.read(i,j);
-//		gyro[j] = file.read(i,j+3);
-//		accelero[j] = file.read(i,j+6);
-//	}
-//
-//	file.addDataColl(i, 16, q, 4);
-//	file.addDataColl(i, 20, euler, 3);
-//	file.addDataColl(i, 23, q1, 4);
-//	file.addDataColl(i, 27, euler1, 3);
-
-//	for(i=0; i<file.getRow(); i++){
-	for(i=0; i<10; i++){
+	for(i=0; i<file.getRow(); i++){
+//	for(i=0; i<10; i++){
 		for(j = 0; j<3; j++){
 			magneto[j] = file.read(i,j);
 			gyro[j] = file.read(i,j+3);
 			accelero[j] = file.read(i,j+6);
 		}
-		madgwick(gyro, accelero, magneto, q, euler, T, NEGBeta, setn, &start, &q_done, &e_done);
+		madgwick(gyro, accelero, magneto, q, euler, T, NEGBeta, setn);
 
 		file.addDataColl(i, 16, q, 4);
 		file.addDataColl(i, 20, euler, 3);
-		file.addDataColl(i, 23, q1, 4);
-		file.addDataColl(i, 27, euler1, 3);
 
 		for (int f = 0; f<4; f++){
 			cout <<q[f] <<"\t";
