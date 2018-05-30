@@ -30,9 +30,11 @@
 // Functions declaration
 void normType4(float input[4]);
 void mulConstanta(float result[4], float vector[4], float constanta);
+//void mulConstanta(float result[6], float vector[6], float constanta);
 //void Qmul(float result[4], float a[4], float b[3]);
 void Qmul(float result[4], float a[4], float b[4]);
 void add2vector(float a[4], float b[4]);
+void mul2matrix(float resul[4], float j[4][3], float f[3]);
 void madgwick(
 		float g[3], float a[3], float m[3],
 		float q[4], float euler[3],
