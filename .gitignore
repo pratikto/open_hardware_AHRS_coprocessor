@@ -22,9 +22,10 @@ MadgwickAHRS_original/*
 !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.cpp
 !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.h
 
-# !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/ZYBO_Z7_NAV_MADGWICK/src/*.c
-# !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/ZYBO_Z7_NAV_MADGWICK/src/*.cpp
-# !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/ZYBO_Z7_NAV_MADGWICK/src/*.h
+!Xilinx/zybo/zybo.sdk/**/src/*.c
+!Xilinx/zybo/zybo.sdk/**/src/*.cc
+!Xilinx/zybo/zybo.sdk/**/src/*.cpp
+!Xilinx/zybo/zybo.sdk/**/src/*.h
 
 # !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/SDcard/src/*.c
 # !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/SDcard/src/*.cc
