@@ -11,9 +11,11 @@ q_matlab  = dlmread('output2.csv', ',', [0 9 totalData-1 12]);
 e_matlab  = dlmread('output2.csv', ',', [0 13 totalData-1 15]);
 q_HLS     = dlmread('output2.csv', ',', [0 16 totalData-1 19]);
 e_HLS     = dlmread('output2.csv', ',', [0 20 totalData-1 22]);
-q1_HLS    = dlmread('outputHW.csv', ',', [0 0 totalData-1 3]);
-e1_HLS    = dlmread('outputHW.csv', ',', [0 4 totalData-1 6]);
-count     = dlmread('outputHW.csv', ',', [0 7 totalData-1 7]);
+t_high    = dlmread('output2.csv', ',', [0 20 totalData-1 22]); %%jangan lupa diganti
+t_low     = dlmread('output2.csv', ',', [0 20 totalData-1 22]); %%jangan lupa diganti
+q1_HLS    = dlmread('outputHW2.csv', ',', [0 0 totalData-1 3]);
+e1_HLS    = dlmread('outputHW2.csv', ',', [0 4 totalData-1 6]);
+count     = dlmread('outputHW2.csv', ',', [0 7 totalData-1 7]);
 %q1_HLS    = dlmread('output2.csv', ',', [0 23 totalData-1 26]);
 %e1_HLS    = dlmread('output2.csv', ',', [0 27 totalData-1 29]);
 
@@ -36,17 +38,17 @@ for i = 1:3
 end
   RMSE_q_HLS_matlab(4) = sqrt(mean((q_HLS(:,4) - q_matlab(:,4)).^2));  % Root Mean Squared Error
   
-%for i = 1:1359
-%  exec_time(i) = count(i)/50000000;
-%end  
-
-exec_time = (count(totalData)/totalData)/timer_freq;
+%for i:1359
+%  t_sys(i) = bitshift(t_high(i), 32) + t_low(1);
+%end
+  
+time_latency = (count(totalData)/totalData)/timer_freq;
 
 disp(RMSE_q_HLS_HLS1);
 disp(RMSE_q_HLS_matlab);
 disp(RMSE_euler_HLS_HLS1);
 disp(RMSE_euler_HLS_matlab);
-disp(exec_time)
+disp(time_latency)
 disp(1/exec_time)
 time = 1:1:totalData;
 

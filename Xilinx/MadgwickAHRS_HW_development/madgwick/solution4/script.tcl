@@ -5,10 +5,10 @@
 ############################################################
 open_project madgwick
 set_top madgwick
-add_files csv.h
-add_files csv.cpp
-add_files MadgwickAHRS.h
 add_files MadgwickAHRS.cpp
+add_files MadgwickAHRS.h
+add_files csv.cpp
+add_files csv.h
 add_files -tb MadgwickAHRS_testbench.cpp
 open_solution "solution4"
 set_part {xc7z020clg400-1}
