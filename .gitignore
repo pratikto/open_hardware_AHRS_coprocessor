@@ -22,10 +22,20 @@ MadgwickAHRS_original/*
 !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.cpp
 !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/*/src/*.h
 
-!Xilinx/zybo/zybo.sdk/**/src/*.c
-!Xilinx/zybo/zybo.sdk/**/src/*.cc
-!Xilinx/zybo/zybo.sdk/**/src/*.cpp
-!Xilinx/zybo/zybo.sdk/**/src/*.h
+!Xilinx/zybo/zybo.sdk/madgwick_0_0/src/*.c
+!Xilinx/zybo/zybo.sdk/madgwick_0_0/src/*.cc
+!Xilinx/zybo/zybo.sdk/madgwick_0_0/src/*.cpp
+!Xilinx/zybo/zybo.sdk/madgwick_0_0/src/*.h
+
+!Xilinx/zybo/zybo.sdk/timer_whole_sys/src/*.c
+!Xilinx/zybo/zybo.sdk/timer_whole_sys/src/*.cc
+!Xilinx/zybo/zybo.sdk/timer_whole_sys/src/*.cpp
+!Xilinx/zybo/zybo.sdk/timer_whole_sys/src/*.h
+
+!Xilinx/zybo/zybo.sdk/**/*.c
+!Xilinx/zybo/zybo.sdk/**/*.cc
+!Xilinx/zybo/zybo.sdk/**/*.cpp
+!Xilinx/zybo/zybo.sdk/**/*.h
 
 # !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/SDcard/src/*.c
 # !Xilinx/Zybo_Z7_NAV/Zybo_Z7_NAV.sdk/SDcard/src/*.cc
